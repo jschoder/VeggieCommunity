@@ -1,0 +1,25 @@
+body > footer {
+    padding:0.6em;
+
+    .lang {
+        float:right;
+    }
+    
+    div {
+        @extend .clearfix; 
+    }
+    
+    a, span {
+        display:block;
+        float:left; 
+        border-left:1px solid $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 33%);
+        padding-left:0.5em;
+        margin:0 0 0.5em 0.5em;
+        
+        &:first-child {
+            padding:0;
+            margin-left:0;
+            border:none; 
+        }
+    }
+}

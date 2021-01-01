@@ -1,0 +1,23 @@
+.activity {
+    display:inline-block;
+    width:1.2em;
+    height:1.2em;
+    vertical-align:bottom;
+    border-radius:$smallBorderRadius;
+    
+    &.xs {
+        background-color:#CD434A;
+    }
+    &.s {
+        background-color:#F6AB4C;
+    }
+    &.m {
+        background-color:#F6D759; 
+    }
+    &.l {
+        background-color:#BDD443;
+    }
+    &.xl {
+        background-color:#80B156;
+    }
+}

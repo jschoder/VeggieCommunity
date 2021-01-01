@@ -1,0 +1,27 @@
+ol.licons li {
+    border-width:1px 0 0 0;
+    border-style:solid;
+    border-image: linear-gradient(to right,rgba($itemBorderColor,1),rgba($itemBorderColor,0));
+    border-image-slice:1;
+    
+    &:first-child {
+        border-top-width:0px; 
+    }
+    
+    &:before {
+        @extend .awesome;
+        color:$secondaryFontColor; 
+    } 
+    &.me:before {
+        color:$primaryColor; 
+    }
+    &.friend:before {
+        content:"\f0c0"; 
+    }
+    &.picture:before {
+        content:"\f030"; 
+    }
+    &.profile:before {
+        content:"\f007"; 
+    }
+}

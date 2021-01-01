@@ -1,0 +1,1 @@
+<div class="notifyError"><?php echo $this->message ?></div>

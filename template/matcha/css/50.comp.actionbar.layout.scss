@@ -1,0 +1,31 @@
+.actionBar {
+    margin:0 0 0.4em;
+    padding:0.2em 0 0;
+    
+    form {
+        display:inline;
+    }
+    
+    button,
+    a.button {
+        margin:0 0 0.2em;
+        
+        span {
+            display:none;
+            white-space:nowrap;
+        }
+    
+        &:before {
+            margin:0; 
+        }
+    }
+    
+    &.expanded {
+        a.button {
+            &:before {
+                @extend .awesome;
+                margin-right:0.2em;
+            }
+        }
+    }
+}

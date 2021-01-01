@@ -1,0 +1,460 @@
+form > ul > li,
+form li.group > .collapsible > div > ul > li,
+form li.group div.wideCol > div > ul > li,
+.location .addresspopup > ul > li {
+    > label:first-child {
+        font-weight:bold;
+    }
+    
+    input[type="password"] + label {
+        font-weight:bold;
+    }
+}
+    
+li.mandatory {
+    position:relative;
+}
+
+.mandatory > label:not(.secondary):after {
+    @extend .awesome;
+    vertical-align:top;
+    color:$complementaryColor;
+    content:"\f069";
+    font-size:0.75em;
+    margin-left:0.15em;
+}
+
+form li.fromto {
+    label {
+        font-weight:bold;
+        
+        + label {
+            text-align:right;
+        }
+    }
+
+    .inline {
+        font-weight:normal;
+        
+        &.first:before,
+        &.last:after {
+            @extend .awesome;
+            display:inline-block;
+            font-size:1.2em;
+            color:$secondaryColor;
+        }
+
+        &.first:before {
+            content:"\f060";
+            margin-right:0.4em;
+        }
+
+        &.last:after {
+            content:"\f061";
+            margin-left:0.4em;
+        }
+    }
+}
+
+label.help:after,
+label.error:after{
+    content: ""; 
+}
+
+
+label.help,
+label.error {
+    font-size:0.8em;
+    width:$formWidth / 0.8;
+}
+
+label.help {
+    line-height:1.2em;
+    color:$secondaryFontColor; 
+}
+label.error {
+    color:$errorFontColor;
+    font-weight:bold; 
+}
+
+.passwordStrength {
+    > div {
+        font-size:0.8em;
+        color:$secondaryFontColor; 
+    }
+    
+    .bar {
+        background-color:$itemBackgroundColor;
+        border:solid 1px $itemBorderColor;
+        
+        > div {
+            transition:width 1s;
+        }
+        
+        .weak {
+            background-color:#c5000b;
+        }
+        .fair {
+            background-color:#ff950e;
+        }
+        .good {
+            background-color:#ffd320;
+        }
+        .strong {
+            background-color:#aecf00;
+        }
+        .verystrong {
+            background-color:#579d1c;
+        }
+    }
+    
+    ul .specialchars {
+        letter-spacing:0.4em;
+    }
+    
+    &:after{
+        content: ""; 
+    }
+}
+
+label,
+input[type=file] {
+    cursor:pointer; 
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border:solid 1px $itemBorderColor;
+    background-color:$itemBackgroundColor;
+    border-radius:$smallBorderRadius; 
+    resize:none;
+
+    &:focus {
+        border-color:$primaryColor !important; 
+    }
+    
+    &[readonly] {
+        background-color:$secondaryColor;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    &:hover {
+        border-color:$itemBorderColor - hsl(0deg, 0%, 25%);
+    }
+}
+
+input[type=radio] ~ label:before,
+input[type=checkbox] ~ label:before {
+    @extend .awesome;
+    font-size:1.2em;
+    margin-top:-0.1em;
+    line-height:1.2em;
+    width:1.2em; 
+}
+input[type=radio],
+input[type=checkbox] {
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px; 
+}
+input[type=radio] + label:before {
+    color:$itemBorderColor;
+    content:"\f1db"; 
+}
+input[type=checkbox] + label:before {
+    color:$itemBorderColor;
+    content:"\f096"; 
+}
+
+input[type=radio]:checked + label:before {
+    color:$primaryColor;
+    content:"\f192"; 
+}
+input[type=checkbox]:checked + label:before {
+    color:$primaryColor;
+    content:"\f14a"; 
+}
+
+li.hp {
+    display:none;
+}
+
+select {
+    -webkit-appearance:none; 
+    -moz-appearance:none; 
+    position:relative;
+    cursor:pointer;
+    background:$itemBackgroundColor url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGAgMAAAC3EvZ0AAAACVBMVEUAAAC2try5ub8jhWtNAAAAAnRSTlMAKTQhVVQAAAAjSURBVAjXY1i1agkDg9aqBQwMXKsaGBiYVjEAwQoQocDAAAB7ygYVgQmnsAAAAABJRU5ErkJggg==') no-repeat 100% center;
+    border:solid 1px $itemBorderColor;
+    border-radius:$smallBorderRadius;
+    /* Using pixel since the only basis is the background image */
+    padding-right:22px;
+
+    &:hover,
+    &:focus {
+        background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGAgMAAAC3EvZ0AAAACVBMVEUAAAC2tryVlZXwWHaxAAAAAnRSTlMAKTQhVVQAAAAjSURBVAjXY1i1agkDg9aqBQwMXKsaGBiYVjEAwQoQocDAAAB7ygYVgQmnsAAAAABJRU5ErkJggg==');
+    }
+    
+    &:focus {
+        border-color:$primaryColor !important; 
+    }
+
+    &::-ms-expand {
+        display: none; 
+    }
+}
+
+.datepicker,
+.clockpicker {
+    border-radius: $smallBorderRadius;
+    background-color:$secondaryColor;    
+
+    input {
+        border-radius:0;
+        /*
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+        */
+        &.first {
+            border-top-left-radius:$smallBorderRadius;
+            border-bottom-left-radius:$smallBorderRadius; 
+        }
+        /*
+        &.year {
+            border:solid 1px $itemBorderColor;
+            border-width:0 1px 0 0;
+        }
+        */
+    }
+
+    .icon {
+        color:$navFontColor;
+    }
+
+    &:hover {
+        border-color:$itemBorderColor - hsl(0deg, 0%, 25%);
+    }
+    
+    &.active {
+        border-color:$primaryColor; 
+
+        input {
+            border-color:$primaryColor; 
+        }
+    }
+}
+.datepicker .icon:after {
+    @extend .awesome;
+    content:"\f133"; 
+}
+.clockpicker .icon:after {
+    @extend .awesome;
+    content:"\f017"; 
+}
+
+.rows {
+    .dnd {
+        span.sorter {
+            display:inline-block;
+            height:100%;
+            width:2em;
+            padding:0.2em 0 0;
+            cursor:move;
+
+            &:before {
+                @extend .awesome;
+                content: "\f0dc"; 
+            }
+        }
+
+        .ui-sortable-helper {
+            background-color:$secondaryColor;
+            border-radius:$bigBorderRadius;
+        }
+    }
+    
+    .ajaxUploadSelect {
+        display:none;
+    }
+    
+    .ajaxUploadPreview {
+        border:1px solid $itemBorderColor; 
+        border-radius:$smallBorderRadius;
+        
+        &:hover {
+            border-color:$primaryColor;
+        }
+    }
+    .ajaxUpload {
+        cursor:pointer;
+        background-color:$itemBackgroundColor;
+    
+        &:before {
+            position:absolute;
+            top:0.3em;
+            left:0.4em;
+            color:$itemBorderColor;
+            font: normal normal normal 3em/1 FontAwesome;
+            content: "\f1c5";
+        }
+    }
+}
+
+
+.ajaxUploadPreview {
+    border:1px solid $itemBorderColor;
+    background-color:$itemBackgroundColor;
+    border-radius:$smallBorderRadius;
+    
+    .delete:before {
+        @extend .awesome;
+        content:"\f1f8";
+    }
+}
+
+button,
+a.button{
+    display: inline-block;
+    cursor:pointer;
+    background-color:$primaryHighlightColor;
+    color:$primaryContrastFontColor;
+    font-family:'Ubuntu', sans-serif;
+    font-weight:normal; 
+    border:1px solid $primaryHighlightColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%); 
+    border-radius:$bigBorderRadius;    
+    
+    &:hover {
+        background-color:$primaryColor;
+        border:1px solid $primaryColor;  
+    }
+}
+
+/* Copy of normal button design. Requires to be seperate to work with firefox */
+input:-webkit-file-upload-button,
+input:-ms-browse {
+    display: inline-block;
+    line-height:1em;
+    cursor:pointer;
+    background-color:$primaryHighlightColor;
+    color:$primaryContrastFontColor;
+    font-family:'Ubuntu', sans-serif;
+    font-weight:normal; 
+    border:1px solid $primaryHighlightColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%); 
+    border-radius:$bigBorderRadius;    
+    
+    &:hover {
+        background-color:$primaryColor;
+        border:1px solid $primaryColor;  
+    }
+}
+    
+button,
+a.button {
+    &:before {
+        @extend .awesome;
+        margin-right:0.3em; 
+    }
+
+    &.add:before {
+        content:"\f055"; 
+    }
+    &.cancel:before {
+        content:"\f05e"; 
+    }
+    &.delete:before {
+        content:"\f00d"; 
+    }
+    &.fb:before {
+        content:"\f09a"; 
+    }
+    &.login:before {
+        content:"\f090"; 
+    }
+    &.picture:before {
+        content:"\f030"; 
+    }
+    &.reset:before {
+        content:"\f0e2"; 
+    }
+    &.save:before {
+        content:"\f0c7"; 
+    }
+    &.signup:before {
+        content:"\f044"; 
+    }
+}
+
+button.cta,
+a.button.cta {
+    background-color:$complementaryColor;
+    border-color: $complementaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%); 
+    
+    &:hover {
+        background-color:$complementaryColor - hsl(0deg, 0%, 15%);
+        border-color:$complementaryColor - hsl(0deg, 0%, 15%);  
+    }
+}
+
+button.fb {
+    background-color:#4267b2;
+    border-color:#4267b2;
+    
+    &:hover {
+        background-color:#365899;
+    }
+}
+
+button.secondary,
+a.button.secondary {
+    background-color:$secondaryColor;
+    color:$defaultFontColor;
+    border:1px solid $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%); 
+    
+    &:hover {
+        background-color:$secondaryColor - hsl(0deg, 0%, 15%);
+        border:1px solid $secondaryColor - hsl(0deg, 0%, 15%);  
+    }
+}
+
+/* Marking mod events */
+button.mod,
+a.button.mod {
+    background-color:$modColor;
+    border:1px solid $modColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%); 
+    
+    &:hover {
+        background-color:$modColor - hsl(0deg, 0%, 15%);
+        border:1px solid $modColor - hsl(0deg, 0%, 15%);  
+    }
+}
+
+.formHighlight {
+    // Clearfix is necessary to prevent margin collapse
+    @extend .clearfix;
+    padding:0.4em 0.4em 0;
+    background-color:$secondaryColor;
+    border-radius:$bigBorderRadius;  
+    box-shadow:$itemBoxShadow; 
+    margin-bottom:1em;
+    
+    aside {
+        // Margin doesn't work here
+        padding:0 0 0.4em;
+        
+        nav {
+            font-size:0.9em;
+        }
+    }
+}

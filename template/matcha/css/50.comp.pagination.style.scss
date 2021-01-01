@@ -1,0 +1,28 @@
+nav.pag {
+    span {
+        color:$secondaryFontColor;
+        font-weight:bold; 
+    }
+    
+    .first, 
+    .prev, 
+    .next, 
+    .last {
+        &:before {
+            @extend .awesome; 
+        }
+    }
+    
+    .first:before {
+        content:"\f048"; 
+    }
+    .prev:before {
+        content:"\f04a"; 
+    }
+    .next:before {
+        content:"\f04e"; 
+    }
+    .last:before {
+        content:"\f051"; 
+    }
+}

@@ -1,0 +1,120 @@
+// Breaking points for responsive design 
+// Basic calculation 1em = 16px 
+$supportedMinWidth:320px; // Has to be in pixel
+$breakingPointS: 28em;
+$breakingPointM: 49em;
+$breakingPointL: 70em;
+$breakingPointXL: 85em;
+$supportMaxWidth: 105em; // 1680px
+
+// Item width for bubbles & co 
+$itemMaxWidth: 40em; 
+
+// Point where the calendar switches over to a list 
+$breakingPointCalendar:35em;
+
+// FormWidth 
+$formWidth:25em;
+
+
+
+// Background image 
+$background:#F4F5F2;
+
+
+
+// Primary color to highlight elements 
+/*
+$primaryColor:#A0B42F;
+$primaryHighlightColor:#B3CA34;
+$primaryDarkColor:#455F04;
+*/
+$primaryColor:#90b530;
+$primaryHighlightColor:#A3CB35;
+$primaryDarkColor:#356005;
+
+/*
+PURPLE
+$primaryColor:#9030b5;
+$primaryHighlightColor:#A335CB;
+$primaryDarkColor:#350560;
+
+BLUE
+$primaryColor:#3090b5;
+$primaryHighlightColor:#35A3CB;
+$primaryDarkColor:#053560;
+*/
+
+
+
+// Secondary color to mark important-ish elements (inactive tabs, collapsible, footer, etc)
+$secondaryColor:#DADAE8;
+// Complementary color to mark important informations and actions
+$complementaryColor:#E78E25;
+$complementaryDarkColor:#E7B880;
+// Borders marking mod content like flagged posts
+// (sitemods + group mods)
+$modColor:#FE7200;
+
+
+
+// Background color for item elements (popups, bubbles, etc.)
+$itemBackgroundColor:#FAFAFA;
+// Border color for item elements (popups, bubbles, etc.)
+$itemBorderColor:#B9B9BF;
+
+
+
+// Notification Colors
+$notifySuccessColor:#829225;
+$notifyWarnColor:#DE7825;
+$notifyErrorColor:#A70011;
+
+
+
+// Default color for normal text (black or shade of black)
+$defaultFontColor:#333;
+// Color for navigation-elements
+$navFontColor:#9494A7;
+// Color for secondary options/informations (deny friendrequest, timestamp, etc)
+$secondaryFontColor:#9494A7;
+// Font color for error messages.
+$errorFontColor:#C00;
+// Font color for text on element with primaryColor-background
+$primaryContrastFontColor:#FFF;
+$primaryContrastFontDarkColor:#E6E8E2;
+
+
+
+// Border radius for small elements (itembox, images))
+$smallBorderRadius:0.3em;
+// Border radius for big elements (bubbles))
+$bigBorderRadius:0.5em;
+
+// Box Shadow border
+$itemBoxShadow:none;
+// 2px 2px 2px 0px rgba(40,40,40,0.5);
+
+
+// Z-Indexies for different layers of the page
+// Use always an at least two digit difference since slightly lower elements
+// won't have their own constants but will be calculated (-1))
+
+// Default layer of elements
+$defaultZ: auto;
+
+// Pointers of bubbles or popup menus
+$pointerArrowZ: 9;
+
+// Absolute positioned elements that should be displayed above the content
+// (e.g. accept/deny friend)
+$contentElementZ: 19;
+
+// Popupmenus within the content
+$popupZ: 29;
+
+// Dialog screens
+$dialogZ: 49;
+
+// The mainmenu usually on the side if opened on small screen via js
+$mainMenuZ: 99;

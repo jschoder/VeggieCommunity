@@ -1,0 +1,51 @@
+#userNav {
+    form ul {
+        margin:0;
+        
+        li {
+            margin:0 0 0.4em;
+            label {
+                line-height:1em;
+                margin:0 0 0.2em; 
+            }
+        }
+    }
+    
+    .welcome {
+        @extend .clearfix;
+        
+        a  {
+            img {
+            display:inline-block;
+            width:2em;
+            vertical-align:middle;
+            border:none;
+            padding:0;
+            margin:0 0.5em 0.3em 0; 
+            }
+        }
+        
+    }
+    
+    ul {
+        margin-bottom:0.8em; 
+        li {
+            line-height:1.7em; 
+            ul {
+                margin:0 0 0 1em;
+                font-size:0.9em;
+            }
+        }
+    }
+    
+    button,
+    a.button {
+        text-align:center;
+        width:100%; 
+    }
+    
+    a:before {
+        margin-right:0.3em; 
+    }
+}
+

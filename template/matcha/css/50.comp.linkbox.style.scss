@@ -1,0 +1,15 @@
+a.linkbox {
+    color:$defaultFontColor;
+    background-color:$secondaryColor;
+    border-radius:$bigBorderRadius;
+    font-weight:normal;
+    
+    .title {
+        font-weight:bold;
+    }
+    
+    &:hover {
+        color:$primaryContrastFontColor;
+        background-color:$primaryColor;
+    }
+}

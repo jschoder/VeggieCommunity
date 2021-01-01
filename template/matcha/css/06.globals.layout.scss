@@ -1,0 +1,125 @@
+ul.list {
+    padding-left: 0;
+    margin:0 0 0.8em 1.5em;
+    list-style-type: none;
+
+    > li {
+        position: relative;
+        margin:0 0 0.3em;
+
+        &:before {
+            @extend .awesome;
+            position: absolute;
+            left:-1.3em;
+            top:0.1em;
+            font-size:0.8em;
+            color:$secondaryFontColor;
+            content:"\f10c";
+            /*content: "\f10c";*/
+        }
+    }
+    
+    &.buttons {
+        > li {
+            &:before {
+                top:0.8em;
+            }
+        }
+    }
+    
+    > li.active:before {
+        color:$complementaryColor;
+        content:"\f111";
+    }
+    &.yes > li:before {
+        color:#adc332;
+        content:"\f05d";
+    }
+    &.no > li:before {
+        color:#e78e25;
+        content:"\f05c";
+    }
+    &.news > li:before {
+        color:$complementaryColor;
+        content:"\f09e";
+    }
+    > li.question {
+        font-weight:bold;
+        
+        &:before {
+            top:-0.2em;
+            font-size:1.2em;
+            content:"\f059";
+        }
+    }
+    > li.answer {
+        margin:0 0 1em;
+        
+        &:before {
+            top:-0.2em;
+            font-size:1.2em;
+            color:$primaryColor;
+            content:"\f06a";
+        }
+    }
+}
+
+.jAgo,
+span.secondary {
+    display:inline-block;
+    color:$secondaryFontColor;
+    font-size:0.8em; 
+}
+
+jAgo.inline {
+    displine:inline;
+    color:inherit;
+    font-size:1em;
+}
+
+span.detail:before {
+    @extend .awesome;
+    color:$navFontColor;
+    content: "\f101"; 
+}
+
+.loadMoreComments {
+    max-width:$itemMaxWidth;
+    margin:0 auto 0.7em;
+    padding-left:55px;
+    
+    a,
+    a:hover,
+    a:visited {
+        display:block;
+        color:$navFontColor;
+    }
+        
+    a:before {
+        @extend .awesome;
+        content:"\f021";
+        margin-right:0.3em;
+    }
+    
+    a:hover:before {
+        animation: spin 3s infinite linear;
+    }
+}
+
+.jLoading:before {
+    @extend .awesome;
+    content:"\f021";
+    animation: spin 3s infinite linear;
+    color:$primaryColor;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}

@@ -1,0 +1,150 @@
+// Will be placed at the end of the body
+.ui-datepicker {
+    display: none;
+    padding: 0.2em 0.2em 0;
+    width: 17em;
+    
+    &.ui-widget-content {
+        background-color:$itemBackgroundColor;
+        border:1px solid $primaryColor;
+        border-radius:$smallBorderRadius;
+    }
+
+    .ui-widget-header {
+        background-color: $secondaryColor;
+        border: medium none;
+        border-radius: $smallBorderRadius $smallBorderRadius 0 0;
+        font-weight: normal;
+    }
+    
+    .ui-datepicker-title {
+        line-height: 1.8em;
+        margin: 0 2.3em;
+        text-align: center;
+    }
+   
+    select {
+        width:auto;
+    }
+    
+    .ui-icon {
+        height: 1em;
+        width: 1em;
+        background-repeat: no-repeat;
+        display: block;
+        overflow: hidden;
+        text-indent: -99999px;
+    }
+    
+    table {
+        font-size: 0.9em;
+        margin: 0 0 0.4em;
+        width: 100%;
+    }
+    
+    th {
+        color:$secondaryFontColor; 
+        padding:0.2em 0;
+    }
+    
+    td {
+        border: 0 none;
+        padding: 1px;
+        
+        span, a {
+            display: block;
+            font-weight:normal;
+            padding: 0.2em;
+            text-align: right;
+            text-decoration: none;;
+        }
+    }
+    
+    .ui-state-default, 
+    .ui-widget-content 
+    .ui-state-default, 
+    .ui-widget-header 
+    .ui-state-default {
+        background-color:$itemBackgroundColor;
+        border:1px solid $itemBorderColor;
+        color:$secondaryFontColor; 
+    }
+    
+    .ui-datepicker-unselectable span {
+        cursor:default;
+        background-color:$secondaryColor;
+    }
+    
+    .ui-state-highlight, 
+    .ui-widget-content 
+    .ui-state-highlight, 
+    .ui-widget-header 
+    .ui-state-highlight {
+        background-color:$primaryColor;
+        color:$primaryContrastFontColor; 
+    }
+}
+    
+.ui-widget-header {
+    padding: 0.2em 0;
+    position: relative;
+    background-color:$secondaryColor;
+    border-radius:$smallBorderRadius;
+
+    a {
+        color:$secondaryFontColor;
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+        cursor:pointer;
+
+        span {
+            text-indent:0;
+        }
+    }
+
+    .ui-datepicker-prev, 
+    .ui-datepicker-next {
+        cursor: pointer;
+        height: 1.8em;
+        position: absolute;
+        top: 2px;
+        width: 1.8em;
+        
+        span {
+            display: block;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px;
+            position: absolute;
+            top: 50%;
+        }
+        
+        &:hover span {
+            color:$primaryColor;
+        }
+    }
+    
+    .ui-datepicker-prev { 
+        left: 2px;
+        
+        span {
+            &:before {
+                @extend .awesome;
+                content:"\f04a"; 
+            }
+        }
+    }
+
+    .ui-datepicker-next {
+        right: 2px;
+        
+        span {
+            &:before {
+                @extend .awesome;
+                content:"\f04e"; 
+            }
+        }
+    }
+}

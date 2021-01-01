@@ -1,0 +1,32 @@
+.scrollbar {
+    overflow:auto;
+}
+
+#sidebars {
+    min-height:100%;
+}
+
+.track {
+    width:10px;
+    background:rgba(0, 0, 0, 0);
+    margin-right:2px;
+    border-radius:10px;
+    transition:background 250ms linear;
+
+    .handle {
+        width:7px;
+        right:0;
+        background:#999;
+        background:rgba(0, 0, 0, 0.4);
+        border-radius:7px;
+        transition:width 250ms; }
+
+    &:hover,
+    &.dragging {
+        background:#d9d9d9; /* Browsers without rgba support */
+        background:rgba(0, 0, 0, 0.15); 
+    
+        .handle {
+            width:10px; }
+    }
+}

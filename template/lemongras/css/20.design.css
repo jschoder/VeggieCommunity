@@ -1,0 +1,2963 @@
+/* -------------------------------------------------------
+  STYLES
+------------------------------------------------------- */
+
+/* -------------------------------------------------------
+  GENERALS
+------------------------------------------------------- */
+
+html, body {
+	background:#adbe4f;
+	color:#1d1d1d;
+	font:normal 13px/15px Arial, FreeSans, Tahoma, sans-serif; }
+
+#contentWrapper {
+	background:url('/img/lemongras/backgrounds/background.jpg') 0 0 repeat; }
+
+.fa:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome; }
+.fa-calendar:before {
+    content:"\f073"; }
+.fa-copy:before {
+  content: "\f0c5\00a0"; }
+.fa-delete:before {
+  content: "\f00d\00a0"; }
+.fa-time:before {
+    content:"\f017"; }
+.fa-thumbs-o-up:before {
+  content: "\f087\00a0"; }
+.fa-thumbs-o-down:before {
+  content: "\f088\00a0"; }
+.fa-pencil:before {
+    font-size:12px;
+  content: "\f040\00a0"; }
+.fa-user-plus:before {
+  content: "\f234\00a0"; }
+.fa-participate-sure:before {
+  content: "\f0c0\00a0"; }
+.fa-participate-likely:before {
+  content: "\f007\00a0"; }
+.fa-participate-unlikely:before {
+  content: "\f183\00a0"; }
+.fa-participate-not:before {
+  content: "\f192\00a0"; }
+.fa-pm:before {
+  content:"\f0e0"; }
+.fa-bomb:before {
+  content:"\f1e2"; }
+.fa-trash:before {
+  content:"\f1f8"; }
+
+.fa-bookmark:before {
+  content: "\f02e\00a0"; }
+
+@font-face {
+    font-family:'CABNDWebBold';
+    src:url('/fonts/CABNDWebBold.eot');
+    src:local('CA BND Web'), 
+        local('CABNDWebBold'), 
+        url('/fonts/CABNDWebBold.woff') format('woff'), 
+        url('/fonts/CABNDWebBold.ttf') format('truetype'), 
+        url('/fonts/CABNDWebBold.svg#CABNDWebBold') format('svg'); }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/fonts/fontawesome-webfont.eot?v=4.4.0');
+  src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), 
+       url('/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), 
+       url('/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), 
+       url('/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3, h4 {
+	font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+h1 {
+	font-size:25px;
+	line-height:30px;
+	margin-bottom:15px;
+	padding-bottom:5px;
+	background:url('/img/lemongras/lines/1px-line-long.png') 0 100% no-repeat; }
+
+h2 {
+	font-size:22px;
+	line-height:22px; }
+
+h3 {
+	font-size:18px;
+	line-height:20px; }
+
+h4 {
+	font-size:16px;
+	line-height:20px; }
+
+a,
+a:link {
+	color:#a0b42f;
+	text-decoration:none; }
+
+	a:hover,
+	a:focus {
+		color:#b3ca34; }
+
+	a:active,
+	a:visited {
+		color:#455f04; }
+
+a[target="_blank"] {
+	padding-right:10px;
+	background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -3261px no-repeat; }
+
+img {
+	padding:4px;
+	border:1px solid #cfdae5; }
+
+	img:hover {
+		border:1px solid #b3ca35; }
+        
+img.loading, img.loading:hover {
+	padding:0px;
+	border-style:none; }
+
+form {
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;	}
+
+input, textarea {
+    box-sizing: border-box;
+    font:normal 13px/15px Arial, FreeSans, Tahoma, sans-serif; }
+
+input[type="text"],
+input[type="password"],
+input.date,
+input.time,
+select,
+textarea {
+	padding:5px;
+	border:1px solid #cfdae5; }
+
+.datepicker,
+.clockpicker {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-right:12px; }
+.datepicker span.icon,
+.clockpicker span.icon {
+    display:inline-block;
+    background-color:#c9d5db;
+    border:1px solid #cfdae5;
+    margin-right: -1px;
+    vertical-align:top;
+    width:25px;
+    height:25px; }
+.datepicker span.icon span {
+    padding:4px 0 0 4px; }
+.clockpicker span.icon span {
+    padding:4px 0 0 5px; }
+.datepicker span.icon span,
+.clockpicker span.icon span {
+    color:#6e7478;
+    font-size:16px; }
+.datepicker input {
+    width:70px; }
+.clockpicker input {
+    width:80px; }
+
+button,
+.button,
+input[type="submit"],
+input[type="reset"] {
+	cursor:pointer;
+	font-size:18px !important;
+	line-height:20px;
+	font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif !important;
+	letter-spacing:1px;
+	padding:3px 15px 5px;
+	border-radius:6px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border: 1px solid transparent; }
+
+
+form.modular dt.hp,
+form.modular dd.hp {
+    display:none;
+}
+
+button,
+.button,
+button[type="submit"],
+input[type="submit"] {
+	color:#fff !important;
+	text-shadow:1px 1px 1px #455f04;
+	background:#c2d63f; }
+
+	button:hover,
+	.button:hover,
+	button[type="submit"]:hover,
+	input[type="submit"]:hover {
+		background:#a0b42f; }
+
+button[type="reset"],
+input[type="reset"],
+button.secondary {
+	color:#fff;
+	text-shadow:1px 1px 1px #607d80;
+	background:#cfdae5;	}
+
+	button[type="reset"]:hover,
+	input[type="reset"]:hover {
+		background:#c4d1df;}
+
+label.invalid {
+	color:#990000;
+	font-weight:bold; }
+
+
+
+/* -------------------------------------------------------
+  Slideboxes
+------------------------------------------------------- */
+
+.openslide,
+.hiddenslide {
+	display:block;
+	cursor:pointer;
+	padding-right:22px; }
+
+.hiddenslide {
+	color:#1d1d1d;
+	background:url('/img/lemongras/icons/slidehidden.png') right center no-repeat; }
+
+	.hiddenslide:hover {
+		background:url('/img/lemongras/icons/slidehiddenHover.png') right center no-repeat; }
+
+.openslide {
+	color:#1d1d1d;
+	background:url('/img/lemongras/icons/slideopen.png') right center no-repeat; }
+
+	.openslide:hover {
+		background:url('/img/lemongras/icons/slideopenHover.png') right center no-repeat; }
+
+
+/* ----------------- 100% width ----------------- */
+
+.slideBox {
+	background:url('/img/lemongras/lines/1px-line-long.png') 0 100% no-repeat; }
+
+	.slideBox img {
+		border:none;
+		padding:0; }
+
+	.slideBox h2 {
+		padding-left:5px;
+		height:40px;
+		line-height:40px;}
+
+	.slideBox h2 {
+            border-bottom:1px dotted #c9d4da; }
+
+
+/* -------------------------------------------------------
+  Pager
+------------------------------------------------------- */
+
+#pager {
+	margin:15px 0; }
+
+	#pager div.pages {
+		float:left; }
+
+	#pager div.pagination {
+		float:right; }
+
+.pagination {
+	margin-top:7px; }
+
+	.pagination img {
+		border:0;
+		padding:0 5px; }
+
+
+/* -------------------------------------------------------
+  HEADER
+------------------------------------------------------- */
+
+#headerWrapper {
+	background:url('/img/lemongras/backgrounds/header.jpg') 0 0 repeat-x; }
+
+#header {
+	width:990px;
+	height:115px;
+	margin:0 auto; }
+
+	#header div {
+		float:left; }
+
+/* -------------------------------------------------------
+  	Logo
+------------------------------------------------------- */
+
+#header #logo {
+	float:left;
+	margin-top:35px; }
+
+	#header #logo img {
+		border:none;
+		padding:0; }
+
+/* -------------------------------------------------------
+  	Top navi
+------------------------------------------------------- */
+
+#notify {
+	float:right;
+	margin-top:35px;}
+
+	#notify li {
+            float:left;
+            margin-left:8px; }
+
+	#notify li.group {
+            padding-left:8px;
+            border-left:1px solid #cfdae5; }
+
+        #notify li:first-child {
+            margin-left:0;
+            border:none; }
+
+	#notify li.submenu {
+            position:relative;
+            cursor:pointer;
+            padding-right:12px;
+            background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -3694px no-repeat; }
+
+        #notify li.submenu:hover {
+            background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -3664px no-repeat; }
+
+        #notify li.submenu .menu {
+            position:absolute;
+            background:url('/img/lemongras/backgrounds/background.jpg') 0 0 repeat;
+            border:1px solid #ACBBC3;
+            box-shadow:3px 3px 3px 3px #ccc;
+            top:15px;
+            right:-10px;
+            width:228px;
+            z-index:999;
+            visibility:hidden; }
+
+        #notify li.submenu:hover .menu {
+            visibility:visible; }
+
+            #notify li.submenu .menu li {
+                float:none;
+                width:100%;
+                margin:0 0 2px 4px;
+                padding:0px;
+                border:none; }
+
+            #notify li.submenu .menu li.new {
+                margin-left:0px;
+                border-left:4px #a0b42f solid; }
+
+    #notify li a.icons {
+        position:relative;
+        color:#999;}
+    
+    #notify li a.icons:before {
+        display:inline-block;
+        width:16px;
+        height:16px;
+        font: 16px/1 FontAwesome; }
+    
+        #notify li a.icons:hover {
+            color:#b3ca34; }
+
+        #notify li a.pm:before {
+            content:"\f0e0"; }
+
+        #notify li a.friends:before {
+            content:"\f0c0"; }
+
+        #notify li a.groups:before {
+            content:"\f0ac"; }
+
+        #notify li a.profile:before {
+            content:"\f013"; }
+
+        #notify li a.plus:before {
+            content:"\f06c"; }
+
+        #notify li a.help:before {
+            content:"\f0fa"; }
+
+		#notify li.language a {
+			display:inline-block;
+			width:15px;
+			height:15px;
+			text-indent:-9999px;
+			margin-left:5px; }
+
+			#notify li.language a.de {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3322px no-repeat; }
+
+				#notify li.language a.de:hover,
+				#notify li.language a.de.active {
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3306px no-repeat; }
+
+			#notify li.language a.en {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -3322px no-repeat; }
+
+				#notify li.language a.en:hover,
+				#notify li.language a.en.active {
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -3306px no-repeat; }
+
+	#notify li a {
+            color:#999; }
+
+		#notify li a:hover {
+                    color:#b3ca34; }
+
+	#notify li a .count,
+	#notify li.submenu .count {
+            text-indent:0;
+            background:#e78e25;
+            position: absolute;
+            top: -12px;
+            right: -8px;
+            min-width:13px;
+            height: 13px;
+            vertical-align:middle;
+            color:#ffffff;
+            border-radius: 3px;
+            padding: 1px 2px 2px 2px;
+            text-align: center;
+            font-family: "CABNDWebBold",Arial,FreeSans,Tahoma,sans-serif;
+            font-size: 9px; }
+
+	#notify li.submenu .menu li.failed {
+            margin:4px;
+            font-style:italic; }
+
+	#notify ul.groupNotifications li.thread a {
+            display:block;
+            clear:both;
+            width:220px;
+            font-size:11px;
+            padding:2px 0 2px 3px; }
+
+        #notify ul.groupNotifications li.thread a:after,
+        #notify ul.groupNotifications li.thread a::after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+
+        #notify ul.groupNotifications li.thread a img {
+                border:none;
+                float:left; }
+
+            #notify ul.groupNotifications li.thread a p {
+                color:#1d1d1d;
+                margin:2px 0 0 3px;
+                float:left;
+                width:152px; }
+
+            #notify ul.groupNotifications li.thread a span.jAgo {
+                color:#999;
+                margin-left:3px; }
+
+	#notify ul.groupNotifications li.thread a:hover {
+            background-color:#a0b42f; }
+
+            #notify ul.groupNotifications li.thread a:hover p,
+            #notify ul.groupNotifications li.thread a:hover span.jAgo {
+                color:#FFF; }
+
+        #notify li.submenu ul.profile {
+            margin:8px;}
+
+            #notify li.submenu ul.profile li {
+                margin:7px 0px; }
+
+/* -------------------------------------------------------
+  	Ad
+------------------------------------------------------- */
+
+#header .ad {
+	margin:30px 0 0 80px;
+	padding-left:9px; }
+
+	#header .ad.de {
+		background:url('/img/lemongras/icons/ad.png') 0 -115px no-repeat; }
+
+	#header .ad.en {
+		background:url('/img/lemongras/icons/ad.png') 0 0 no-repeat; }
+
+
+/* -------------------------------------------------------
+  MAINMENU
+------------------------------------------------------- */
+
+#navWrapper {
+	height:45px;
+	background:url('/img/lemongras/backgrounds/nav.png') 0 0 repeat-x; }
+
+#navigation {
+	width:990px;
+	margin:0 auto;
+	background:url('/img/lemongras/backgrounds/nav-sprite.png') 0 0 no-repeat; }
+
+	#navigation ul,
+	#navigation ul li,
+	#navigation #mainsearch {
+		float:left; }
+
+	#navigation ul li {
+		width:151px;
+		text-align:center; }
+
+		#navigation ul li a {
+			font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif;
+			font-size:17px;
+			line-height:45px;
+			letter-spacing:1px;
+			text-transform:uppercase;
+			color:#fff;
+			display:block; }
+
+			#navigation ul li:hover,
+			#navigation ul li a:focus {
+				text-decoration:none;
+				background:url('/img/lemongras/backgrounds/nav-sprite.png') 0 -46px no-repeat; }
+
+			#navigation ul li a:active,
+			#navigation ul li.active {
+				text-decoration:none;
+				background:url('/img/lemongras/backgrounds/nav-sprite.png') 0 -90px no-repeat; }
+
+#mainsearch {
+	margin:8px 0 0 116px; }
+
+#mainsearch form {
+	position:relative; }
+
+	#mainsearch form input.searchtext {
+		padding:5px;
+		height:29px;
+		width:267px;
+		border:1px solid #7e8e24; }
+
+	#mainsearch form button {
+		position:absolute;
+		top:5px;
+		right:7px;
+		height:18px;
+		width:18px;
+		display:block;
+		text-indent:-9999px;
+		border:none;
+		padding:0;
+		background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -632px no-repeat; }
+
+		#mainsearch form button:hover {
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -671px no-repeat; }
+
+
+/* -------------------------------------------------------
+  	SIDEBAR
+------------------------------------------------------- */
+
+#sidebar {
+	float:left;
+	width:255px;
+	padding:20px 0 0 15px;
+	min-height:700px;
+	background:url('/img/lemongras/backgrounds/sidebar.png') 0 0 no-repeat; }
+
+	#sidebar li {
+		background:url('/img/lemongras/lines/1px-line-long.png') -225px 100% no-repeat; }
+
+		#sidebar li ul li {
+			background:transparent; }
+
+		#sidebar li a.normal,
+		#sidebar li a.hiddenslide,
+		#sidebar li a.openslide {
+			display:block;
+			padding:15px 0;
+			font-size:18px;
+			font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+		#sidebar li a.hiddenslide {
+			color:#1d1d1d;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -2206px no-repeat; }
+
+			#sidebar li a.hiddenslide:hover,
+			#sidebar li a.hiddenslide:focus {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -2266px no-repeat; }
+
+		#sidebar li a.openslide {
+			color:#1d1d1d;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -2086px no-repeat; }
+
+			#sidebar li a.openslide:hover,
+			#sidebar li a.openslide:focus {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -2146px no-repeat; }
+
+
+/* -------------------------------------------------------
+  	Usermenu
+------------------------------------------------------- */
+
+#usermenu {
+	padding:0; }
+
+	#usermenu h2 {
+		padding-bottom:10px; }
+
+	#usermenu div.image {
+		float:left;
+		position:relative;
+		height:110px;
+		width:110px;
+		margin-bottom:15px; }
+
+		#usermenu .image .edit {
+			position:absolute;
+			top:5px;
+			left:5px;
+			opacity:.7;
+			filter: alpha(opacity=70);
+			background:#000 url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 5px -303px no-repeat;
+			color:#fff;
+			font-size:.8em;
+			font-family:Verdana, Geneva, sans-serif;
+			padding:3px 5px 3px 23px;
+			visibility:hidden; }
+
+			#usermenu .image:hover .edit {
+				visibility:visible; }
+
+	#usermenu .links {
+		float:left;
+		width:130px;
+		margin-left:15px;
+                margin-bottom:10px; }
+
+		#usermenu .links .profileActions {
+			height:135px; }
+
+		#usermenu .links a {
+			display:block;
+			color:#999;
+			padding-left:18px;
+			margin-top:5px; }
+
+			#usermenu .links a:hover,
+			#usermenu .links a:focus {
+				color:#b3ca34; }
+
+			#usermenu .links a.view {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -207px no-repeat; }
+
+				#usermenu .links a.view:hover,
+				#usermenu .links a.view:focus {
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -239px no-repeat; }
+
+			#usermenu .links a.edit {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -271px no-repeat; }
+
+				#usermenu .links a.edit:hover,
+				#usermenu .links a.edit:focus {
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -337px no-repeat; }
+
+			#usermenu .links a.settings {
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -369px no-repeat; }
+
+				#usermenu .links a.settings:hover,
+				#usermenu .links a.settings:focus {
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -403px no-repeat; }
+
+			#usermenu .links a.logout {
+				font-weight:bold;
+				color:#1d1d1d;
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -438px no-repeat; }
+
+				#usermenu .links a.logout:hover,
+				#usermenu .links a.logout:focus {
+					color:#b3ca34;
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -470px no-repeat; }
+
+
+/* -------------------------------------------------------
+  	Userlisting
+------------------------------------------------------- */
+
+#sidebar .userlisting {
+	padding-bottom:15px; }
+
+	#sidebar .userlisting li {
+		float:left;
+		position:relative;
+		margin:0 7px 7px 0; }
+
+		#sidebar .userlisting li:nth-child(3n),
+		#sidebar .userlisting li.break {
+			margin:0 0 7px 0; }
+
+		#sidebar .userlisting a.image {
+			position:relative;
+			display:block; }
+
+			#sidebar .userlisting a.image span {
+				position:absolute;
+				top:0;
+				left:0; }
+
+		#sidebar .userlisting .link {
+			position:absolute;
+			bottom:5px;
+			left:5px;
+			width:60px;
+			opacity:.7;
+			filter: alpha(opacity=70);
+			background:#fff;
+			color:#000;
+			font-size:.7em;
+			line-height:1.2em;
+			font-family:Verdana, Geneva, sans-serif;
+			padding:3px 5px;
+			overflow:hidden; }
+
+
+
+/* -------------------------------------------------------
+  	Login
+------------------------------------------------------- */
+
+#sideLogin {
+	padding:10px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border:1px solid transparent;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+	#sideLogin form {
+		margin:15px 0 10px; }
+
+		#sideLogin form label {
+			display:block;
+			font-weight:bold;
+			padding-bottom:3px; }
+
+		#sideLogin form input[type="text"],
+		#sideLogin form input[type="password"] {
+			width:220px; }
+
+		#sideLogin form li {
+			background:transparent;
+			margin-bottom:5px; }
+
+			#sideLogin form li p {
+				float:left;
+				padding-bottom:5px; }
+
+				#sideLogin form li p label {
+					font-weight:normal;
+					font-size:12px;
+					color:#999;
+					display:inline; }
+
+			#sideLogin form li button {
+				float:right; }
+
+	#sideLogin .lostPW {
+		display:block;
+		padding-bottom:5px; }
+
+
+/* -------------------------------------------------------
+  	Ad
+------------------------------------------------------- */
+
+#sidebar .ad {
+	padding:10px 0;
+	text-align:center;
+	background:url('/img/lemongras/lines/1px-line-long.png') -225px 100% no-repeat; }
+
+	#sidebar .ad p {
+		margin:0 0 10px;
+		text-align:right;
+		color:#999;
+		font-size:11px; }
+
+		#sidebar .ad p a {
+			border-left:1px solid #a0b42f;
+			padding-left:3px; }
+
+/* -------------------------------------------------------
+  	Poll
+------------------------------------------------------- */
+
+#sidebar .poll {
+	margin:15px 0 0;
+	padding:0 0 15px 0;
+	background:url('/img/lemongras/lines/1px-line-long.png') -225px 100% no-repeat; }
+
+	#sidebar .poll h3 {
+		margin:5px 0 10px; }
+
+	#sidebar .poll ul li {
+		background:transparent;
+		padding:2px 0; }
+
+	#sidebar .poll p {
+		color:#999; }
+
+	#sidebar .poll .infoText {
+		color:#999;
+		font-size:11px; }
+
+#sidebar .poll .buttons {
+	text-align:right;
+	margin:10px 0; }
+
+	#sidebar .poll .buttons a {
+		float:left; }
+
+
+/* ----------------- show poll ----------------- */
+
+#sidebar .poll form input[type="radio"],
+#sidebar .poll form label {
+	display:inline-block;
+	vertical-align:top; }
+
+#sidebar .poll form label {
+	width:225px;
+	padding:3px 0 0 3px; }
+
+	#sidebar .poll form .buttons a {
+		margin-top:10px; }
+
+/* ----------------- poll results ----------------- */
+
+#sidebar .pollResults {
+	padding-bottom:10px; }
+
+	#sidebar .pollResults p {
+		margin:10px 0; }
+
+	#sidebar .pollResults .resultBarBox {
+		background-color:#f1f1f1;
+		border:1px solid #d1d1d1;
+		position:relative;
+		margin:5px 0 10px; }
+
+		#sidebar .pollResults .resultBarBox .resultPer {
+			position:absolute;
+			top:2px;
+			left:3px;
+			font-weight:bold;
+			font-size:.9em; }
+
+		#sidebar .pollResults .resultBarBox .resultVotes {
+			position:absolute;
+			top:1px;
+			right:3px;
+			color:#999;
+			font-size:11px; }
+
+		#sidebar .pollResults .resultBarBox .resultBar {
+			background-color:#a0b42f;
+			font-size:2px;
+			height:18px; }
+
+/* -------------------------------------------------------
+  CONTENT
+------------------------------------------------------- */
+
+#wrapper {
+	background:url('/img/lemongras/backgrounds/background.jpg') 0 0 repeat; }
+
+#contentWrapper {
+	width:990px;
+	margin:0 auto; }
+
+#siteContent {
+	float:left;
+	width:705px;
+	padding:20px 15px 0 0; }
+
+	#siteContent.index {
+		width:100%; }
+
+#content {
+	width:705px; }
+
+
+
+/* -------------------------------------------------------
+  Index
+------------------------------------------------------- */
+
+#wideContent #content {
+	width:990px;
+	padding-top:20px; }
+
+
+/* ----------------- login ----------------- */
+
+#start #login {
+	width:970px;
+	height:90px;
+	padding:10px;
+	margin-bottom:30px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+	#start #login h2,
+	#start #login form,
+	#start #login form ul li {
+		float:left; }
+
+	#start #login h2 {
+		font-size:28px;
+		line-height:30px;
+		width:100px;
+		margin:16px 0 0 13px;
+		background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 65px -2792px no-repeat; }
+
+	#start #login form {	 }
+
+		#start #login form label {
+			display:block;
+			font-weight:bold;
+			padding-bottom:5px; }
+
+		#start #login form input[type="text"],
+		#start #login form input[type="password"]{
+			display:block;
+			width:315px;
+			height:30px;
+			padding:5px;
+			margin:0 20px 5px 0;
+			border:1px solid #aaa; }
+
+		#start #login .signUp,
+		#start #login .lostPW {
+			padding-left:12px; }
+
+		#start #login .signUp {
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2728px no-repeat; }
+
+		#start #login .lostPW {
+			color:#666;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2697px no-repeat; }
+
+			#start #login .lostPW:hover {
+				color:#b3ca34;
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1982px no-repeat; }
+
+		#start #login form .autoLogin label {
+			display:inline;
+			padding:0;
+			font-weight:normal;
+			font-size:.9em;
+			color:#666; }
+
+		#start #login button[type="submit"] {
+			margin:20px 0 5px;
+			width:150px; }
+
+
+/* ----------------- content ----------------- */
+
+#start .content {
+	height:440px;
+	padding:0 0 0 0;
+	background:url('/img/lemongras/pc-%LOCALE%.png') 0 0 no-repeat; }
+
+h1.start {
+	font-size:35px;
+	line-height:35px;
+	background:transparent; }
+
+#welcometext {
+	width:445px; }
+
+	#welcometext p {
+		font-size:1.2em;
+		line-height:1.3em;
+                margin:0 0 1em;  }
+
+#start .content .button {
+    display:inline-block;
+    text-align:center; }
+
+
+/* -------------------------------------------------------
+  Userprofile
+------------------------------------------------------- */
+
+/* ----------------- userBasics ----------------- */
+
+ul.userinfo {
+    max-width:400px; }
+
+.userActions,
+.eventActions {
+  margin-bottom: 10px;
+}
+
+  .userActions span.favoriteadded,
+  .userActions span.friendadded,
+  .userActions a {
+    padding:3px 12px 3px 18px;
+    color: #999999;
+  }
+
+  .userActions span.favoriteadded {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') -1px -776px no-repeat; }
+
+  .userActions span.friendadded {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -875px no-repeat; }
+
+  .userActions span {
+    cursor: not-allowed;
+  }
+  .userActions a:hover {
+    color: #B3CA34;
+  }
+  .userActions a.pm {
+     background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1471px no-repeat; }
+
+    .userActions a.pm:hover,
+    .userActions a.pm:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1529px no-repeat; }
+
+  .userActions a.addFavorite {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -777px no-repeat; }
+
+    .userActions a.addFavorite:hover,
+    .userActions a.addFavorite:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -842px no-repeat; }
+
+  .userActions a.deleteFavorite {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -777px no-repeat; }
+
+    .userActions a.deleteFavorite:hover,
+    .userActions a.deleteFavorite:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -842px no-repeat; }
+
+  .userActions a.addFriend,
+  .userActions a.confirmFriend,
+  .userActions a.denyFriend {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -876px no-repeat; }
+
+    .userActions a.addFriend:hover,
+    .userActions a.addFriend:focus,
+    .userActions a.confirmFriend:hover,
+    .userActions a.confirmFriend:focus,
+    .userActions a.denyFriend:hover,
+    .userActions a.denyFriend:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -946px no-repeat; }
+
+    .userActions a.cancelFriend,
+    .userActions a.deleteFriend {
+        background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1381px no-repeat; }
+
+        .userActions a.cancelFriend:hover,
+        .userActions a.cancelFriend:focus,
+        .userActions a.deleteFriend:hover,
+        .userActions a.deleteFriend:focus {
+            background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1441px no-repeat; }
+
+  .userActions a.block {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1084px no-repeat; }
+
+    .userActions a.block:hover,
+    .userActions a.block:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1154px no-repeat; }
+
+  .userActions a.flag {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -980px no-repeat; }
+
+    .userActions a.flag:hover,
+    .userActions a.flag:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1050px no-repeat; }
+
+  .userActions a.tellafriend,
+  .userActions .context .context-menu ul li a.tellafriend {
+    padding-left:24px;
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 4px -3356px no-repeat; }
+
+    .userActions a.tellafriend:hover,
+    .userActions a.tellafriend:focus {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 4px -3391px no-repeat; }
+
+  .userActions .context {
+    position:relative;
+    display:inline-block;
+    height:16px;
+    width:32px; }
+  .userActions .context .show-context {
+    display:inline-block;
+    text-indent:-9999px;
+    height:16px;
+    width:32px;
+    padding:0;
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -4173px no-repeat; }
+  .userActions .context .context-menu {
+      left:0px; }
+
+
+    .userActions .context:hover .show-context {
+      background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -4143px no-repeat; }
+
+
+    #subnav a[rel="profileTabMod"] {
+        width:60px; }
+
+#userBasics,
+#groupBasics,
+#eventBasics {
+	width:710px;
+	margin-bottom:5px; }
+
+#basics {
+	float:left; }
+
+	#basics img,
+	#basics div {
+		float:left; }
+
+	#basics img {
+		margin:0 7px 0 0; }
+
+		#basics div div {
+			float:none;
+			margin-bottom:10px; }
+
+			#basics div div p,
+			#basics div div strong {
+				display:inline-block; }
+
+			#basics div div strong {
+				font-size:25px;
+				line-height:27px;
+				padding:0 0 0 3px;
+				font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+			#basics div div p {
+				cursor:pointer;
+				position:relative;
+				color:#999;
+				padding-right:7px;
+				margin-left:10px;
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -1761px no-repeat; }
+
+				#basics div div p:hover,
+				#basics div div p:focus {
+					color:#b3ca34;
+					background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 100% -1791px no-repeat; }
+
+	#basics div ul li {
+		float:left;
+		padding:0 5px;
+		border-left:1px solid #cfdae5; }
+
+		#basics div ul li:first-child {
+			border-left:none; }
+
+		#basics div ul li.online,
+		#basics div ul li.offline {
+			padding-left:20px; }
+
+		#basics div ul li.online {
+			color:#a0b42f;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 4px -2934px no-repeat; }
+
+		#basics div ul li.offline {
+			color:#999;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 4px -2954px no-repeat; }
+
+#userBasics dl {
+	float:right;
+	width:240px;
+	color:#aaa;
+	font-size:.9em;
+	margin-top:10px; }
+
+	#userBasics dt,
+	#userBasics dd {
+		display:inline-block; }
+
+	#userBasics dt {
+		width:100px; }
+
+	#userBasics dd {
+		width:120px; }
+
+
+/* ----------------- subnav ----------------- */
+
+#subnav {
+	width:705px;
+	height:31px;
+	margin-bottom:15px;
+	background:url('/img/lemongras/backgrounds/subnav.png') 0 -46px repeat-x; }
+
+	#subnav a {
+		float:left;
+		width:119px;
+		height:27px;
+		text-align:center;
+		color:#1d1d1d;
+		padding:4px 0 0 0;
+		border-right:1px solid #f7f7f7;
+                text-overflow:ellipsis;
+                overflow:hidden;
+		white-space: nowrap;
+		background:url('/img/lemongras/backgrounds/subnav.png') center -46px repeat-x; }
+
+		#subnav a:hover {
+			color:#fff;
+			background:url('/img/lemongras/backgrounds/subnav.png') center -90px no-repeat; }
+
+		#subnav a.active {
+			color:#fff;
+			background:url('/img/lemongras/backgrounds/subnav.png') center 0 no-repeat; }
+
+/* ----------------- news ----------------- */
+
+.newsitem {
+	position:relative;
+	padding:15px 0 0;
+	margin-bottom:15px;
+	background:#ecf0f4 url('/img/lemongras/boxes/box705.png') 0 0 no-repeat; }
+
+	.newsitem .close {
+		position:absolute;
+		top:1px;
+		right:1px;
+		padding:2px 7px 3px 20px;
+		color:#999;
+		background:#cfdae5 url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 6px -1381px no-repeat; }
+
+	.newsitem h3 {
+		padding:0 100px 0 15px; }
+
+	.newsitem p {
+		padding:10px 15px 15px;
+		background:url('/img/lemongras/lines/1px-line-long.png') 0 100% no-repeat; }
+
+/* ----------------- activity list ----------------- */
+
+#activities {
+	float:left;
+	width:460px;
+	padding-right:10px;
+	overflow:hidden;
+	background:url('/img/lemongras/lines/1px-line-vertical.png') 100% 0 repeat-y; }
+
+/* ----------------- activity list ----------------- */
+        
+#contentSide {
+	float:left;
+	width:225px;
+	padding-left:10px; }
+
+	#contentSide h3 {
+		margin-bottom:10px; }
+
+	#contentSide h4 {
+		margin-bottom:6px; }
+
+
+/* ----------------- last visitors ----------------- */
+
+
+#visitorsContent {
+	padding-bottom:5px;
+	margin-bottom:15px;
+	background:url("/img/lemongras/lines/1px-line-long.png") -225px 100% no-repeat; }
+
+#visitorsContent .userlisting li {
+	float:left;
+	margin:0 7px 7px 0;
+	position:relative; }
+
+	#visitorsContent .userlisting li:nth-child(3n),
+	#visitorsContent .userlisting li.break {
+		margin:0 0 7px 0; }
+
+	#visitorsContent .userlisting a.image {
+		display:block;
+		position:relative; }
+
+		#visitorsContent .userlisting a.image span {
+			position:absolute;
+			top:5px;
+			left:5px;
+			display:block;
+			height:35px;
+			width:35px;
+			text-indent:-9999px;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2979px no-repeat; }
+
+	#visitorsContent .userlisting .link {
+		position:absolute;
+		bottom:5px;
+		left:5px;
+		width:50px;
+		opacity:.7;
+		filter: alpha(opacity=70);
+		background:#fff;
+		color:#000;
+		font-size:.7em;
+		line-height:1.2em;
+		font-family:Verdana, Geneva, sans-serif;
+		padding:3px 5px;
+		overflow:hidden; }
+
+	#visitorsContent p {
+		text-align:right;
+		margin:7px 0; }
+
+		#visitorsContent p a {
+			color:#999;
+			padding-left:16px;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -502px no-repeat; }
+
+			#visitorsContent p a:hover,
+			#visitorsContent p a:focus {
+				color:#b3ca34;
+				background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -534px no-repeat; }
+
+
+/* ----------------- saved searches ----------------- */
+
+#searches {
+	float:left;
+	width:225px; }
+
+	#searches .result {
+		padding-bottom:5px;
+		margin-bottom:10px;
+		background:url('/img/lemongras/lines/1px-line-long.png') -225px 100% no-repeat; }
+
+		#searches .result ul.infoboxlisting li {
+			padding:7px 0;
+			background:url('/img/lemongras/lines/break-sprite.png') -1250px 100% no-repeat; }
+
+			#searches .result ul.infoboxlisting li img,
+			#searches .result ul.infoboxlisting li div {
+				float:left; }
+
+			#searches .result ul.infoboxlisting li div a {
+				font-size:16px;
+				font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+			#searches .result ul.infoboxlisting img {
+				margin-right:5px; }
+
+			#searches .result ul.infoboxlisting li p {
+				width:173px;
+				text-align:left;
+				margin:3px 0 0 0;
+				font-size:11px;
+				color:#333;
+				overflow:hidden; }
+
+				#searches .result ul.infoboxlisting li p span {
+					border-left:1px solid #aaa;
+					padding:0 5px 0 5px; }
+
+					#searches .result ul.infoboxlisting li p span:first-child {
+						border-left:none;
+						padding:0 5px 0 0; }
+
+            #searches .result .userlisting li {
+                float:left;
+                margin:0 7px 7px 0;
+                position:relative; }
+
+                #searches .result .userlisting li:nth-child(3n),
+                #searches .result .userlisting li.break {
+                    margin:0 0 7px 0; }
+
+                #searches .result .userlisting a.image {
+                    display:block;
+                    position:relative; }
+
+                    #searches .result .userlisting a.image span {
+                        position:absolute;
+                        top:5px;
+                        left:5px;
+                        display:block;
+                        height:35px;
+                        width:35px;
+                        text-indent:-9999px;
+                        background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2979px no-repeat; }
+
+                #searches .result .userlisting .link {
+                    position:absolute;
+                    bottom:5px;
+                    left:5px;
+                    width:50px;
+                    opacity:.7;
+                    filter: alpha(opacity=70);
+                    background:#fff;
+                    color:#000;
+                    font-size:.7em;
+                    line-height:1.2em;
+                    font-family:Verdana, Geneva, sans-serif;
+                    padding:3px 5px;
+                    overflow:hidden; }
+
+                #searches .result .textlisting li {
+                    padding-bottom: 3px; }
+
+			#searches p {
+				text-align:right;
+				margin:7px 0; }
+
+				#searches p a {
+						padding-left:16px; }
+
+					#searches p a.details {
+						margin-right:10px;
+						background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -534px no-repeat; }
+
+					#searches p a.delete {
+						background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 3px -1443px no-repeat; }
+
+
+/* ----------------- profile contents ----------------- */
+
+.tabInfoContent div {
+		background:url('/img/lemongras/lines/1px-line-long.png') 0 100% no-repeat; }
+
+	.tabInfoContent div div div {
+		background:transparent; }
+
+.slideBox .quicklogin {
+	padding:10px 20px 10px; }
+
+.slideBox .questionaire {
+	padding:10px 20px 0; }
+
+	.slideBox .questionaire h3 {
+		padding-bottom:10px; }
+
+	.slideBox .questionaire div {
+		padding-bottom:30px; }
+
+#info {
+	padding:10px 20px 20px; }
+
+	#info dt,
+	#info dd {
+		float:left;
+		margin-bottom:10px; }
+
+	#info dt {
+                clear:left;
+		font-weight:bold;
+		width:28%; }
+
+	#info dd {
+		width:72%; }
+
+.hobbies {
+	padding:10px 20px 0; }
+
+
+.tabInfoContent .hobbies div {
+	padding:10px 0 10px; }
+
+	.tabInfoContent .hobbies div div {
+		padding:0; }
+
+	.tabInfoContent .hobbies ul {
+		padding:0 0 5px; }
+
+#gmapper_map {
+	margin:15px 0 30px; }
+
+#faveLinks dt,
+#faveLinks dd {
+	float:left;
+	margin-bottom:10px; }
+
+#faveLinks dt {
+	width:20%; }
+
+#faveLinks dd {
+	width:80%; }
+
+
+/* ----------------- photo album ----------------- */
+
+.album td {
+	height:180px;
+	width:180px;
+	vertical-align:middle;
+	text-align:center; }
+
+.album a {
+	display:inline-block;
+	width:auto;
+	height:auto;
+	position:relative; }
+
+	.album a span {
+		position:absolute;
+		bottom:5px;
+		right:5px;
+		opacity:.7;
+		filter: alpha(opacity=70);
+		background:#000 url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 3px -707px no-repeat;
+		color:#fff;
+		font-size:.8em;
+		font-family:Verdana, Geneva, sans-serif;
+		padding:3px 5px 3px 23px;
+		visibility:hidden; }
+
+		.album a:hover span {
+			visibility:visible; }
+
+.album img {
+	padding:4px;
+	border:1px solid #cfdae5;
+	background:#fff; }
+
+	.album img:hover {
+		border:1px solid #b3ca35; }
+
+
+/* ----------------- message ----------------- */
+
+#compose {
+	padding:10px 20px 30px; }
+
+	#compose form {
+		margin:10px 0 0 0;
+		padding:10px 20px;
+		background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+		#compose form input[type="text"] {
+			width:539px; }
+
+		#compose form textarea {
+			width:614px; }
+
+	#compose ul li {
+		padding:5px 0; }
+
+		#compose ul li div {
+			float:left; }
+
+		#compose ul li span {
+			width:70px;
+			display:inline-block;
+			font-weight:bold; }
+
+		#compose ul li.buttons {
+			text-align:right; }
+
+
+/* ----------------- friends ----------------- */
+
+#tabfriendsContent img {
+	padding:4px;
+	border:1px solid #cfdae5; }
+
+	#tabfriendsContent img:hover {
+		border:1px solid #b3ca35; }
+
+
+/* -------------------------------------------------------
+  Userlists
+------------------------------------------------------- */
+
+/* ----------------- list ----------------- */
+
+#userList,
+#friendInbox {
+	margin-top:10px; }
+
+	#friendInbox li.profileBox,
+	#userList li.profileBox,
+	#userList.friends.request li.profileBox {
+		position:relative;
+		float:left;
+		width:321px;
+		height:79px;
+		padding:12px;
+		margin:0 7px 10px 0;
+		/* overflow:hidden; */
+		background:url('/img/lemongras/boxes/box-userlist.png') 0 0 no-repeat; }
+
+	#userList .image,
+	#userList .profileinfo,
+	#friendInbox .image,
+	#friendInbox .profileinfo {
+		float:left; }
+
+	#friendInbox .image,
+	#userList .image {
+		width:80px;
+		height:80px;
+		margin-right:10px;
+		position:relative; }
+
+		#friendInbox .image span,
+		#userList .image span {
+			position:absolute;
+			top:5px;
+			left:5px;
+			display:block;
+			height:35px;
+			width:35px;
+			text-indent:-9999px;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2979px no-repeat; }
+
+	#friendInbox .profileinfo,
+	#userList .profileinfo {
+		width:230px; }
+
+		#friendInbox .profileinfo .username,
+		#userList .profileinfo .username {
+			display:block;
+			padding-bottom:6px;
+			font-size:16px;
+			font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+		#friendInbox .profileinfo ul.fields li,
+		#userList .profileinfo ul.fields li {
+			float:left;
+			width:auto;
+			height:auto;
+			padding:0 5px;
+			font-size:.9em;
+			border-left:1px solid #cfdae5; }
+
+			#friendInbox .profileinfo ul.fields li:first-child,
+			#userList .profileinfo ul.fields li:first-child {
+				padding:0 5px 0 0;
+				border-left:none; }
+
+		#friendInbox .profileinfo p,
+		#userList .profileinfo p {
+			font-size:.9em;
+			margin-top:3px;
+			height:15px; }
+
+			#friendInbox .profileinfo p.lastUpdate,
+			#userList .profileinfo p.lastUpdate {
+				color:#aaa; }
+
+		#friendInbox .profileinfo .context .show-context,
+		#userList .profileinfo .context .show-context {
+            top:5px;
+            right:5px; }
+
+            .profileinfo a.addFriend,
+            .profileinfo a.confirmFriend,
+            .profileinfo a.denyFriend {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -878px no-repeat; }
+
+                .profileinfo a.addFriend:hover,
+                .profileinfo a.addFriend:focus,
+                .profileinfo a.confirmFriend:hover,
+                .profileinfo a.confirmFriend:focus,
+                .profileinfo a.denyFriend:hover,
+                .profileinfo a.denyFriend:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -948px no-repeat; }
+
+            .profileinfo a.cancelFriend,
+            .profileinfo a.deleteFriend {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1385px no-repeat; }
+
+                .profileinfo a.cancelFriend:hover,
+                .profileinfo a.cancelFriend:focus,
+                .profileinfo a.deleteFriend:hover,
+                .profileinfo a.deleteFriend:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1445px no-repeat; }
+
+            .profileinfo a.pn {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1474px no-repeat; }
+
+                .profileinfo a.pn:hover,
+                .profileinfo a.pn:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1532px no-repeat; }
+
+            .profileinfo a.addFavorite {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -780px no-repeat; }
+
+                .profileinfo a.addFavorite:hover,
+                .profileinfo a.addFavorite:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -845px no-repeat; }
+
+            .profileinfo a.deleteFavorite {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1385px no-repeat; }
+
+                .profileinfo a.deleteFavorite:hover,
+                .profileinfo a.deleteFavorite:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1445px no-repeat; }
+
+            .profileinfo a.flag {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1088px no-repeat; }
+
+                .profileinfo a.flag:hover,
+                .profileinfo a.flag:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1158px no-repeat; }
+
+            .profileinfo a.report {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -980px no-repeat; }
+
+                .profileinfo a.report:hover,
+                .profileinfo a.report:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1050px no-repeat; }
+
+            .profileinfo a.modswitch {
+                background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1252px no-repeat; }
+
+                .profileinfo a.modswitch:hover,
+                .profileinfo a.modswitch:focus {
+                    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1284px no-repeat; }
+
+		#users .userlisting a.image span {
+			position:absolute;
+			top:5px;
+			left:5px;
+			display:block;
+			height:35px;
+			width:35px;
+			text-indent:-9999px;
+			background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2979px no-repeat; }
+
+
+/* ----------------- friends ----------------- */
+
+/* #userList.friends li.profileBox {
+	height:170px;
+	background:url('/img/lemongras/boxes/box-userlistFriends.png') 0 0 no-repeat; }
+
+	#userList.friends li.profileBox:hover {
+		background:#ecf0f4 url('/img/lemongras/boxes/box-userlistFriends.png') 0 0 no-repeat; } */
+
+#userList.friends div,
+#userList.friends.request div.profileinfo {
+	float:left; }
+
+	#userList.friends.request div {
+		float:none; }
+
+
+/* ----------------- friend comment ----------------- */
+
+#userList.friends .showComment {
+	cursor:pointer;
+	position:absolute;
+	top:3px;
+	right:20px;
+	text-indent:-9999px;
+	display:block;
+	opacity:.7;
+	padding:3px 5px 3px 18px;
+	width:1px;
+	background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -3356px no-repeat; }
+
+	#userList.friends.own .showComment {
+		padding:3px 5px 3px 25px;
+		background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -3497px no-repeat; }
+
+/* -------------------------------------------------------
+  Edit Profile
+------------------------------------------------------- */
+
+.slideBox.profileEdit {
+	background:transparent; }
+
+	.slideBox.profileEdit {
+		background:url('/img/lemongras/lines/1px-line-long.png') 0 100% no-repeat; }
+
+	.slideBox.profileEdit div div {
+		padding:10px 20px 30px; }
+
+		.slideBox.profileEdit div div div {
+			padding:0; }
+
+	.slideBox.profileEdit .edit-controls,
+	.tabInfoContent .edit-controls {
+		text-align:right;
+		padding:0;
+		background:transparent; }
+
+.slideBox.profileEdit textarea {
+	width:600px;
+	overflow:auto; }
+
+.slideBox.profileEdit .privacy {
+	margin-bottom:10px;
+	padding:10px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+
+
+
+/* ----------------- info ----------------- */
+
+.editfields {
+	margin-bottom:15px; }
+
+	.editfields td.caption,
+	.editfields td.field {
+		padding:0 10px 10px 0; }
+
+	.editfields td.caption {
+		font-weight:bold;	}
+
+		.editfields td.field .text {
+			padding:6px 5px;
+			border:1px solid #cfdae5; }
+
+		.editfields td.field input[type="text"] {
+			width:228px; }
+
+
+/* ----------------- character ----------------- */
+
+.slideBox.profileEdit .questionaire {
+	padding:10px 0 10px; }
+
+	.slideBox.profileEdit .questionaire div {
+		padding:0 0 10px; }
+
+		.slideBox.profileEdit .questionaire div div {
+			padding:0; }
+
+	.slideBox.profileEdit .questionaire input[type="text"] {
+		width:189px; }
+
+
+/* ----------------- contact ----------------- */
+
+.slideBox.profileEdit .info {
+	padding-bottom:20px; }
+
+
+/* ----------------- photos ----------------- */
+
+#slide-content-album .pictures {
+	width:500px; }
+
+	#slide-content-album .pictures li {
+		padding-bottom:10px;
+		margin-bottom:10px;
+		height:auto;
+		background:url('/img/lemongras/lines/break-sprite.png') -750px 100% no-repeat; }
+
+	#slide-content-album .pictures .pic,
+	#slide-content-album .pictures .settings {
+		float:left; }
+
+	#slide-content-album .pictures .pic {
+		width:150px;
+		display:block; }
+
+	#slide-content-album .pictures .settings {
+		width:350px; }
+
+	#slide-content-album .pictures .settings li {
+		padding-bottom:5px;
+		background:transparent;
+		margin:0; }
+
+	#slide-content-album .pictures .settings .description label {
+		display:block;
+		margin-bottom:3px; }
+
+	#slide-content-album .pictures .settings .description textarea {
+		width:300px;
+		overflow:auto; }
+
+#slide-content-album img {
+	padding:4px;
+	border:1px solid #cfdae5;
+	background:#fff; }
+
+
+/* -------------------------------------------------------
+  Settings
+------------------------------------------------------- */
+
+.settings {
+	margin-bottom:25px; }
+
+	.settings h3 {
+		margin-bottom:10px; }
+
+	.settings #designs li {
+		float:left;
+		width:50%; }
+
+		.settings #designs li label img {
+			margin:5px 0 0 25px; }
+
+	.settings.buttons {
+		text-align:right; }
+
+
+
+/* -------------------------------------------------------
+  Messages
+------------------------------------------------------- */
+
+#messages img {
+		border:none;
+		padding:0; }
+
+#messages .toolbar {
+	background:#eaeaea;
+	padding:5px 5px 5px 10px; }
+
+	#messages .toolbar .onselection {
+		background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -2664px no-repeat;
+		padding:0 12px 0 20px; }
+
+	#messages .toolbar a {
+		padding:0 12px 0 18px;
+		color:#999; }
+
+		#messages .toolbar a:hover,
+		#messages .toolbar a:focus {
+			color:#b3ca34; }
+
+		#messages .toolbar a.reverse { }
+
+			#messages .toolbar a.reverse:hover,
+			#messages .toolbar a.reverse:focus { }
+
+		#messages .toolbar a.trashmail {
+			background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1384px no-repeat; }
+
+			#messages .toolbar a.trashmail:hover,
+			#messages .toolbar a.trashmail:focus {
+				background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 4px -1444px no-repeat; }
+
+		#messages .toolbar a.markspam {
+			background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1252px no-repeat; }
+
+			#messages .toolbar a.markspam:hover,
+			#messages .toolbar a.markspam:focus {
+				background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1284px no-repeat; }
+
+		#messages .toolbar a.history {
+			background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1317px no-repeat; }
+
+		#messages .toolbar a.history:hover,
+		#messages .toolbar a.history:focus {
+			background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1352px no-repeat; }
+
+	#messages .toolbar a.mailreply {
+		background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 2px -1190px no-repeat; }
+
+		#messages .toolbar a.mailreply:hover,
+		#messages .toolbar a.mailreply:focus {
+			background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 2px -1220px no-repeat; }
+
+
+/* ----------------- overview ----------------- */
+
+.mailbox {
+	height:200px;
+	overflow:auto;
+	padding:10px 5px;
+	border:1px solid #eaeaea; }
+
+	.mailbox tr.selected {
+		background:#e9e9e9; }
+
+	.mailbox td {
+		padding:5px 5px 5px 0; }
+
+		.mailbox td.subject {
+			width:240px; }
+
+			.mailbox td.subject a {
+				padding-left:5px;
+				font-size:16px;
+				font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+				.mailbox td.subject a.read {
+					color:#999; }
+
+					.mailbox td.subject a.read:hover,
+					.mailbox td.subject a.read:focus {
+						color:#b3ca34; }
+
+		.mailbox td.sender {
+			width:90px; }
+
+		.mailbox td.sender a.inactiveSenderLink {
+			text-decoration: line-through; }
+
+		.mailbox td.email {
+			width:210px;
+			overflow:hidden; }
+
+		.mailbox td.dateformat {
+			width:90px;
+			color:#999; }
+
+#inboxcontent,
+#outboxcontent {
+	margin-top:2px; }
+
+	#inboxcontent .toolbar,
+	#outboxcontent .toolbar {
+		text-align:right; }
+
+	#inboxcontent .mail,
+	#outboxcontent .mail {
+		padding:10px 20px; }
+
+		#inboxcontent .mail h2,
+		#outboxcontent .mail h2 {
+			padding:0 0 10px; }
+
+
+#outboxtable td.dateformat {
+	width:305px;
+	text-align:right; }
+
+
+/* ----------------- history ----------------- */
+
+#inboxhistory,
+#outboxhistory {
+	margin-top:10px; }
+
+#inboxhistory div,
+#outboxhistory div {
+	padding:10px;
+	margin-bottom:10px;
+	border-top:1px solid #ddd; }
+
+#inboxhistory h4,
+#outboxhistory h4 {
+	margin-bottom:5px; }
+
+.historymailRecipient h4 {
+	color:#94aab6; }
+
+
+
+
+/* -------------------------------------------------------
+  Register
+------------------------------------------------------- */
+
+/* ----------------- step 1 ----------------- */
+
+#registration h2 {
+	margin:20px 0 10px; }
+
+#registration dl {
+	width:600px; }
+
+	#registration dt,
+	#registration dd {
+		float:left;
+		margin-bottom:5px; }
+
+	#registration dt {
+		width:20%; }
+
+	#registration dd {
+		width:80%; }
+
+#registration label {
+	font-weight:bold; }
+
+#registration input {
+	width:300px; }
+
+#registration select {
+	width:311px; }
+
+#registration .buttons {
+	width:432px;
+	text-align:right; }
+
+
+/* ----------------- step 2 ----------------- */
+
+#register img {
+	border:none;
+	padding:0; }
+
+#register input[type="password"] {
+	width:228px; }
+
+#register .link {
+	color:#999;
+	font-weight:bold;
+	font-size:11px; }
+
+
+/* -------------------------------------------------------
+  Search
+------------------------------------------------------- */
+
+.searchbox {
+	background:url('/img/lemongras/lines/1px-line-long.png') 0 100% no-repeat; }
+
+	.searchbox img {
+		border:none;
+		padding:0; }
+
+	.searchbox h2 {
+		padding-left:5px;
+		height:40px;
+		line-height:40px; }
+
+	.searchbox h4 {
+		margin-bottom:5px; }
+
+	.searchbox h2.openslide {
+		background:url('/img/lemongras/icons/acc.png') 0 0 no-repeat; }
+
+		.searchbox h2.openslide:hover {
+			background:url('/img/lemongras/icons/acc.png') 0 -40px no-repeat; }
+
+	.searchbox .content {
+		padding:10px 20px 30px; }
+
+	.searchbox .two,
+	.searchbox .three,
+	.searchbox .five {
+		float:left; }
+
+	.searchbox .two {
+		width:50%; }
+
+	.searchbox .three {
+		width:33%; }
+
+	.searchbox .five {
+		width:20%; }
+
+	#slide-content-hobbies h4 {
+		clear:both;
+		display:block;
+		margin:10px 0 5px; }
+
+	#slide-content-hobbies ul {
+		padding:10px 0 5px; }
+
+		#slide-content-hobbies ul li {
+			float:left;
+			width:33%;
+			padding:0; }
+
+.buttonblock {
+	text-align:right;
+	padding:15px 0; }
+
+.searchscroll {
+	height:270px;
+	overflow:auto; }
+
+.scroll {
+	height:226px;
+	margin-right:15px;
+	overflow:auto; }
+
+/* -------------------------------------------------------
+  Search results
+------------------------------------------------------- */
+
+/* ----------------- options ----------------- */
+
+.resultOptions {
+	position:relative;
+	margin-bottom:10px; }
+
+	.resultOptions .links {
+		position:absolute;
+		top:0;
+		right:0; }
+
+		.resultOptions .links a {
+			padding-left:10px; }
+
+
+
+/* ----------------- save search ----------------- */
+
+.savesearch {
+	width:685px;
+	padding:10px;
+	margin-bottom:30px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+	.savesearch .text {
+		margin:10px 0; }
+
+	.savesearch label {
+		display:inline-block;
+		font-weight:bold;
+		padding-right:10px; }
+
+	.savesearch .name {
+		margin-bottom:10px; }
+
+		.savesearch .name input[type="text"] {
+			width:500px; }
+
+	.savesearch .mail select {
+		width:195px; }
+
+/* ----------------- map ----------------- */
+
+#legendMap li {
+	float:left;
+	width:33%;
+	margin-bottom:5px; }
+
+	#legendMap li img {
+		padding:0;
+		border:none; }
+
+/* -------------------------------------------------------
+  Directory
+------------------------------------------------------- */
+
+.directoryBox {
+	margin:10px 0 25px; }
+
+.directoryEntry {
+	float:left;
+	width:33%;
+	padding:2px 0; }
+
+
+/* -------------------------------------------------------
+  Chat
+------------------------------------------------------- */
+
+.chat,
+.notifyInfo {
+	margin:10px 0 25px; }
+
+	.chat.links {
+		text-align:center; }
+
+a.chatImg {
+	margin:0 0 5px 0;
+	padding:0;
+	background:transparent;
+	display:block; }
+
+	a.chatImg img {
+		border:0; }
+
+
+/* -------------------------------------------------------
+  Help
+------------------------------------------------------- */
+
+.help {
+	float:left;
+	width:48%; }
+
+.help + .help {
+    margin-left:4%;
+}
+
+	.help h3 {
+		margin-bottom:10px; }
+
+	.help p {
+		width:300px;
+		margin-bottom:10px;}
+
+	.help a.link {
+		padding-left:25px;
+		font-weight:bold;
+		background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -1729px no-repeat; }
+
+	.help form {
+		padding:10px 20px;
+                margin:0;
+		background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+		.help form label {
+			font-weight:bold;
+			display:inline-block;
+			width:70px; }
+
+		.help form input[type="text"] {
+			width:225px; }
+
+		.help form textarea {
+			width:299px; }
+
+		.help form select {
+			width:237px; }
+
+
+/* -------------------------------------------------------
+  faq
+------------------------------------------------------- */
+
+#faq .question {
+	font-size:16px;
+	font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif;
+	padding-left:20px;
+	background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2519px no-repeat; }
+
+#faq .answer {
+	margin:10px 0 25px 20px; }
+
+
+/* -------------------------------------------------------
+  plus
+------------------------------------------------------- */
+.plusForm h3 {
+    font-size:16px;
+    line-height:18px;
+    padding-bottom:10px;
+}
+.plusForm .paypal,
+.plusForm .paysafecard {
+    padding-right:10px;
+    margin-right:10px;
+    border-right:1px solid #cfdae5; }
+.plusForm .paypal,
+.plusForm .paysafecard,
+.plusForm .sofort {
+    float:left;
+    width:220px; }
+.plusForm .paypal img,
+.plusForm .paysafecard img,
+.plusForm .sofort img {
+    border:0;
+    margin-bottom:6px; }
+.plusForm .paypal select {
+    width:100%;
+    margin-bottom:6px; }
+
+/* -------------------------------------------------------
+  share
+------------------------------------------------------- */
+.share {
+    margin-bottom:25px; }
+.share h2 {
+    font-size:16px;
+    line-height:18px;
+    padding-bottom:10px; }
+.share .tellafriend,
+.share .facebook {
+    padding-right:10px;
+    margin-right:10px;
+    border-right:1px solid #cfdae5; }
+.share .tellafriend {
+    float:left;
+    width:190px; }
+.share .tellafriend input[type="text"],
+.share .tellafriend textarea {
+    width:180px;
+    margin-bottom:6px; }
+.share .facebook {
+    float:left;
+    width:240px; }
+.share .facebook .fb-share-button {
+    margin:0 0 30px 74px; }
+.share .twitter {
+    float:left;
+    width:233px; }
+.share .twitter .twitter-share-button {
+    margin:0 0 20px 24px; }
+.share:after,
+.share::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+/* -------------------------------------------------------
+  terms of service
+------------------------------------------------------- */
+
+.confirm-button {
+	margin-top:10px;
+	text-align:right; }
+
+/* -------------------------------------------------------
+  tell a friend
+------------------------------------------------------- */
+
+#tellafriend p {
+	padding-bottom:10px; }
+
+#tellafriend p label {
+	font-weight:bold; }
+
+#tellafriend .form {
+	padding:20px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+#tellafriend dl {
+	margin-bottom:20px; }
+
+	#tellafriend dt,
+	#tellafriend dd {
+		display:inline-block;
+		margin-bottom:5px; }
+
+	#tellafriend dt {
+		width:100px;
+		font-weight:bold; }
+
+	#tellafriend dd {
+		width:550px; }
+
+		#tellafriend dd input[type="text"] {
+			width:300px; }
+
+		#tellafriend dd input#subject {
+			width:540px; }
+
+#tellafriend ul {
+	margin-bottom:20px; }
+
+	#tellafriend ul li {
+		float:left;
+		width:33%;
+		padding-bottom:3px; }
+
+		#tellafriend ul li input[type="text"] {
+			width:205px; }
+
+#tellafriend textarea {
+	width:644px;
+	margin-bottom:20px; }
+
+#tellafriend .buttons {
+	text-align:right; }
+
+
+/* -------------------------------------------------------
+  password
+------------------------------------------------------- */
+
+/* ----------------- lost ----------------- */
+
+#passwordlost div {
+	margin-top:10px;
+	padding:20px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+	#passwordlost div input[type="text"] {
+		width:400px; }
+
+
+/* ----------------- change ----------------- */
+
+#password {
+	margin-top:10px;
+	padding:20px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+	#password .buttons {
+		text-align:right; }
+
+		#password .buttons button {
+			margin:5px 0 0 5px; }
+
+	#password td {
+		padding:0 10px 5px 0; }
+
+	#password input[type="password"] {
+		width:275px; }
+
+/* -------------------------------------------------------
+  delete profile
+------------------------------------------------------- */
+
+#unregister {
+	margin-top:10px;
+	padding:20px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	background:url('/img/lemongras/backgrounds/form.png') 0 0 repeat; }
+
+	#unregister .buttons {
+		margin:10px 0; }
+
+	#unregister textarea {
+		margin:10px 0 0;
+		width:655px; }
+
+
+/* -------------------------------------------------------
+  impressum/press
+------------------------------------------------------- */
+
+#press {
+	padding-top: 1em; }
+#impressum div, #press div {
+	margin:10px 0 20px; }
+
+#impressum p, #press p {
+	padding-bottom:5px; }
+
+#impressum .nekeon {
+	text-indent:-9999px;
+	display:inline-block;
+	height:17px;
+	width:67px;
+	padding:0;
+	background:url('/img/lemongras/nekeon.png') 0 -26px no-repeat; }
+
+
+/* -------------------------------------------------------
+  infotext
+------------------------------------------------------- */
+
+.infotext h2 {
+	margin-bottom:10px; }
+
+
+/* -------------------------------------------------------
+  notifications
+------------------------------------------------------- */
+
+.notifyInfo,
+.slideBox.profileEdit .notifyInfo,
+.tabInfoContent .notifyInfo {
+	padding:0 0 5px 23px;
+	background:url('/img/lemongras/icons/info.png') 0 0 no-repeat; }
+
+.notifySuccess,
+.notifyWarn,
+.notifyError {
+	padding:10px;
+	margin-bottom:10px; }
+
+.notifySuccess {
+	background:#d9dfa8;
+	border:1px solid #829225; }
+
+.notifyWarn {
+	background:#d9dfa8;
+	border:1px solid #829225; }
+
+.notifyError {
+	background:#d9dfa8;
+	border:1px solid #829225; }
+
+
+
+/* -------------------------------------------------------
+  FOOTER
+------------------------------------------------------- */
+
+#footerWrapper {
+	background:#adbe4f url('/img/lemongras/backgrounds/footer.jpg') 0 0 repeat-x; }
+
+#footer {
+	width:990px;
+	margin:0 auto;
+	padding-top:50px;
+	color:#fff;
+	font:normal 12px/14px Arial, FreeSans, Tahoma, sans-serif; }
+
+	#footer a {
+		color:#fff;
+		font:bold 12px/14px Arial, FreeSans, Tahoma, sans-serif; }
+
+		#footer a:hover {
+			text-decoration:underline; }
+
+	#footer div ul {
+		float:left; }
+
+		#footer div ul li {
+			float:left;
+			padding:1px 5px;
+			border-left:1px solid #b3ca34; }
+
+			#footer div ul li:first-child {
+				border-left:none; }
+
+	#footer div a.top,
+	#footer div a.impressum {
+		float:right; }
+
+	#footer div a.top {
+		padding-left:15px;
+		background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2637px no-repeat; }
+
+	#footer div a.impressum {
+		border:none;
+		width:auto; }
+
+	#footerLinks {
+		padding-bottom:15px;
+		margin-bottom:15px;
+		border-bottom:1px solid #829225; }
+
+	#footer a.nekeon {
+		text-indent:-9999px;
+		display:inline-block;
+		height:12px;
+		width:67px;
+		padding:0;
+		background:url('/img/lemongras/nekeon.png') 0 0 no-repeat; }
+
+/***************************************************************************************************
+ *
+ * Context menu
+ *
+ **************************************************************************************************/
+.context .show-context {
+    position:absolute;
+    cursor:pointer;
+    top:1px;
+    right:1px;
+    text-indent:-9999px;
+    display:inline-block;
+    height:15px;
+    width:15px;
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3640px no-repeat; }
+
+.context:hover .show-context {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3610px no-repeat; }
+
+.context .context-menu {
+    position:absolute;
+    background:url('/img/lemongras/backgrounds/background.jpg') 0 0 repeat;
+    border:1px solid #ACBBC3;
+    box-shadow:3px 3px 3px 3px #ccc;
+    top:13px;
+    right:1px;
+    width:140px;
+    padding:8px 8px 0 8px;
+    z-index:999;
+    visibility:hidden; }
+
+.context:hover .context-menu {
+    text-align:left;
+    visibility:visible; }
+
+.context .context-menu ul li {
+    margin-bottom:6px; }
+
+.context .context-menu ul li a {
+    display:block;
+    width:100%;
+    padding-left:18px;
+    color: #999999; }
+.context .context-menu ul li a:hover {
+    color: #b3ca34; }
+
+.context .context-menu ul .edit {
+    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -272px no-repeat; }
+
+    .context .context-menu ul .edit:hover,
+    .context .context-menu ul .edit:focus {
+        background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -338px no-repeat; }
+
+.context .context-menu ul .delete {
+    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 2px -1384px no-repeat; }
+
+    .context .context-menu ul .delete:hover,
+    .context .context-menu ul .delete:focus {
+        background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 2px -1444px no-repeat; }
+
+.context .context-menu ul .flag,
+.context .context-menu ul .unflag {
+    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -982px no-repeat; }
+
+    .context .context-menu ul .flag:hover,
+    .context .context-menu ul .flag:focus,
+    .context .context-menu ul .unflag:hover,
+    .context .context-menu ul .unflag:focus {
+        background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -1052px no-repeat; }
+    
+.context .context-menu ul .invite {
+    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0px -878px no-repeat; }
+
+    .context .context-menu ul .invite:hover,
+    .context .context-menu ul .deleinvitete:focus {
+        background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0px -948px no-repeat; }
+
+.context .context-menu ul .subscribe,
+.context .context-menu ul .unsubscribe {
+    background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -4300px no-repeat; }
+
+    .context .context-menu ul .subscribe:hover,
+    .context .context-menu ul .subscribe:focus,
+    .context .context-menu ul .unsubscribe:hover,
+    .context .context-menu ul .unsubscribe:focus {
+        background:url("/img/lemongras/icons/icons-sprite.png?%VERSION%") 0 -4270px no-repeat; }
+
+/* -------------------------------------------------------
+  Mod
+------------------------------------------------------- */
+table.mod td {
+    padding:3px;
+}
+
+table.mod tr.odd td {
+    background-color:#CCC;
+}
+
+/***************************************************************************************************
+ *
+ * Global classes (should overwrite all others).
+ *
+ **************************************************************************************************/
+img.smile {
+	border-style:none ! important;
+	float:none ! important;
+	vertical-align: middle; }
+div.pagination {
+    text-align:center; }
+
+.ui-widget-header {
+    color:#FFF;
+    background-color:#B3CA34;
+    background-image:none; }
+.deleteGroupDialog {
+    min-width:430px; }
+.deleteGroupDialog p {
+    padding-bottom:1em; }
+
+.ajaxUploadSelect {
+    display:none; }
+
+table.infos {
+    margin:0 auto; 
+    border-spacing: 6px;
+    border-collapse: separate; }
+table.infos th,
+table.infos td {
+    background-color:#FFF;
+    height:32px; 
+    text-align:left;
+    vertical-align:middle;
+    padding:0 1em; }
+table.infos tr.active td {
+    font-weight:bold; }
+table.infos td.feature {
+    text-align:center; }
+
+.fa-present:before,
+.fa-missing:before {
+    font-size:1.6em;
+    line-height:1.5em;
+    font-weight:bold; }
+.fa-present:before {
+    color:#a0b42f;
+    content:"\f00c"; }
+.fa-missing:before {
+    color:#cfdae5;
+    content:"\f00d"; }
+
+
+form[name="UserPictures"] dd.rows dd.text,
+form[name="UserPictures"] dd.rows dd.radio,
+form[name="UserPictures"] dd.rows dd.checkbox {
+    width:70%;
+    margin-bottom:0.3em; }
+
+    form[name="UserPictures"] dd.rows dd input.text {
+        width:300px; }
+
+.match:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f004\00a0"; }
+.match {
+    font-weight:bold; }
+    .match0,.match1,.match2,.match3,.match4 {
+        color:#c5000b; }
+    .match5 {
+        color:#ff950e; }
+    .match6 {
+        color:#ffd320; }
+    .match7,.match9,.match10 {
+        color:#aecf00; }
+    .match8 {
+        color:#579d1c; }
+    
+.col3 {
+    float:left;
+    width:33%; }
+
+.validpics {
+    width:80%;
+    margin:0 auto; }
+.validpics p {
+    font-weight:bold; }
+.validpics div {
+    float:left;
+    width:50%;
+    line-height:1.5em;
+    margin:0 0 1em; }
+.validpics div ul li {
+    margin:0 1em 0 1.5em; }
+.validpics div ul li:before {
+    font:normal normal normal 14px/1 FontAwesome;
+    float: left;
+    margin-left: -1.5em;}
+.validpics div.yes ul li:before {
+    color:#adc332;
+    content:"\f05d"; }
+.validpics div.no ul li:before {
+    color:#e78e25;
+    content:"\f05c"; }
+
+
+.jLoading {
+    width:1em;
+    height:1em;
+}
+.jLoading:before {
+    display: inline-block;
+    font: normal normal normal 1em FontAwesome; 
+    content:"\f021";
+    animation: spin 3s infinite linear;
+    color:#90b530;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.quicklogin form {
+    display:inline;
+}
+
+#sideLogin form.fb {
+    margin:-10px 0 10px;
+}
+
+.thread a.linkbox {
+    margin:0 12px 6px 24px;
+}
+
+a.linkbox {
+    display:block;
+}
+a.linkbox img {
+    float:left;
+    width:50px;
+    height:50px;
+    margin-right:12px;
+}
+a.linkbox .title {
+    font-weight:bold;
+}
+
+.inlineform {
+    display:inline;
+}
+
+.receivedSent:before {
+    font-family:FontAwesome;
+    font-weight:bold;
+}
+.receivedSent.bidirectional:before {
+    content:"\f0ec";
+}
+.receivedSent.received:before {
+    content:"\f177";
+}
+.receivedSent.sent:before {
+    content:"\f178";
+}
+
+
+.cookies {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    font-size:0.8em;
+    line-height:1.5em;
+    color:#FFF;
+    background-color:#adbe4f;
+}
+.cookies > div {
+    width:990px;
+    margin:0.8em auto;
+    padding:0 2.5em 0 1em;
+}
+.cookies a {
+    color:#FFF;
+    text-decoration:underline;
+}
+.cookies a:hover {
+    text-decoration:none;
+}
+.cookies .close {
+    position:absolute;
+    top:0.8em;
+    right:1em;
+    text-decoration:none;
+}
+.cookies .close:before {
+    font-family:FontAwesome;
+    content:"\f00d";
+    font-size:1.5em;
+}
+
+    /*
+    box-shadow: 
+        0 -1px 0 0 $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%),
+	0 -2px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 27%),
+	0 -3px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 47%);
+        */

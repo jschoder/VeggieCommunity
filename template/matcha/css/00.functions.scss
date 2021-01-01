@@ -1,0 +1,7 @@
+@function getTextColor($color) {
+    @if (lightness($color) > 50) {
+        @return #333; // Lighter background, return dark color
+    } @else {
+        @return #fff; // Darker background, return light color
+    }
+}

@@ -1,0 +1,13 @@
+.real:after {
+    font:normal normal normal 14px/1 FontAwesome;
+    display:inline;
+    color:#E78E25;
+    vertical-align:super;
+    content:"\f058"; 
+    margin-left:0.2em; }
+
+#notify .real:after {
+   display:none; }
+
+.real:hover:after {
+    color:#E7B880; }

@@ -1,0 +1,35 @@
+.calendar {
+    background-color:$itemBackgroundColor;
+    border:1px solid $secondaryColor;
+    border-radius:$bigBorderRadius;
+    margin:0 0 1em;
+    
+    header > div {
+        background-color:$secondaryColor; 
+    }
+    
+    .week {
+        > div {
+            border:2px solid $secondaryColor; 
+        }
+    
+        a {
+            display:block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color:$primaryContrastFontColor;
+        }
+    }
+    
+    .week > .today {
+        border-color:$primaryColor; 
+    }
+    
+    .day {
+        color:$defaultFontColor; 
+    }
+    .weekday {
+        font-weight:bold; 
+    }
+}

@@ -1,0 +1,50 @@
+.collapsible > h2,
+.collapsible > h3,
+.collapsed > h2,
+.collapsed > h3 {
+    cursor:pointer; 
+    position:relative;
+    border-radius:$smallBorderRadius $smallBorderRadius 0 0;
+    background-color:$secondaryColor;
+    box-shadow: 
+        0 1px 0 0 $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%),
+        0 2px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 27%),
+        0 3px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 47%);
+}
+
+.collapsible > h2:after,
+.collapsible > h3:after,
+.collapsed > h2:after,
+.collapsed > h3:after {
+    @extend .awesome;
+    position:absolute;
+    top:0.3em;
+    right:0.3em;
+    background-color:$secondaryColor;
+    color:$navFontColor; 
+}
+
+.collapsible > h2:after,
+.collapsible > h3:after,
+.collapsed > h2:hover:after,
+.collapsed > h3:hover:after  {
+    content:"\f103"; 
+}
+.collapsed > h2:after,
+.collapsed > h3:after,
+.collapsible > h2:hover:after,
+.collapsible > h3:hover:after {
+    content:"\f102"; 
+}
+
+.collapsible > h2 + div,
+.collapsible > h3 + div {
+    border:1px dotted transparent;
+    border-top-width:0px;
+    border-radius:0 0 $smallBorderRadius $smallBorderRadius;
+}
+
+.collapsible > h2:hover + div,
+.collapsible > h3:hover + div {
+    border-color:$secondaryColor;
+}

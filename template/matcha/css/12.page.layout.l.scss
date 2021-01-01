@@ -1,0 +1,26 @@
+@media screen and (min-width:$breakingPointL) {
+    main {
+        float:left; 
+        width:calc(100% - 35em);
+    
+        &.wide {
+            width:calc(100% - 15em);
+        }
+    }
+    
+    #sidebars {
+        float:none;
+        width:auto;
+    }
+    
+    #userNav,
+    #pmThreads {
+        width:14em;
+        float:left; 
+    }
+
+    #blocks {
+        width:20em; 
+        float:right; 
+    }
+}

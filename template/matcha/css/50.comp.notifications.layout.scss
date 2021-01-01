@@ -1,0 +1,16 @@
+.notifyNews,
+.notifyInfo,
+.notifyPlus,
+.notifySuccess,
+.notifyWarn,
+.notifyError {
+    position:relative;
+    padding:0.6em 0.6em 0.6em 1.9em;
+    margin-bottom:0.7em; 
+    
+    .close {
+        position:absolute;
+        top:0.1em;
+        right:0.3em;
+    }
+}

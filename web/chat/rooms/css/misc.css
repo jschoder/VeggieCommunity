@@ -1,0 +1,46 @@
+/*
+ * @package AJAX_Chat
+ * @author Sebastian Tschan
+ * @copyright (c) Sebastian Tschan
+ * @license GNU Affero General Public License
+ * @link https://blueimp.net/ajax/
+ */
+
+
+/*
+ * Misc
+ */
+
+@media screen,projection,handheld {
+
+	#content #bbCodeContainer input, #content #optionsContainer input.button, #content #settingsContainer #settingsList input.button {
+		cursor:pointer;
+	}
+}
+
+.activechannel,
+.inactivechannel {
+	padding-left: 14px;
+	background-repeat:no-repeat;
+	background-position: left center;
+}
+
+.activechannel {
+	background-image:url(../img/channel-active.png);
+}
+.inactivechannel {
+	background-image:url(../img/channel-inactive.png);
+}
+.activechannel.inviteonly {
+	background-image:url(../img/channel-closed-in.png);
+}
+.inactivechannel.inviteonly {
+	background-image:url(../img/channel-closed-out.png);
+}    
+
+#onlineList a.mod {
+	padding-right: 33px;
+	background-repeat:no-repeat;
+	background-position: right center;
+	background-image:url(../img/moderator.gif);
+}

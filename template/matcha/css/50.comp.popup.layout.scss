@@ -1,0 +1,81 @@
+.popup {
+    .jTrigger {
+        outline:0;
+    }
+    
+    .context {
+        position:absolute;
+        display:inline-block;
+        top:0.4em;
+        right:0.6em; 
+        padding:0 0.2em;
+
+        &:before {
+            font-size:1.5em; 
+        }
+    }
+
+    .menu {
+        position:absolute;
+        box-shadow:2px 2px 2px 2px #ccc;
+        top:1.9em;
+        right:-0.6em;
+        width:14em;
+        z-index:$popupZ;
+        visibility:hidden; 
+        font-size:0.9em;
+        line-height:1.2em;
+        
+        &.left {
+            left:-1em;
+            right:auto;
+        }
+        
+        > a {
+            display:block;
+            margin:0;
+            padding:0.3em 0.5em;
+           
+            &:before {
+                width:1em;
+                text-align:center;
+                margin-right: 0.4em; 
+            }
+        }
+       
+        > li {
+            @extend .clearfix;
+            padding:2%;
+            
+            a {
+                display:block;
+                width:100%; 
+            }
+            
+            img {
+                border:none;
+                float:left;
+                width:30%;
+                margin:0 3% 0 0; 
+            }
+           
+            p {
+                float:left;
+                width:63%;
+                margin:0;
+            }
+            
+            &.all {
+                text-align:center; 
+                a {
+                    padding:0.2em 0; 
+                }
+            }
+        }
+    }
+   
+    .jTrigger:focus + .menu,
+    .menu:hover {
+        visibility:visible; 
+    }
+}

@@ -1,0 +1,23 @@
+.match {
+    font-weight:bold;
+    &:before {
+        @extend .awesome;
+        content: "\f004";
+        margin-right:0.2em; 
+    }
+}
+.match0,.match1,.match2,.match3,.match4 {
+    color:#c5000b; 
+}
+.match5 {
+    color:#ff950e;
+}
+.match6 {
+    color:#ffd320; 
+}
+.match7,.match9,.match10 {
+    color:#aecf00; 
+}
+.match8 {
+    color:#579d1c; 
+}

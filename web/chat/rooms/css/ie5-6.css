@@ -1,0 +1,71 @@
+/*
+ * @package AJAX_Chat
+ * @author Sebastian Tschan
+ * @copyright (c) Sebastian Tschan
+ * @license GNU Affero General Public License
+ * @link https://blueimp.net/ajax/
+ */
+
+
+/*
+ * Positioning adjustments for IE versions < 7
+ */
+
+body {
+	width:100%;
+	height:100%;
+}
+#content #chatList {
+	position:static;
+	margin-right:230px;
+	margin-left:10px;
+	margin-top:40px;
+	height:400px;
+}
+
+#content #onlineListContainer {
+	height:400px;
+}
+#content #helpContainer {
+	height:400px;
+}
+#content #settingsContainer {
+	height:400px;
+}
+#content #inputFieldContainer {
+	top:500px;
+	padding:0px;
+}
+#content #submitButtonContainer {
+	top:500px;
+}
+#content #bbCodeContainer {
+	top:460px;
+}
+#content #colorCodesContainer {
+	top:460px;
+}
+#content #emoticonsContainer {
+	top:460px;
+}
+#content #optionsContainer {
+	top:10px;
+}
+#content #inputFieldContainer #inputField {
+	width:70%;
+}
+#content #onlineListContainer #onlineList {
+	width:100%;
+	height:335px;
+	overflow:auto;
+}
+#content #helpContainer #helpList {
+	width:100%;
+	height:335px;
+	overflow:auto;
+}
+#content #settingsContainer #settingsList {
+	width:100%;
+	height:335px;
+	overflow:auto;
+}

@@ -1,0 +1,85 @@
+body > header {
+    background-color:$primaryColor;
+    box-shadow: 
+        0 1px 0 0 $primaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%),
+        0 2px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 27%),
+        0 3px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 47%);
+    
+    .jMenu {
+        border:solid 1px $primaryContrastFontColor;
+        border-radius:$smallBorderRadius;
+        color:$primaryContrastFontColor;
+
+        &:hover {
+            color:$primaryContrastFontDarkColor;
+            border-color:$primaryContrastFontDarkColor; 
+        }
+        
+        &:before {
+            @extend .awesome;
+            content:"\f0c9"; 
+        }
+        span {
+            margin-left:0.3em; 
+        }
+    }
+    
+    nav#notify {
+        .popup a {
+            display:inline-block;
+        }
+        
+        a:before,
+        .jTrigger:before {
+            @extend .awesome; 
+        }
+
+        > a,
+        a:before,
+        > a:visited,
+        > div {
+            font-weight:normal;
+            color:$primaryContrastFontColor; 
+        }
+
+        > a:hover,
+        a:hover:before,
+        > div:hover {
+            border-color:$primaryContrastFontDarkColor;
+            color:$primaryContrastFontDarkColor; 
+        }        
+    }
+}
+
+nav#notify {
+    float:right; 
+
+    a {
+        position:relative; 
+    }
+    
+    span.count {
+        background-color:$complementaryColor;
+        color:$primaryContrastFontColor; 
+    }
+    
+    .popup {
+        > ul > li {
+            padding:0;
+            
+            a {
+                margin:0.2em 0.2em 0.2em 0;
+                padding-left:0.2em;
+                border-left:4px solid transparent;
+            }
+            
+            &.new a {
+                border-left:4px solid $primaryColor;
+            } 
+            
+            > p {
+                margin:0.2em;
+            }
+        }
+    }
+}

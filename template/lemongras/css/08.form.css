@@ -1,0 +1,130 @@
+textarea {
+    resize:none;
+}
+
+form.modular {
+    margin:0 120px 0 120px; }
+form.modular dt {
+    margin:10px 0 3px 0;}
+form.modular dt.mandatory label:after {
+    color:#e78e25;
+    font-weight:bold;
+    content:" *"; }
+form.modular dt,
+form.modular dd,
+form.modular dd.help {
+    width:465px;
+    display:block; }
+form.modular dl.row dt,
+form.modular dl.row dd {
+    width:auto;
+    float:left;
+    margin:0; }
+    form.modular dl.row dt label {
+        display:inline-block;
+        padding:5px 3px 0 5px; }
+    form.modular dl.row dd label {
+        vertical-align:super; }
+form.modular dl.row:after,
+form.modular dl.row::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+form.modular dd.help {
+    margin-top:4px;
+    float:none;
+    font-size:11px;
+    color:#999; }
+form.modular dd.error {
+    margin-top:4px;
+    float:none;
+    font-size:11px;
+    color:#C00;
+    font-weight:bold; }
+
+form.modular dt.fromto {
+    font-weight:bold; }
+form.modular dd.fromto span {
+    display:inline-block; 
+    padding:7px 0;
+    vertical-align:middle; }
+    form.modular dd.fromto span.labeled {
+        width:90px;
+        padding:2px 0 4px 0;
+        text-align:center; }
+        form.modular dd.fromto span.labeled label {
+            display:block; }
+    form.modular dd.fromto span.caption {
+        width:140px;
+        font-weight:bold; }
+    form.modular dd.fromto span.xs {
+        width:35px;
+        text-align:center; }
+    
+form.modular dd.rows .sorter {
+    display:block;
+    float:left;
+    cursor:pointer;
+    height:22px;
+    width:20px;
+    padding:5px 0 0 4px; }
+    form.modular dd.rows .sorter:before {
+        color:#999;
+        font: normal normal normal 16px/1 FontAwesome;
+        content: "\f0dc"; }
+    form.modular dd.rows .ui-sortable-helper {
+        background-color:#a0b42f; 
+        border-radius:4px; }
+    
+form.modular dd.rows .ui-sortable-handle {
+    padding:5px 0; }
+
+form.modular dd.rows .ajaxUploadPreview {
+    position:relative;
+    width:80px;
+    height:80px; 
+    margin-right:4px;
+    border:2px solid #cfdae5; }
+form.modular dd.rows .ajaxUpload {
+    cursor:pointer;
+    background-color:#FFF;}
+    form.modular dd.rows .ajaxUpload:before {
+        position:absolute;
+        top:14px;
+        left:20px;
+        color:#cfdae5;
+        font: normal normal normal 46px/1 FontAwesome;
+        content: "\f1c5"; }
+    form.modular dd.rows .ajaxUploadPreview img {
+        position:absolute;
+        top:0px;
+        left:0px;
+        border:none;
+        height:80px;
+        width:80px;
+        padding:0; 
+        z-index:999;}
+    
+form.modular button {
+    margin-right:0.5em; }
+
+
+dd.location {
+    position:relative;
+}
+    
+dd.location .addresspopup {
+    display:none;
+    position:absolute;
+    top:2em;
+    left:0;
+    width: 100%;
+    max-width: 18em;
+    padding:0.4em;
+    z-index:10;
+
+    background-color:#FFF;
+    border:solid 1px #cfdae5;
+}

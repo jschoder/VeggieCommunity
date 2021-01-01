@@ -1,0 +1,12 @@
+#header .ad-de {
+	background:url('/design/lemongras/images/icons/ad.png') 0 -115px no-repeat; }
+
+#header .ad-en {
+	background:url('/design/lemongras/images/icons/ad.png') 0 0 no-repeat; }
+
+.ad-block a[target="blank"] {
+	background:transparent;
+	padding:0; }
+
+.adbutton {
+	text-align:center; }

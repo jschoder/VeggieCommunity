@@ -1,0 +1,64 @@
+.itembox {   
+    span.circle {
+        position:relative;
+        display:inline-block;
+        font-size:2.1em;
+        
+        &:before {
+            @extend .awesome;
+            content:"\f111";
+            color:#FFF; 
+        }
+        
+        a {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:$contentElementZ;
+        }
+    }
+    span.circle.confirm {
+        a:before {
+            content:"\f05d";
+            color:$primaryColor; 
+        }
+    }
+    span.circle.deny {
+        a:before {
+            content:"\f05c";
+            color:$secondaryFontColor; 
+        }
+    }
+    
+    span.online {
+        &:before,
+        &:after {
+            @extend .awesome;
+            position:absolute;
+            top:0.8em;
+            left:4.3em;
+        }
+        
+        &:after {
+            content:"\f111";
+            color:$itemBackgroundColor;
+            z-index:$contentElementZ - 1;
+        }
+        
+        &:before {
+            content:"\f192";
+            color:$primaryColor;
+            z-index:$contentElementZ;
+        }
+    }
+    
+    > li {
+        border:1px solid $itemBorderColor;
+        border-radius:$smallBorderRadius;
+        background-color:$itemBackgroundColor;
+        box-shadow:$itemBoxShadow; 
+    }
+    div > ul {
+        @extend ul.h;
+    } 
+}

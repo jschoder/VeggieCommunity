@@ -1,0 +1,1 @@
+<div id="gmapper_map" style="width:700px;height:420px;"></div>

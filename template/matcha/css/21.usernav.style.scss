@@ -1,0 +1,64 @@
+#userNav {
+    
+    form ul li label {
+        color:$defaultFontColor;
+    }
+    
+    .welcome {
+        p { }
+    }
+    
+    > section, > ul {
+        font-size:0.9em; 
+    }
+    
+    nav ul {    
+        li {
+            text-overflow:ellipsis;
+            overflow:hidden;
+            white-space: nowrap;
+            color:$navFontColor; 
+        }
+        
+        span.collapsible,
+        span.collapsed {
+            float:right;
+            margin:0;
+            width:2em;
+            text-align:right;
+            cursor:pointer;
+            
+            &:after,
+            &:after {
+                @extend .awesome;
+                color:$navFontColor; 
+            }
+        }
+            
+        span.collapsible:after,
+        span.collapsed:hover:after {
+            content:"\f103"; 
+        }
+
+        span.collapsed:after,
+        span.collapsible:hover:after {
+            content:"\f102"; 
+        }
+        
+
+
+        a {
+            font-weight:normal;
+            color:$navFontColor; 
+
+            &:before {
+                @extend .awesome;
+            }
+
+            &:hover {
+                color:$primaryColor; 
+            }
+        }
+    }
+}
+

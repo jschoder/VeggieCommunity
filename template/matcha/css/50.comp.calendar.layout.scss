@@ -1,0 +1,91 @@
+/** 
+ * Inspired by http://tympanus.net/codrops/2012/11/27/calendario-a-flexible-calendar-plugin/
+ */
+.calendar {
+    @extend .clearfix;
+    
+    width:100%;
+    display:table;
+    table-layout:fixed;
+    
+    .body {
+        display:table-row-group;
+    }
+    
+    header,
+    .week {
+        display:table-row;
+        
+        > div {
+            display:table-cell;
+            position: relative; 
+        }
+    }
+    
+    header {
+        > div {
+            padding:0.4em;
+            text-align:center; 
+        }
+    }
+    
+    .week {
+        > div {
+            padding:1.5em 0.4em 0.4em;
+            height:6em; 
+        }
+        a {
+            font-size:0.9em;
+            padding:0.3em;
+            margin-bottom:0.3em; 
+        }
+    }
+    
+    .day {
+        top:0.3em;
+        left:0;
+        position: absolute;
+        width:1.4em;
+        height:1em;
+        text-align: right; 
+    }
+    
+    .weekday {
+        top:0.3em;
+        left:1.4em;
+        position: absolute;
+        text-align:left;
+        padding-left:0.2em;
+        display: none; 
+    }
+}
+
+@media screen and (max-width: $breakingPointCalendar) {
+    .calendar {
+        header {
+            display:none; 
+        }
+        
+        .body,
+        .week {
+            display:block;
+        }
+        
+        .week {
+            > div {
+                display:block;
+                min-height: 4em;
+                width:100% !important; 
+            }
+        }
+        
+        .prevM,
+        .nextM {
+            display:none;
+        }
+        
+        .weekday {
+            display:block; 
+        }
+    }
+}

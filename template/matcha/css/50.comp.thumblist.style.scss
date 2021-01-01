@@ -1,0 +1,78 @@
+ul.thumblist {    
+    img {
+        box-shadow:$itemBoxShadow; 
+    }
+    
+    aside.actions {
+        a {
+            font-size:1.4em; 
+        }
+    }
+    
+    .label {
+        font-weight:normal;
+        background-color:$itemBackgroundColor;
+        color:$defaultFontColor; 
+        opacity:0.7; 
+    }
+    
+    li:hover .label {
+        opacity:0.85; 
+    }
+
+    span.online {
+        &:before,
+        &:after {
+            @extend .awesome;
+            position:absolute;
+            top:0.1em;
+            right:0.3em;
+        }
+        
+        &:after {
+            content:"\f111";
+            color:$itemBackgroundColor;
+            z-index:$contentElementZ - 1;
+        }
+        
+        &:before {
+            content:"\f192";
+            color:$primaryColor;
+            z-index:$contentElementZ;
+        }
+    }
+    
+    label.circle {
+        position:relative;
+        display:inline-block;
+        font-size:2.1em;
+        
+        &:before {
+            @extend .awesome;
+            content:"\f111";
+            color:#FFF; 
+        }
+        
+        span {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:$contentElementZ;
+            
+            &:before {
+                @extend .awesome;
+                content:"\f10c";
+                color:$secondaryFontColor; 
+            }
+        }
+    }
+    
+    li:hover label span:before {
+        content:"\f05d";
+    }
+    
+    input[type="checkbox"]:checked + aside label span:before {
+        content:"\f05d";
+        color:$primaryColor; 
+    }
+}

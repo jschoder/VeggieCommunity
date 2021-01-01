@@ -1,0 +1,12 @@
+.awesome {
+    display: inline-block;
+    font: normal normal normal 1em FontAwesome; 
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both; 
+    }
+}

@@ -1,0 +1,19 @@
+.basics {
+    @extend .clearfix;
+    margin:0 0 0.2em;
+    
+    img {
+        height:4em;
+        float:left;
+        margin-right:0.5em;
+        border-radius: $smallBorderRadius;
+    }
+    
+    a img {
+        border-radius:0;
+    }
+    
+    ul {
+        @extend ul.h;
+    }
+}

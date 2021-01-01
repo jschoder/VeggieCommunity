@@ -1,0 +1,76 @@
+.defaultColor1 {
+    background-color:$background;
+    color:getTextColor($background);
+}
+.defaultColor10 {
+    background-color:$primaryColor;
+    color:getTextColor($primaryColor);
+}
+.defaultColor11 {
+    background-color:$primaryHighlightColor;
+    color:getTextColor($primaryHighlightColor);
+}
+.defaultColor12 {
+    background-color:$primaryDarkColor;
+    color:getTextColor($primaryDarkColor);
+}
+.defaultColor20 {
+    background-color:$secondaryColor;
+    color:getTextColor($secondaryColor);
+}
+.defaultColor21 {
+    background-color:$complementaryColor;
+    color:getTextColor($complementaryColor);
+}
+.defaultColor22 {
+    background-color:$complementaryDarkColor;
+    color:getTextColor($complementaryDarkColor);
+}
+.defaultColor23 {
+    background-color:$modColor;
+    color:getTextColor($modColor);
+}
+.defaultColor30 {
+    background-color:$itemBackgroundColor;
+    color:getTextColor($itemBackgroundColor);
+}
+.defaultColor31 {
+    background-color:$itemBorderColor;
+    color:getTextColor($itemBorderColor);
+}
+.defaultColor40 {
+    background-color:$notifySuccessColor;
+    color:getTextColor($notifySuccessColor);
+}
+.defaultColor41 {
+    background-color:$notifyWarnColor;
+    color:getTextColor($notifyWarnColor);
+}
+.defaultColor42 {
+    background-color:$notifyErrorColor;
+    color:getTextColor($notifyErrorColor);
+}
+.defaultColor50 {
+    background-color:$defaultFontColor;
+    color:getTextColor($defaultFontColor);
+}
+.defaultColor51 {
+    background-color:$navFontColor;
+    color:getTextColor($navFontColor);
+}
+.defaultColor52 {
+    background-color:$secondaryFontColor;
+    color:getTextColor($secondaryFontColor);
+}
+.defaultColor53 {
+    background-color:$errorFontColor;
+    color:getTextColor($errorFontColor);
+}
+.defaultColor54 {
+    background-color:$primaryContrastFontColor;
+    color:getTextColor($primaryContrastFontColor);
+}
+.defaultColor55 {
+    background-color:$primaryContrastFontDarkColor;
+    color:getTextColor($primaryContrastFontDarkColor);
+}

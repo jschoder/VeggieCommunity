@@ -1,0 +1,11 @@
+body {
+    background:$background; 
+}
+
+@media screen and (max-width:$breakingPointM) {
+    #sidebars {
+        background:$background;
+        border:1px solid $itemBorderColor;
+        border-radius:$smallBorderRadius; 
+    }
+}

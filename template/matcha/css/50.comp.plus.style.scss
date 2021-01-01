@@ -1,0 +1,27 @@
+a.plusInfo {
+    color:$complementaryColor;
+    
+    &:hover {
+        color:$complementaryDarkColor; 
+    }
+}
+
+.plus:after {
+    @extend .awesome;
+    display:inline;
+    color:$complementaryColor;
+    content:"\f06c"; 
+    margin-left:0.2em; 
+}
+
+.real.plus:after {
+    content:"\f058\f06c"; 
+}
+
+.plus:hover:after {
+    color:$complementaryDarkColor; 
+}
+
+nav .plus:after {
+    display:none; 
+}

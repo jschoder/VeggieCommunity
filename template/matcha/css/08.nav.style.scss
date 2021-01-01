@@ -1,0 +1,240 @@
+aside nav {
+    a,
+    span.like,
+    span.dislike {
+        position:relative;
+        margin-right:0.3em; 
+
+        &:before {
+            @extend .awesome; 
+        }
+    }
+    
+    span.i {
+        color:$defaultFontColor;
+        font-weight:normal;
+        font-size:0.9em;
+        margin-right:0.3em;
+    }
+    
+    .popup {
+        display:inline-block;
+        position:relative;
+        
+        span.i {
+            cursor:pointer;
+        }
+    }
+}
+
+footer.actions,
+nav {
+    .active,
+    .active:visited {
+        color:$complementaryColor;
+    }
+        
+    .active:hover {
+        color:$complementaryColor - hsl(0deg, 0%, 15%);
+    }
+}
+
+
+footer.actions,
+nav {
+    .addComment:before {
+        content:"\f112"; 
+    }
+    .addFriend:before,
+    .confirmFriend:before {
+        content:"\f234"; 
+    }
+    .adminAdd:before,
+    .adminRemove:before,
+    .modAdd:before,
+    .modRemove:before {
+        content:"\f132"; 
+    }
+    .ban:before,
+    .block:before,
+    .blocked:before {
+        content:"\f05e"; 
+    }
+    .bullhorn:before {
+        content:"\f0a1"; 
+    }
+    .chart:before {
+        content:"\f1fe"; 
+    }
+    .chat:before {
+        content:"\f086"; 
+    }
+    a.confirm:before {
+        content:"\f00c"; 
+    }
+    .copy:before {
+        content:"\f0c5"; 
+    }
+    .dashboard:before {
+        content:"\f0e4"; 
+    }
+    .details:before {
+        content:"\f002";
+    }
+    .dislike:before {
+        content:"\f088"; 
+    }
+    .delete:before,
+    .deleteConversation:before {
+        content: "\f1f8";
+    }
+    .deleteFavorite:before {
+        content: "\f097";
+    }
+    .deleteFriend:before,
+    .denyFriend:before,
+    .cancelFriend:before {
+        content:"\f235"; 
+    }
+    a.deny:before {
+        content:"\f00d"; 
+    }
+    .edit:before,
+    .editsearch:before {
+        content:"\f040"; 
+    }
+    .event:before,
+    .events:before {
+        content:"\f073"; 
+    }
+    .faq:before {
+        content:"\f0fa"; 
+    }
+    .addFavorite:before,
+    .favorites:before,
+    .bookmark:before {
+        content:"\f02e"; 
+    }
+    .filter:before {
+        content:"\f0b0"; 
+    }
+    .flag:before {
+        content:"\f024"; 
+    }
+    .friends:before {
+        content:"\f0c0"; 
+    }
+    .groups:before {
+        content:"\f0ac"; 
+    }
+    .hide:before {
+        content:"\f070"; 
+    }
+    .help:before {
+        content:"\f0f9"; 
+    }
+    .info:before {
+        content:"\f129"; 
+    }
+    .invite:before {
+        content:"\f234"; 
+    }
+    .join:before {
+        content:"\f234"; 
+    }
+    .leave:before {
+        content:"\f235"; 
+    }
+    .like:before {
+        content:"\f087"; 
+    }
+    .logout:before {
+        content:"\f08b"; 
+    }
+    .matching:before {
+        content:"\f004"; 
+    }
+    .mysite:before {
+        content:"\f015"; 
+    }
+    .mod:before {
+        content:"\f21b"; 
+    }
+    .net:before {
+        content:"\f074"; 
+    }
+    .newsearch:before {
+        content:"\f002"; 
+    }
+    .openall:before {
+        content:"\f24d"; 
+    }
+    .participateSure:before {
+        content: "\f0c0";
+    }
+    .participateLikely:before {
+        content: "\f007"; 
+    }
+    .participateUnlikely:before {
+        content: "\f183"; 
+    }
+    .participateNot:before {
+        content: "\f192"; 
+    }
+    .password:before {
+        content:"\f084"; 
+    }
+    .pdfExport:before {
+        content:"\f1c1"; 
+    }
+    .pictures:before {
+        content:"\f03e"; 
+    }
+    .plus:before {
+        content:"\f06c"; 
+    }
+    .pm:before,
+    .send:before {
+        content:"\f0e0"; 
+    }
+    .profile:before {
+        content:"\f007"; 
+    }
+    .profile:before {
+        content:"\f007"; 
+    }
+    .real:before {
+        content:"\f058"; 
+    }
+    .remove:before {
+        content:"\f056"; 
+    }
+    .settings:before {
+        content:"\f0ad"; 
+    }
+    .share:before {
+        content:"\f1e0"; 
+    }
+    .signup:before {
+        content:"\f044"; 
+    }
+    .subscribe:before {
+        content:"\f10c"; 
+    }
+    .suspicion:before {
+        content:"\f21b"; 
+    }
+    .unsubscribe:before {
+        content:"\f05d"; 
+    }
+    .users:before {
+        content:"\f07c"; 
+    }
+    .watchlist:before {
+        content:"\f03c"; 
+    }
+    
+    > a > span {
+        font-weight:normal;
+    }
+}

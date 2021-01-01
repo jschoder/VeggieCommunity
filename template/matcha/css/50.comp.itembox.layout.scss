@@ -1,0 +1,78 @@
+.itembox {
+    @extend .clearfix; 
+    margin:0 0 1em;
+    
+    aside.actions {
+        position:absolute;
+        top:2.9em;
+        left:1em;
+        a {
+            margin:0; 
+        }
+    }
+    
+    > li {
+        position:relative;
+        float:left;
+        width:49%;
+        margin:0 1% 0.5em 0;
+        padding:0.5em; 
+        
+        &:nth-child(2n+1) {
+            clear:both;
+        }
+        
+        @media screen and (min-width:$breakingPointXL) {
+            width:32%;
+            
+            &:nth-child(2n+1) {
+                clear:none;
+            }
+            &:nth-child(3n+1) {
+                clear:both;
+            }
+        }
+            
+        @media screen and (max-width:$breakingPointS) {
+            width:100%;
+            margin-right:0; 
+        }
+        > a {
+            float:left; 
+        }
+        > div {
+            float:left;
+            width: calc(100% - 6em);
+            line-height:1.3em; 
+            word-wrap:break-word;
+            
+            ul {
+                @extend ul.h;
+            }
+            p {
+                margin:0; 
+            }
+        }
+        img {
+            width:5em;
+            height:5em;
+            margin-right:0.6em; 
+        }
+        
+        .male:before,
+        .female:before,
+        .queer:before {
+            margin:0;
+        }
+        
+        p {
+            clear:both; 
+        }
+    }
+}
+
+.thinCol, .wideCol {
+    .itembox > li {
+        width:100%;
+    }
+}

@@ -1,0 +1,18 @@
+.basics {
+
+    ul {
+        @extend ul.h;
+    }
+    
+    .online {
+        color:$primaryColor;
+        font-weight:bold;
+
+        &:after {
+            @extend .awesome;
+            display:inline;
+            content:"\f192";
+            margin-left:0.2em; 
+        }
+    }
+}

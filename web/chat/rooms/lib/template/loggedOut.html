@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="[LANG_CODE/]" lang="[LANG_CODE/]" dir="[BASE_DIRECTION/]">
+
+<head>
+	<meta http-equiv="Content-Type" content="[CONTENT_TYPE/]" />
+	<title>Chat | VeggieCommunity.org</title>
+	<link rel="SHORTCUT ICON" href="https://www.veggiecommunity.org/img/favicon.ico" type="image/ico" />
+
+	<meta name="description" lang="de" content="Freunde, Aktivisten und Dates in der Vegetarismus-, Veganismus- und Rohkostszene" />
+	<meta name="description" lang="en" content="dating and making friends within the vegetarian, vegan and rawfood community" />
+
+        <link rel="icon" type="image/png" href="/img/favicon.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/en/chat/rooms/img/apple-touch-icon-114x114-precomposed.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/en/chat/rooms/img/apple-touch-icon-72x72-precomposed.png" />
+        <link rel="apple-touch-icon-precomposed" href="/en/chat/rooms/img/apple-touch-icon-57x57-precomposed.png" />
+	
+	[STYLE_SHEETS/]
+
+	<style type="text/css">
+		body {
+			padding:0;
+			margin:0;
+		}
+		#login {
+			width:300px;
+			margin:0 auto;
+		}
+	</style>
+	<script src="js/chat.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="js/lang/[LANG_CODE/].js" type="text/javascript" charset="UTF-8"></script>
+	<script src="js/config.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		// <![CDATA[
+			function initializeLoginPage() {
+				document.getElementById('userNameField').focus();
+				if(!ajaxChat.isCookieEnabled()) {
+					var node = document.createElement('div');
+					var text = document.createTextNode(ajaxChatLang['errorCookiesRequired']);
+					node.appendChild(text);
+					document.getElementById('errorContainer').appendChild(node);
+				}
+			}
+			
+			ajaxChatConfig.sessionName = '[SESSION_NAME/]';
+			ajaxChatConfig.cookieExpiration = parseInt('[COOKIE_EXPIRATION/]');
+			ajaxChatConfig.cookiePath = '[COOKIE_PATH/]';
+			ajaxChatConfig.cookieDomain = '[COOKIE_DOMAIN/]';
+			ajaxChatConfig.cookieSecure = '[COOKIE_SECURE/]';
+
+			ajaxChat.init(ajaxChatConfig, ajaxChatLang, true, true, false);
+		// ]]>
+	</script>
+</head>
+
+<body onload="initializeLoginPage();">
+<div id="loginContent">
+
+<div id="loginbox" style="padding:3em 0 1em 0">
+	<div id="login">
+		<h2>[LANG]login[/LANG]</h2>
+		<div class="fields">
+			<form id="loginForm" action="[LOGIN_URL/]" method="post" enctype="application/x-www-form-urlencoded">
+				<input type="hidden" name="login" id="loginField" value="login"/>
+				<input type="hidden" name="redirect" id="redirectField" value="[REDIRECT_URL/]"/>
+				<table>
+					<colgroup>
+						<col width="100" />
+						<col width="130" />
+					</colgroup>
+					<tr>
+						<td class="caption"><label for="login-email">[LANG]userName[/LANG] </label></td>
+						<td class="field"><input id="login-email" class="text130" type="text" name="userName" maxlength="255" /></td>
+					</tr><tr>
+						<td class="caption"><label for="login-password">[LANG]password[/LANG] </label></td>
+						<td class="field"><input id="login-password" class="text130" type="password" name="password" maxlength="100" /></td>
+					</tr><tr>
+<!--
+						<td class="caption"><label for="channelField">[LANG]channel[/LANG] </label></td>
+						<td class="field"><select name="channelName" id="channelField">[CHANNEL_OPTIONS/]</select></td>
+					</tr><tr>
+-->
+						<td class="caption"><label for="languageSelection">[LANG]language[/LANG] </label></td>
+						<td class="field"><select id="languageSelection" name="lang" onchange="ajaxChat.switchLanguage(this.value);">[LANGUAGE_OPTIONS/]</select></td>
+					</tr>
+				</table>
+				<div class="buttons">
+					<button type="submit" name="submit">[LANG]login[/LANG]</button>
+				</div>
+			</form>
+		</div>
+		<div class="footline">&nbsp;</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="errorContainer">[ERROR_MESSAGES/]<noscript><div>[LANG]requiresJavaScript[/LANG]</div></noscript></div>
+	<div id="copyright"><a href="https://blueimp.net/ajax/">powered by AJAX Chat</a> &copy; <a href="https://blueimp.net">blueimp.net</a><br /><a href="http://www.kolobok.us">Smilies &copy; Aiwan - Kolobok smiles</a></div>
+</div>
+
+</div>
+</body>
+
+</html>

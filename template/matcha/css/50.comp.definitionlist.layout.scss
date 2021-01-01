@@ -1,0 +1,36 @@
+dl {
+    @extend .clearfix;
+    display:block;
+    width:100%;
+    max-width:30em;
+    margin:0 auto 0.5em;
+    
+    dt {
+        clear:both;
+        width:40%;
+    }
+    
+    dt,
+    dd {
+        float:left;
+        line-height:1.5em;
+    }
+    
+    dd {
+        width:60%;
+        
+        a {
+            display:inline-block;
+            max-width:100%;
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            overflow:hidden;
+            vertical-align:middle;
+        }
+    }
+    
+    ul.list {
+        margin:0.2em 0 0 1.1em;
+        line-height:1em;
+    }
+}

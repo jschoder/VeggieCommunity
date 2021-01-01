@@ -1,0 +1,61 @@
+body > header {
+    @extend .clearfix;
+    padding:0.4em;
+    margin-bottom:0.6em; 
+
+    .jMenu {
+        vertical-align:top;
+        padding:0.1em 0.3em;
+    }
+}
+h1#logo {
+    display:inline-block;
+    font-size:1.3em;
+    margin:0 0.5em 0 0; 
+    
+    img {
+        height:1em;
+        border:0;
+        border-radius:0;
+        padding:0; 
+    }
+}
+
+nav#notify {
+    float:right; 
+    margin-top:0.1em;
+
+    > a,
+    > div {
+        display:inline-block;
+        margin-right:0.4em;
+        position:relative; 
+    }
+    
+    span.count {
+        text-indent:0;
+        position: absolute;
+        top:-0.4em;
+        right:-0.8em;
+        min-width:1.3em;
+        height:1.3em;
+        vertical-align:middle;
+        border-radius:$smallBorderRadius;
+        padding:0.1em 0.2em 0.2em 0.2em;
+        text-align:center;
+        font-size:0.6em;  
+    }
+    
+    span.separator {
+        display:inline-block;
+        width:0.8em;
+    }
+    
+    .popup {
+        .menu {
+            width:18em;
+            right: -1.2em; 
+        }
+    }
+}
+

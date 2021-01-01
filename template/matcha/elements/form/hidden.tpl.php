@@ -1,0 +1,1 @@
+<input type="hidden" <?php if(!empty($this->class)) { ?>class="<?php echo $this->class ?>"<?php } ?> name="<?php echo $this->name ?>" value="<?php echo $this->escapeAttribute($this->value) ?>" />

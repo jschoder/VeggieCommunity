@@ -1,0 +1,2 @@
+<p>deine Gruppe <?php echo $this->prepareHtml($this->GROUPNAME) ?> hat Mitgliederantrag, der seit mindestens eine Woche auf eine Antwort wartet. Du kannst ihn über den folgenden Link ansehen:</p>
+<p><a href="https://www.veggiecommunity.org/de/<?php echo $this->LINK ?>">https://www.veggiecommunity.org/de/<?php echo $this->LINK ?></a></p>

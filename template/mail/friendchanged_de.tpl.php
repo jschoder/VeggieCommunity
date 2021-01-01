@@ -1,0 +1,2 @@
+<p>dein Freund <?php echo $this->prepareHtml($this->USERNAME) ?> hat sein/ihr Profil aktualisiert. Du kannst es über den folgenden Link ansehen:</p>
+<p><a href="https://www.veggiecommunity.org/de/<?php echo $this->LINK ?>">https://www.veggiecommunity.org/de/<?php echo $this->LINK ?></a></p>

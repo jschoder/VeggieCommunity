@@ -1,0 +1,2 @@
+<p>your group <?php echo $this->prepareHtml($this->GROUPNAME) ?> has a member request who is waiting for a reply for at least a week. You can see it here:</p>
+<p><a href="https://www.veggiecommunity.org/en/<?php echo $this->LINK ?>">https://www.veggiecommunity.org/en/<?php echo $this->LINK ?></a></p>

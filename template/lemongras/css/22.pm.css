@@ -1,0 +1,413 @@
+
+/* -------------------------------------------------------
+  pm
+------------------------------------------------------- */
+#pm .threads {
+    float:left;
+    border:solid 1px grey;
+    width:200px;
+    height:400px;
+}
+#pm .threads ul li {
+    border-bottom:solid 1px grey;
+}
+
+#pm .messages {
+    float:left;
+    border:solid 1px grey;
+    width:500px;
+    height:400px;
+}
+
+/******** Scrollbar ********/
+
+.scrollbar {
+    overflow:auto;
+    height:561px;
+    border-right:1px solid #acbbc3; }
+
+.track {
+    width:10px;
+    background:rgba(0, 0, 0, 0);
+    margin-right:2px;
+    border-radius:10px;
+    -webkit-transition:background 250ms linear;
+    transition:background 250ms linear; }
+
+    .track:hover,
+    .track.dragging {
+        background:#d9d9d9; /* Browsers without rgba support */
+        background:rgba(0, 0, 0, 0.15); }
+
+.handle {
+    width:7px;
+    right:0;
+    background:#999;
+    background:rgba(0, 0, 0, 0.4);
+    border-radius:7px;
+    -webkit-transition:width 250ms;
+    transition:width 250ms; }
+
+    .track:hover .handle,
+    .track.dragging .handle {
+        width:10px; }
+
+.jPmThreads .loading,
+.jPmMessages .loading {
+    text-align:center;
+    font-style:italic;
+    padding:3px 0;
+}
+.jPmThreads .loading img,
+.jPmMessages .loading img {
+    vertical-align:middle;
+    margin-right:3px;
+}
+
+/****************************************************************
+ *              MESSAGS                                         *
+ ****************************************************************/
+
+.messageListing {
+    position: relative; }
+
+.messageListing .nav {
+    margin-bottom:1em; }
+
+.messageListing .nav .new {
+    float:right; }
+
+.messageListing .nav .badge {
+    padding:2px 6px;
+    font-size:0.9em; }
+
+/******** Header ********/
+
+#new .image {
+    float:left; }
+
+#new .details {
+    float:left;
+    width:145px; }
+
+/*********************************************************
+ *              List                                     *
+ *********************************************************/
+
+.chooseMessage {
+    float:left;
+    width:212px !important; }
+
+.viewMessage {
+    float:left;
+    padding-left:2em;
+    width:464px !important; }
+
+.chooseMessage .jPmThreads li {
+    border-bottom:1px solid #acbbc3;
+    padding-left:5px; }
+
+.chooseMessage .jPmThreads li.new {
+    background-color:#eceef1; }
+
+.chooseMessage .jThread {
+    height:70px;
+    margin:2px 0;
+    padding:2px 0;
+    position:relative;
+    border-left:4px solid transparent; }
+
+    /*
+    .chooseMessage .jThread:hover {
+        background:#F5F6F7; }
+    */
+
+    .chooseMessage .new {
+        border-left:4px solid #617ca3; }
+
+    .chooseMessage .active {
+        background:#d8dfe9; }
+
+.chooseMessage .delete,
+.chooseMessage .user,
+.chooseMessage .group,
+.chooseMessage .details {
+    height:70px;
+    display:table-cell;
+    vertical-align:middle; }
+
+.chooseMessage .delete {
+    width:30px;
+    padding:0 5px; }
+
+.chooseMessage .user,
+.chooseMessage .group {
+    width:45px !important; }
+
+    .chooseMessage .user .userThumb,
+    .chooseMessage .group .mediaThumb {
+        width:45px;
+        max-width:45px !important;
+        display:block; }
+
+.chooseMessage .details {
+    width:230px;
+    padding:6px 20px 0 10px; }
+
+    .chooseMessage .details a {
+        font-size:0.9em;}
+
+    .chooseMessage .details a.textpreview {
+        display:block;
+        font-size:1em;
+        font-weight:normal;
+        line-height:1.2em;
+        margin:0;
+        color:#60696d;
+        max-height:30px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding:2px 5px 0 0;
+        overflow:hidden;
+        width:140px;  }
+
+    .chooseMessage .details .date {
+        position:absolute;
+        top:9px;
+        right:10px;
+        font-size:0.7em;
+        color:#909da3; }
+
+.chooseMessage .replied {
+    position:absolute;
+    right:1em;
+    top:50%; }
+
+
+/*********************************************************
+ *              Detail                                   *
+ *********************************************************/
+
+/******** Header ********/
+
+.viewMessage .header {
+    position:relative;
+    margin-bottom:1em;
+    border-bottom:1px solid #acbbc3;
+    height:30px; }
+
+    .viewMessage .header .actions {
+        position:absolute;
+        bottom:10px;
+        left:0; }
+
+        .viewMessage .header .actions a {
+            color:#acbbc3;
+            background:none;
+            padding:0;
+            margin-left:6px; }
+        
+            .viewMessage .header .actions a.active {
+                color:#a0b42f; }
+        
+        .viewMessage .header .actions a:before {
+            display: inline-block;
+            font: normal normal normal 16px/1 FontAwesome;  }
+
+            .viewMessage .header .actions a.block:before {
+                content:"\f05e"; }
+
+            .viewMessage .header .actions a.deleteConversation:before {
+                content:"\f1f8"; }
+            
+            .viewMessage .header .actions a.filter:before {
+                content:"\f0b0"; }
+            
+            .viewMessage .header .actions a.pdfExport:before {
+                content:"\f1c1"; }
+
+    .viewMessage .header .recipients {
+        position:absolute;
+        bottom:10px;
+        right:0; }
+
+    .viewMessage .header h2 {
+        margin-top:0; }
+
+    .viewMessage .header span {
+        color:#acbbc3; }
+
+    .viewMessage .header .userThumb {
+        height:25px;
+        width:25px; }
+
+    .viewMessage .header .filterDialog {
+        position:absolute;
+        left:0;
+        right:0;
+        top:30px;
+        z-index:99;
+        line-height:1.5em;
+        padding:12px 12px 6px;
+        border:solid 1px #acbbc3;
+        background:url('/img/lemongras/backgrounds/background.jpg') 0 0 repeat; }
+    
+        .viewMessage .header .filterDialog label {
+            display:inline-block;
+            min-width:5em; }
+    
+        .viewMessage .header .filterDialog form > div {
+            margin-bottom:6px; }
+
+    /******** Notifications ********/
+    .viewMessage .header .jNotifications {
+        position:absolute;
+        left:30px;
+        right:30px;
+        z-index:99; }
+    .viewMessage .header .jNotifications div {
+        position:relative;
+        padding:7px 7px 7px 27px;
+        background:url('/img/lemongras/icons/info.png') 5px center no-repeat; }
+    .viewMessage .header .jNotifications div span.close {
+        position:absolute;
+        top:4px;
+        right:6px;
+        height:16px;
+        width:16px;
+        cursor:pointer;
+        text-indent:-9999px;
+        background:url('/img/lemongras/icons/icons-sprite.png#%VERSION%') 2px -1381px no-repeat; }
+    .viewMessage .header .jNotifications div.info {
+        background-color:#d9dfa8;
+        border:1px solid #829225; }
+    .viewMessage .header .jNotifications div.warning {
+        background-color:#ffc266;
+        border:1px solid #ff9900; }
+    .viewMessage .header .jNotifications div.error {
+        background-color:#e88562;
+        border:1px solid #dd4814; }
+
+/******** Detail ********/
+
+.viewMessage .scrollbar {
+    border:none; }
+
+.viewMessage .details.scrollbar  {
+    width:100% !important;
+    height:400px; }
+
+.viewMessage .details .received,
+.viewMessage .details .sent {
+    margin-bottom:20px;
+    position:relative; }
+
+.viewMessage .details .userThumb {
+    height:65px;
+    width:65px;
+    max-width:65px !important; }
+
+.viewMessage .details .user {
+    font-size:0.9em;  }
+
+.viewMessage .details .date {
+    color:#acbbc3;
+    font-size:0.8em;  }
+
+.viewMessage .details .image {
+    width:70px; }
+
+.viewMessage .details .info,
+.viewMessage .details .text {
+    width:360px; }
+
+
+.viewMessage .details .info {
+    padding-bottom:0.25em;
+    border-bottom:1px solid #eceff2; }
+
+.viewMessage .details .text {
+    margin:5px 30px 0 0; }
+
+.viewMessage .details .text p {
+    line-height:130%; }
+
+
+/*** Received ***/
+.viewMessage .received .image {
+    float:left;
+    text-align:left; }
+
+.viewMessage .received .info,
+.viewMessage .received .text {
+    float:right; }
+
+.viewMessage .received .info .user {
+    float:left; }
+
+.viewMessage .received .info .date {
+    float:right;
+    padding-right: 15px; }
+
+/*** Sent ***/
+.viewMessage .sent .image {
+    float:left;
+    text-align:left; }
+
+.viewMessage .sent .info,
+.viewMessage .sent .text {
+    float:right; }
+
+.viewMessage .sent .info .user {
+    float:left; }
+
+.viewMessage .sent .info .date {
+    float:right;
+    padding-right: 15px; }
+/*
+.viewMessage .sent .image {
+    float:right;
+    text-align:right; }
+
+.viewMessage .sent .info,
+.viewMessage .sent .text {
+    float:left; }
+
+.viewMessage .sent .info .user {
+    float:right; }
+
+.viewMessage .sent .info .date {
+    float:left; }
+*/
+
+.viewMessage .info .context .show-context {
+    top:23px;
+    right:15px; }
+
+.viewMessage .info .context .context-menu {
+    top:30px;
+    right:22px; }
+
+/*********************************************************
+ *              Form                                     *
+ *********************************************************/
+
+.replyForm {
+    width:360px;
+    max-height:400px;
+    float:left;
+    padding-top:5px;
+    position:relative;
+    height:115px;
+}
+
+.replyForm textarea {
+    width:360px;
+}
+.replyForm button {
+    vertical-align:top;
+}
+.replyForm .jLoading {
+    vertical-align:top;
+    margin:5px 0 0 1px;
+}

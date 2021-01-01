@@ -1,0 +1,3 @@
+<p>sorry that we even have to ask: Did your create your profile-pics yourself? Or did you get it from another homepage?</p>
+<p>Our servers are located in Germany and here we have some companies that make their money solely from looking around the internet for copyright-violations and then suing the specific sites. One violation can easily cost us a few thousand dollars. Therefore we can't allow such pictures.</p>
+<p>Please reply with a short message if you own the rights or have the ok from the person who does or delete the picture you copied.</p>

@@ -1,0 +1,172 @@
+#pmThreads {
+    .threadFilter {
+        li {
+            padding:0 0.3em;
+            margin:0 0 0.3em;
+        }
+    }
+    
+    .jPmThreads li {
+        padding:0.3em 0 0.3em 0.3em; 
+    }
+
+    .jThread {
+        position:relative;
+        border-left:0.2em solid transparent; 
+    }
+
+    .details {
+        display:inline-block;
+    }
+
+    .user {
+        display:inline-block;
+        width:28%;
+    }
+    
+    .details {
+        position:relative;
+        width:69%;
+        vertical-align:top; 
+        padding:1.3em 0.2em 0 0.2em; 
+
+        .icon {
+            position:absolute;
+            top:0;
+            left:0;
+            font-size:0.8em;
+            line-height:1em;
+        }
+    
+        .nickname,
+        .textpreview {
+            font-size:0.9em;
+        }
+            
+        .textpreview {
+            display:block;
+            font-size:0.9em;
+            font-weight:normal;
+            line-height:1.4em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow:hidden;
+        }
+
+        .date {
+            position:absolute;
+            top:0;
+            right:0.4em;
+            font-size:0.8em;
+        }
+    }
+
+    .replied {
+        position:absolute;
+        right:1em;
+        top:50%; 
+    }
+}
+
+#inboxControl {
+    display:block;
+    position:relative;
+    padding:0 0.5em 0.5em;
+
+    nav.actions {
+        a {
+            span {
+                display:none;
+            }
+        }
+    }
+    
+    .recipients {
+        position:absolute;
+        top:0;
+        right:0;
+        text-align:right;
+    }
+}
+
+@media screen and (min-width:$breakingPointXL) {
+    #inboxControl {
+        float:right;
+        width:22em; 
+        padding:2.5em 0.5em 0.5em;
+        z-index:$contentElementZ - 1;
+       
+        .recipients {
+            left:0.5em;
+            right:auto;
+        }
+        nav.actions {
+            margin:0 0 0.5em;
+            
+            a {
+                display:block;
+                
+                span {
+                    display:inline;
+                    margin:0 0 0.5em 0.2em;
+                }
+            }
+        }
+    }
+}
+
+#inboxList {
+    position:relative;
+
+    .jNotifications {
+        position:absolute;
+        top:0.3em;
+        left:0;
+        right:0;
+
+        div {
+            display:block;
+            max-width:30em;
+            margin:0 auto;
+            z-index:$contentElementZ;
+        }
+    }
+    
+    .jLoading {
+        display:block;
+        max-width:$itemMaxWidth;
+        margin:0 auto 0.5em;
+    }
+    
+    .bubble p {
+        margin:0;
+    }
+    
+    .draft {
+        max-width:$itemMaxWidth;
+        margin:0 auto 0.5em;
+        
+        a:before {
+            margin-right:0.2em;
+        }
+    }
+    
+    .jReplyForm {
+        display:block;
+        padding:0.8em 0 0;
+        text-align:center;
+        z-index:$contentElementZ;
+        
+        ul,
+        ul li {
+            width:auto;
+            max-width:100%;
+            display:inline-block;
+        }
+        
+        textarea {
+            width:$itemMaxWidth - 5em;
+            max-width:95%;
+        }
+    }
+}

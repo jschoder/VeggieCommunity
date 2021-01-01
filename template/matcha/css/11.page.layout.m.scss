@@ -1,0 +1,64 @@
+body {
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.bodyW {
+    @extend .clearfix;
+    
+    position:relative;
+    min-width:$supportedMinWidth;
+    max-width:$supportMaxWidth; 
+    margin:0 auto;
+}
+
+body > .bodyW {
+    // Default for old browsers
+    min-height:80%;
+    // header + footer (incl padding + margin)
+    min-height:calc(100% - 8em);
+}
+
+.jMenu {
+    display:none; 
+}
+
+#sidebars {
+    width:14em;
+    float:left; 
+}
+
+#userNav, #blocks {
+    float:none;
+}
+
+main {
+    display:block;
+    float:left;
+    width:calc(100% - 15em);
+    
+    padding:0.3em;
+}
+
+main,
+#userNav,
+#blocks {
+    padding:0.3em; 
+}
+
+body > footer {
+    clear:both;
+}
+
+/* Overwrite the sidebar display ONLY on a size BIGGER than M */
+@media screen and (min-width:$breakingPointM + 0.04) {
+    // The plus fix solves the disapperance problem (open dialog and stretch it)
+    // at 785 pixel width.
+    #sidebars {
+        display:block !important;
+    }
+}

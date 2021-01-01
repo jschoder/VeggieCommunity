@@ -1,0 +1,104 @@
+ExpiresActive on
+ExpiresDefault "access plus 15 minutes"
+ExpiresByType image/gif "access plus 1 years"
+ExpiresByType image/png "access plus 1 years"
+ExpiresByType image/jpg "access plus 1 years"
+ExpiresByType image/jpeg "access plus 1 years"
+ExpiresByType image/x-icon "access plus 1 years"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 years"
+ExpiresByType application/font-sfnt "access plus 1 years"
+ExpiresByType image/svg+xml "access plus 1 years"
+ExpiresByType application/font-sfnt "access plus 1 years"
+ExpiresByType application/font-woff "access plus 1 years"
+ExpiresByType application/jsonn "access plus 1 months"
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} ^/de/favicon.ico
+RewriteRule ^(.*)$ /img/favicon.ico [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/en/favicon.ico
+RewriteRule ^(.*)$ /img/favicon.ico [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/favicon.ico
+RewriteRule ^(.*)$ /img/favicon.ico [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-152x152-precomposed.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-120x120-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-120x120-precomposed.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-120x120-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-114x114-precomposed.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-114x114-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-72x72-precomposed.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-72x72-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-57x57-precomposed.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-57x57-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-152x152.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-120x120.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-120x120.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-120x120.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-114x114.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-114x114.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-72x72.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-72x72.png [PT,L,NS]
+
+REWRITECOND %{REQUEST_URI} ^/apple-touch-icon-57X57.PNG
+REWRITERULE ^(.*)$ /img/apple-touch-icon-57X57.PNG [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-120x120-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/apple-touch-icon-precomposed.png
+RewriteRule ^(.*)$ /img/apple-touch-icon-120x120-precomposed.png [PT,L,NS]
+
+RewriteCond %{REQUEST_URI} ^/*
+RewriteCond %{REQUEST_URI} !^/bootstrap.php
+RewriteCond %{REQUEST_URI} !^/robots.txt
+RewriteCond %{REQUEST_URI} !^/google701fda4b7c6d42d1.html
+RewriteCond %{REQUEST_URI} !^/files/.*
+RewriteCond %{REQUEST_URI} !^/fonts/.*
+RewriteCond %{REQUEST_URI} !^/design/.*
+RewriteCond %{REQUEST_URI} !^/img/.*
+RewriteCond %{REQUEST_URI} !^/chat/rooms/.*
+RewriteCond %{REQUEST_URI} !^/p/.*
+RewriteCond %{REQUEST_URI} !^/v/.*
+RewriteRule ^(.*)$ /bootstrap.php [PT,L,NS]
+
+php_value log_errors On
+php_value error_log /usr/www/users/veggir/PHP_errors.log
+php_value upload_max_filesize 10M
+php_value zlib.output_compression On
+php_value always_populate_raw_post_data -1
+php_value gd.jpeg_ignore_warning 1
+php_value hash_bits_per_character 6
+php_value session.hash_function 1
+php_value session.hash_bits_per_character 6
+
+AddType text/javascript .js
+AddType text/css .css
+AddType application/json .json
+
+<ifModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file .(html?|xml|xhtml|txt|css|js|php|pl)$
+mod_gzip_item_include handler ^cgi-script$
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_include mime ^text/css.*
+mod_gzip_item_include mime ^text/javascript.*
+mod_gzip_item_include mime ^application/javascript.*
+mod_gzip_item_include mime ^application/json.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+FileETag None

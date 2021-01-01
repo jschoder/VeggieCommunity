@@ -1,0 +1,17 @@
+.female:before,
+.male:before,
+.queer:before {
+    @extend .awesome;
+}
+
+.female:before {
+    content:"\f221"; 
+}
+
+.male:before {
+    content:"\f222"; 
+}
+
+.queer:before {
+    content:"\f225"; 
+}

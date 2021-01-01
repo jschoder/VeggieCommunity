@@ -1,0 +1,62 @@
+/* -------------------------------------------------------
+  IE7 Hacks
+------------------------------------------------------- */
+
+
+
+
+/* ----------------- sidebar ----------------- */
+
+*+html #sidebar li.ProfileLinks {
+	height:157px; }
+
+*+html #sidebar li a.normal {
+	height:15px; }
+
+
+/* ----------------- profile header ----------------- */
+
+*+html #basics div div {
+	width:445px; }
+
+*+html #basics div div p,
+*+html #basics div div strong {
+	float:left;
+	display:block; }
+
+*+html #basics div div p {
+	margin-top:12px; }
+
+
+*+html #userBasics dt,
+*+html #userBasics dd {
+	float:left;
+	display:block; }
+
+*+html #basics .tooltip {
+	z-index:9999; }
+
+
+/* ----------------- photos ----------------- */
+
+*+html .album a span {
+	bottom:8px; }
+
+
+/* ----------------- help ----------------- */
+
+*+html .help {
+	width:350px; }
+
+	*+html .help form {
+		height:415px;
+		background:url("/img/lemongras/backgrounds/form.png") 0 0 repeat; }
+
+
+/* ----------------- tell a friend ----------------- */
+
+*+html #tellafriend dt,
+*+html #tellafriend dd {
+	float:left;
+	display:block; }
+

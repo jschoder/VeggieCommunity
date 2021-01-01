@@ -1,0 +1,28 @@
+body > footer {
+    background-color:$secondaryColor;
+    box-shadow: 
+        0 -1px 0 0 $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%),
+	0 -2px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 27%),
+	0 -3px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 47%);
+    
+    .bodyW > div {
+        font-size:0.8em;
+    }
+
+    ul {
+        @extend .clearfix; 
+    }
+    
+    li {
+        border-left:1px solid $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 33%);
+        
+        &:first-child {
+            border:none; 
+        }
+        
+        &.copy,
+        &.operator {
+            color:$secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 33%); 
+        }
+    }
+}

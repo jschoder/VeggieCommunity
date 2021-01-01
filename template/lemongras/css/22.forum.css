@@ -1,0 +1,363 @@
+
+#newthread {
+    clear:both;
+    margin-left:70px; }
+    
+#newthread img,
+.newcomment img {
+    float:left; }
+
+#newthread .formWrapper,
+.threadForm,
+.newcomment .formWrapper,
+.threadCommentForm {
+    position:relative;
+    float:left;
+    margin-left:5px;
+    padding-left:9px; }
+
+#newthread .formWrapper,
+.threadForm {
+    width:436px;
+    background:url('/img/lemongras/icons/bubble-grey-arrow.png') 0 20px no-repeat; }
+
+.newcomment .formWrapper,
+.threadCommentForm {
+    width:385px;
+    background:url('/img/lemongras/icons/bubble-grey-arrow.png') 0 15px no-repeat; }
+
+#newthread .form,
+.threadForm .form,
+.newcomment .form,
+.threadCommentForm .form {
+    padding:7px;
+    background:#eaeaea;
+    border-radius: 8px; }
+
+#newthread input[name="subject"],
+.threadForm input[name="subject"],
+#newthread textarea,
+.threadForm textarea {
+    width:380px; }
+
+#newthread .ajaxUploadPreview {
+    display:inline-block;
+    padding-right:0.3em;
+    margin-right:auto;
+}
+    
+    #newthread .ajaxUploadPreview img {
+        height:1.8em;
+        vertical-align:middle;
+    }
+    
+    #newthread .ajaxUploadPreview .filename {
+        max-width:calc(100% - 3.5em);
+        vertical-align:middle;
+        display:inline-block;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+    }
+    
+    #newthread .ajaxUploadPreview .delete {
+        display:inline-block;
+        width:1em;
+    }
+    
+    #newthread .ajaxUploadPreview:empty {
+        display:none;
+    }
+
+    #newthread .ajaxUploadPreview .delete:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        content:"\f1f8";
+    }
+
+.threadForm textarea.pictureCaption,
+#newthread textarea.pictureCaption {
+    vertical-align:top;
+    width:275px; }
+
+#newthread input[name="subject"],
+.threadForm input[name="subject"] {
+    margin-bottom:6px; }
+
+.newcomment textarea,
+.threadCommentForm textarea {
+    width:329px; }
+
+/*#newthread .ajaxUpload,
+.threadForm .uploadedPicture {
+    display:inline-block;
+    cursor:pointer;
+    min-width:100px;
+    height:100px;
+    border:2px solid #cfdae5; }*/
+
+#newthread .form:after,
+#newthread .form::after,
+.threadForm .form:after,
+.threadForm .form::after,
+.newcomment .form:after,
+.newcomment .form::after,
+.threadCommentForm .form:after,
+.threadCommentForm .form::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+button.save,
+button.picture {
+    position:absolute;
+    top:7px;
+    right:7px;
+    width:30px;
+    height:30px;
+    padding:0 3px; }
+
+#newthread button.save {
+    top:7px; }
+
+#newthread button.picture {
+    top:42px; }
+
+button.cancel {
+    position:absolute;
+    top:40px;
+    right:7px;
+    width:30px;
+    height:30px;
+    padding:0 3px; }
+
+button.save span,
+button.cancel span {
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-9999px; }
+
+button.save span {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -4116px no-repeat; }
+
+button.save:hover span {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -4056px no-repeat; }
+
+button.picture span:before { 
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f03e";
+  color:#b3ca34;
+  text-shadow:none;}
+
+button.picture:hover span:before {
+  color:#FFF; }
+
+button.cancel span {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 1px -1154px no-repeat; }
+
+button.cancel:hover span {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 1px -1119px no-repeat; }
+
+div.loader {
+    display:block;
+    position:absolute;
+    top:7px;
+    right:8px;
+    width:32px;
+    height:32px;
+    text-indent:-9999px;
+    background:url('/img/lemongras/ajax-loader-big.gif') 0 0 no-repeat; }
+
+.thread {
+    margin:12px 0 0 70px;
+    width:515px;
+    position:relative; }
+
+.thread div.threadArticle {
+    display: block;
+    float:left;
+    width:444px;
+    margin-left:5px;
+    background:url('/img/lemongras/icons/bubble-thread-blue.png') 0 0 no-repeat; }
+
+.thread div.myThreadArticle {
+    background:url('/img/lemongras/icons/bubble-thread-green.png') 0 0 no-repeat; }
+
+.thread div.flaggedThreadArticle {
+    background:url('/img/lemongras/icons/bubble-thread-red.png') 0 0 no-repeat; }
+
+.thread div.threadArticle h3 {
+    margin:10px 22px 0 20px;
+    overflow:hidden;
+    font-size:16px;
+    font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+.thread div.threadArticle .user {
+    margin:1px 0 5px 20px; }
+.thread div.threadArticle .pictureUser {
+    margin:10px 0 5px 20px; }
+.thread div.threadArticle .user a {
+    font-weight:bold; }
+.thread div.threadArticle .user span.unknown {
+    font-weight:bold;
+    font-style:italic; }
+.thread div.threadArticle .user .date {
+    color:#999999;
+    font-size:11px; }
+.thread div.threadArticle .picture {
+    padding:0 0 5px 20px; }
+.thread div.threadArticle .body {
+    padding:0 0 5px 20px;
+    display:block; }
+
+.thread div.threadArticle .actions {
+    padding:0 0 10px 20px;
+    background:url('/img/lemongras/icons/bubble-thread-blueBottom.png') 0 100% no-repeat; }
+
+.thread div.myThreadArticle .actions {
+    background:url('/img/lemongras/icons/bubble-thread-greenBottom.png') 0 100% no-repeat; }
+
+.thread div.flaggedThreadArticle .actions {
+    background:url('/img/lemongras/icons/bubble-thread-redBottom.png') 0 100% no-repeat; }
+
+    .thread .actions span {
+        color:#1d1d1d;
+        font-size:0.9em; }
+
+.thread .context .show-context {
+    top:5px;
+    right:9px; }
+
+.thread .image {
+    float:left; }
+
+.thread .comments {
+    margin:0 0 0 65px; }
+
+.thread-comment {
+    margin-top:6px;
+    position:relative; }
+
+.thread div.threadCommentArticle {
+    display: block;
+    float:left;
+    width:399px;
+    margin-left:5px;
+    background:url('/img/lemongras/icons/bubble-comment-blue.png') 0 0 no-repeat; }
+
+.thread div.myThreadCommentArticle {
+    background:url('/img/lemongras/icons/bubble-comment-green.png') 0 0 no-repeat; }
+
+.thread div.flaggedThreadCommentArticle {
+    background:url('/img/lemongras/icons/bubble-comment-red.png') 0 0 no-repeat; }
+
+.thread div.threadCommentArticle .user {
+    display:block;
+    padding:5px 0 3px 20px; }
+.thread div.threadCommentArticle .user a {
+    font-weight:bold; }
+.thread div.threadCommentArticle .user span.unknown {
+    font-weight:bold;
+    font-style:italic; }
+.thread div.threadCommentArticle .user .date {
+    color:#999999;
+    font-size:11px; }
+.thread div.threadCommentArticle .body {
+    padding:0 0 5px 20px; }
+    
+.thread div.threadCommentArticle .actions {
+    padding:0 0 7px 20px;
+    background:url('/img/lemongras/icons/bubble-comment-blueBottom.png') 0 100% no-repeat; }
+
+.thread div.myThreadCommentArticle .actions {
+    background:url('/img/lemongras/icons/bubble-comment-greenBottom.png') 0 100% no-repeat; }
+
+.thread div.flaggedThreadCommentArticle .actions {
+    background:url('/img/lemongras/icons/bubble-comment-redBottom.png') 0 100% no-repeat; }
+
+.thread-comment .context .show-context {
+    top:5px;
+    right:9px; }
+
+.newcomment {
+    position:relative;
+    margin:8px 0 0 65px; }
+
+.newcomment:after,
+.newcomment::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+/* Mysite specific */
+
+#jFeed #newthread, 
+#jFeed .thread {
+    margin-left:0;
+}
+#jFeed #newthread .formWrapper, .threadForm { 
+    width:386px;
+}
+#jFeed #newthread input[name="subject"], 
+#jFeed .threadForm input[name="subject"], 
+#jFeed #newthread textarea, 
+#jFeed .threadForm textarea {
+    width:330px;
+}
+#jFeed .thread {
+    width:465px;
+}
+#jFeed .thread div.threadArticle {
+    width: 394px;
+}
+#jFeed .newcomment .formWrapper, .threadCommentForm {
+    width: 335px;
+}
+#jFeed .newcomment textarea, .threadCommentForm textarea {
+    width: 279px;
+}
+#jFeed .thread div.threadCommentArticle {
+    width: 349px;
+}
+
+#jFeed .thread div.threadArticle {
+    background-image:url('/img/lemongras/icons/narrow/bubble-thread-blue.png'); }
+
+#jFeed .thread div.myThreadArticle {
+    background-image:url('/img/lemongras/icons/narrow/bubble-thread-green.png'); }
+
+#jFeed .thread div.flaggedThreadArticle {
+    background-image:url('/img/lemongras/icons/narrow/bubble-thread-red.png'); }
+
+#jFeed .thread div.threadArticle .actions {
+    background-image:url('/img/lemongras/icons/narrow/bubble-thread-blueBottom.png'); }
+
+#jFeed .thread div.myThreadArticle .actions {
+    background-image:url('/img/lemongras/icons/narrow/bubble-thread-greenBottom.png'); }
+
+#jFeed .thread div.flaggedThreadArticle .actions {
+    background-image:url('/img/lemongras/icons/narrow/bubble-thread-redBottom.png'); }
+
+#jFeed .thread div.threadCommentArticle {
+    background-image:url('/img/lemongras/icons/narrow/bubble-comment-blue.png'); }
+
+#jFeed .thread div.myThreadCommentArticle {
+    background-image:url('/img/lemongras/icons/narrow/bubble-comment-green.png'); }
+
+#jFeed .thread div.flaggedThreadCommentArticle {
+    background-image:url('/img/lemongras/icons/narrow/bubble-comment-red.png'); }
+
+#jFeed .thread div.threadCommentArticle .actions {
+    background-image:url('/img/lemongras/icons/narrow/bubble-comment-blueBottom.png'); }
+
+#jFeed .thread div.myThreadCommentArticle .actions {
+    background-image:url('/img/lemongras/icons/narrow/bubble-comment-greenBottom.png'); }
+
+#jFeed .thread div.flaggedThreadCommentArticle .actions {
+    background-image:url('/img/lemongras/icons/narrow/bubble-comment-redBottom.png'); }

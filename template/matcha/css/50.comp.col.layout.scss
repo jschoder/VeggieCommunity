@@ -1,0 +1,92 @@
+/*
+Use the class "big" for thinCol (>= 4 columns) and wideCol (>= 3 columns))
+*/
+
+.thinCol {
+    @extend .clearfix;
+
+    /* 3 Columns */
+    > div {
+        float:left;
+        width:32.6%;
+        margin-right:1%;
+
+        &:nth-child(3n) {
+            margin:0;
+        }
+        &:nth-child(3n+1) {
+            clear:both;
+        }
+        
+        @media screen and (max-width:$breakingPointS) {
+            /* 2 Column */
+            width:49.5%;
+            &:nth-child(2n) {
+                margin:0;
+            }
+        }
+    }
+        
+    @media screen and (min-width:$breakingPointXL) {
+        &.big {
+            > div {
+                /* 4 Columns */
+                width:24.2%;
+                &:nth-child(3n) {
+                    margin-right:1%;
+                }
+                &:nth-child(4n) {
+                    margin:0;
+                    clear:none;
+                }
+                &:nth-child(4n+1) {
+                    clear:both;
+                }
+            }
+        }
+    }
+}
+
+.wideCol {
+    @extend .clearfix;
+
+    /* 2 Columns */
+    > div {    
+        float:left;
+        width:49.5%;
+        margin-right:1%;
+        
+        &:nth-child(2n) {
+            margin:0;
+        }
+        &:nth-child(2n+1) {
+            clear:both;
+        }
+        
+        @media screen and (max-width:$breakingPointS) {
+            /* 1 Column */
+            width:100%;
+            margin:0;
+        }
+    }
+        
+    @media screen and (min-width:$breakingPointXL)  {
+        &.big {
+            > div { 
+                /*  3 Columns */
+                width:32.6%;
+
+                &:nth-child(2n) {
+                    margin-right:1%;
+                }
+                &:nth-child(3n) {
+                    margin:0;
+                    clear:none;
+                }
+                &:nth-child(3n+1) {
+                    clear:both;
+                }
+            }
+        }
+    }
+}

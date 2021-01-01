@@ -1,0 +1,2 @@
+<p>deine Realprüfung wurde leider entfernt. Dies liegt wahrscheinlich daran, dass du alle erkennbaren Fotos von dir entfernt hast.</p>
+<p>Diese Entfernung ist nicht mit einer Strafe verbunden und kann, nach dem hochladen neuer Profilbilder, neu beantragt werden.</p>

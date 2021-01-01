@@ -1,0 +1,289 @@
+/* -------------------------------------------------------
+  My Groups
+------------------------------------------------------- */
+
+#mygroups .lastUpdates,
+#mygroups .secondary {
+    float:left;
+    width:49%; }
+#mygroups h2 {
+    font-size:18px;
+    line-height:18px; }
+#mygroups .secondary h2 {
+    margin-bottom:8px; }
+#mygroups .unconfirmedMembers {
+    margin-bottom:8px; }
+#mygroups ul {
+    margin-left:12px;
+    list-style:disc outside none; }
+#mygroups ul li {
+    margin-bottom:6px; }
+#mygroups .flags ul li h3,
+#mygroups .invitations ul li h3 {
+    font-size:14px;
+    line-height:14px; }
+    #mygroups .invitations ul li p {
+       font-style:italic;
+       margin:2px 0 1px 0; }
+    #mygroups .invitations ul li .date {
+       color: #999999;
+       font-size: 11px; }
+
+/* -------------------------------------------------------
+  Group Search
+------------------------------------------------------- */
+
+#groupList {
+    margin-top:10px; }
+
+#groupList li.groupBox {
+    position:relative;
+    float:left;
+    width:321px;
+    height:79px;
+    padding:12px;
+    margin:0 7px 10px 0;
+    /* overflow:hidden; */
+    background:url('/img/lemongras/boxes/box-userlist.png') 0 0 no-repeat; }
+
+#groupList li.groupBox:hover {
+    background:#ecf0f4 url('/img/lemongras/boxes/box-userlist.png') 0 0 no-repeat; }
+
+#groupList li.groupBox:hover img {
+    background:#f7f7f7; }
+
+#groupList .image,
+#groupList .groupinfo {
+    float:left; }
+
+#groupList .image {
+    width:80px;
+    height:80px;
+    margin-right:10px;
+    position:relative; }
+
+#groupList .image span {
+    position:absolute;
+    top:5px;
+    left:5px;
+    display:block;
+    height:35px;
+    width:35px;
+    text-indent:-9999px;
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -2979px no-repeat; }
+
+#groupList .groupinfo {
+    width:230px; }
+
+#groupList .groupinfo .groupname {
+    padding-bottom:6px;
+    font-size:16px;
+    font-family:'CABNDWebBold', Arial, FreeSans, Tahoma, sans-serif; }
+
+#groupList .groupinfo ul.fields li {
+    float:left;
+    width:auto;
+    height:auto;
+    padding:0 5px;
+    font-size:.9em;
+    border-left:1px solid #cfdae5; }
+
+#groupList .groupinfo ul.fields li:first-child {
+    padding:0 5px 0 0;
+    border-left:none; }
+
+.activity {
+    display:inline-block;
+    width:23px;
+    height:11px;
+    vertical-align:middle; }
+.activity.xs {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3730px no-repeat; }
+.activity.s {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3760px no-repeat; }
+.activity.m {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3790px no-repeat; }
+.activity.l {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3820px no-repeat; }
+.activity.xl {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3850px no-repeat; }
+
+.visibility_public,
+.visibility_registered,
+.visibility_member {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    vertical-align:middle; }
+
+#subnav a .forumPublic,
+#subnav a .forumRegistered,
+#subnav a .forumMember {
+    padding:0 2px 0 23px; }
+#subnav a .forumPublic,
+.visibility_public {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 2px -3880px no-repeat; }
+#subnav a:hover .forumPublic,
+#subnav a.active .forumPublic {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 2px -3910px no-repeat; }
+#subnav a .forumRegistered,
+.visibility_registered {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 2px -4000px no-repeat; }
+#subnav a:hover .forumRegistered,
+#subnav a.active .forumRegistered {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 2px -4030px no-repeat; }
+#subnav a .forumMember,
+.visibility_member {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 2px -3940px no-repeat; }
+#subnav a:hover .forumMember,
+#subnav a.active .forumMember {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -3970px no-repeat; }
+
+/* -------------------------------------------------------
+  Groupinfo
+------------------------------------------------------- */
+#groupInfo h2 {
+    padding:0 27px 5px 27px; }
+#groupInfo .invitations,
+#groupInfo p {
+    padding:0 27px 12px 27px; }
+    #groupInfo .invitations p {
+        font-style:italic;
+        padding:0 27px 12px 12px; }
+#groupInfo .invitations button {
+    margin:0.5em 0 0 0.5em;
+    float:right; }
+#groupInfo h2.membersRegistered {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 4px -3995px no-repeat; }
+#groupInfo h2.membersMember {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 4px -3935px no-repeat; }
+#groupInfo h3,
+#groupInfo .userquicklist ,
+#groupInfo #unconfirmed-members{
+    padding:5px 0 0 27px; }
+
+/* -------------------------------------------------------
+  Groupdetails
+------------------------------------------------------- */
+
+#groupBasics #options,
+#eventBasics #options {
+    float:right;
+    width:auto;
+    text-align:center;
+    min-width:60px; }
+
+#groupBasics #options .context,
+#eventBasics #options .context {
+    margin-top:3px;
+    position:relative; }
+
+#groupBasics #options .context .show-context,
+#eventBasics #options .context .show-context {
+    position:absolute;
+    top:1px;
+    left:0px;
+    right:0px;
+    margin-left:auto;
+    margin-right:auto;
+    text-indent:-9999px;
+    display:inline-block;
+    height:16px;
+    width:32px;
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -4176px no-repeat; }
+
+#groupBasics #options .context:hover .show-context,
+#eventBasics #options .context:hover .show-context {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 0 -4146px no-repeat; }
+
+#groupForum h2 {
+    width:auto;
+    float:left;
+    margin:0 0 8px 5px; }
+
+#groupForum .subscribeForum,
+#groupForum .unsubscribeForum {
+    display:block;
+    float:left;
+    cursor:pointer;
+    width:22px;
+    height:22px; }
+
+#groupForum .subscribeForum {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 1px -4448px no-repeat; }
+
+#groupForum .unsubscribeForum {
+    background:url('/img/lemongras/icons/icons-sprite.png?%VERSION%') 1px -4417px no-repeat; }
+
+
+#groupForum {
+    position:relative; }
+
+#groupForum .infobox {
+    position:absolute;
+    top:30px;
+    left:5px;
+    width:170px; }
+
+#groupForum .infobox h3 {
+    margin-bottom:8px; }
+
+#groupForum .infobox .description,
+#groupForum .infobox .rules {
+    border:solid 1px #c2d63f;
+    border-radius:8px;
+    padding:10px;
+    margin-bottom:10px; }
+
+/* -------------------------------------------------------
+  Group Members
+------------------------------------------------------- */
+#groupMembers h2 {
+    margin-bottom:8px; }
+#groupMembers #unconfirmed-members li {
+    margin-bottom:8px; }
+#groupMembers #unconfirmed-members li button {
+    margin-left:6px; }
+
+/* -------------------------------------------------------
+  Group Settings
+-------------------------------------------------------- */
+#groupSettings dl.row {
+    margin-bottom:6px; }
+#groupSettings dl.row input[name^="forums[name]"] {
+    margin:0 5px 0 0;
+    width:145px; }
+#groupSettings dl.row select[name^="forums[contentVisibility]"] {
+    margin:0 5px 0 0;
+    width:240px; }
+#groupSettings dl.row label {
+    vertical-align:4px;}
+
+/* -------------------------------------------------------
+  Invite Member Dialog
+-------------------------------------------------------- */
+.inviteMemberDialog ul {
+    max-height:320px;
+    overflow-y:scroll; }
+    .inviteMemberDialog ul li {
+        display:inline-block;
+        width:80px;
+        float:left; 
+        margin:0 5px 6px 0;}
+        .inviteMemberDialog ul li input[type="checkbox"] {
+            float:left;
+            margin:0 3px 0 0; }
+        .inviteMemberDialog ul li label {
+            cursor:pointer; }
+        .inviteMemberDialog ul li label.text {
+            display:inline-block;
+            float:left;
+            overflow:hidden;
+            width:55px;
+            font-size:0.7em; }
+    .inviteMemberDialog textarea {
+        width:100%;
+        height:5em;
+        margin-bottom:12px; }
+    .inviteMemberDialog button {
+        float:right; }

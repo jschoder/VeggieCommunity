@@ -1,0 +1,98 @@
+.notifyNews,
+.notifyInfo,
+.notifyPlus,
+.notifySuccess,
+.notifyWarn,
+.notifyError {
+    position:relative;
+    
+    &:before {
+        @extend .awesome;
+        position:absolute;
+        top:0.7em;
+        left:0.6em;
+    }
+    
+    .close {
+        cursor:pointer;
+    }
+    
+    .close:before {
+        @extend .awesome;
+        content:"\f00d";
+    }
+}
+
+.notifyNews:before {
+    color:$itemBorderColor;
+    content:"\f09e";
+}
+.notifyInfo:before {
+    color:$itemBorderColor;
+    content:"\f05a";
+}
+.notifyPlus:before {
+    color:$itemBorderColor;
+    content:"\f06c";
+}
+.notifyNews .info,
+.notifyNews .close {
+    color:$itemBorderColor;
+    &:hover {
+        color:$itemBorderColor + hsl(0deg, 0%, 10%);
+    }
+}
+.notifySuccess:before {
+    color:$notifySuccessColor;
+    content:"\f00c";
+}
+.notifyWarn:before {
+    color:$notifyWarnColor;
+    content:"\f071";
+}
+.notifyWarn a,
+.notifyWarn .close,
+.notifyWarn ul.list > li::before {
+    color:$notifyWarnColor;    
+}
+.notifyWarn a,
+.notifyWarn .close {
+    &:hover {
+        color:$notifyWarnColor + hsl(0deg, 0%, 10%);
+    }
+}
+.notifyError:before {
+    color:$notifyErrorColor;
+    content:"\f056";
+}
+.notifyError a,
+.notifyError .close {
+    color:$notifyErrorColor;
+    &:hover {
+        color:$notifyErrorColor + hsl(0deg, 0%, 10%);
+    }
+}
+
+.notifyNews, .notifyInfo, .notifyPlus, .notifySuccess, .notifyWarn, .notifyError {
+    border-radius:$smallBorderRadius; 
+    box-shadow:$itemBoxShadow; 
+    line-height:1.3em;
+} 
+.notifyNews,
+.notifyInfo,
+.notifyPlus {
+    border:1px solid $itemBorderColor;
+    background-color:$itemBackgroundColor; 
+}
+.notifySuccess {
+    border:1px solid $notifySuccessColor;
+    background-color:$notifySuccessColor + hsl(0deg, 0%, 38%); 
+}
+.notifyWarn {
+    border:1px solid $notifyWarnColor;
+    background-color:$notifyWarnColor + hsl(0deg, 0%, 38%); 
+}
+.notifyError {
+    border:1px solid $notifyErrorColor;
+    background-color:$notifyErrorColor + hsl(0deg, 0%, 38%); 
+}

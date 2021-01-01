@@ -1,0 +1,410 @@
+form {
+    display:inline;
+}
+
+form > ul > li,
+form li.group > .collapsible > div > ul > li,
+form li.group div.wideCol > div > ul > li,
+.location .addresspopup > ul > li {
+    width:100%;
+    max-width:$formWidth;
+    margin:0 auto 0.8em; 
+
+    > label {
+        display:block;
+        margin:0 0 0.3em; 
+    }
+}
+
+form > ul > li,
+form li.group > .collapsible > div > ul > li,
+form li.group div.wideCol > div > ul > li {
+    &.rows {
+        width:auto;
+        max-width:100%;
+    }
+    
+    input[type="password"] + label {
+        margin:0.3em 0 0.3em; 
+    }
+    
+    &:empty {
+        display:none;
+    }
+}
+
+form > ul > li.group {
+    width:100%;
+    max-width:100%;
+}
+
+form li.fromto {
+    max-width:30em;
+    
+    .topLabel {
+        display:none;
+    }
+    
+    label {
+        display:inline-block;
+        vertical-align:top;
+        width:50%;
+        padding:0 0 0.2em;
+        
+        &.wideLabel {
+            width:100%;
+        }
+    }
+    
+    .inline {
+        width:35%;
+        padding:0;
+        
+        &.first {
+            text-align:left;
+        }
+        &.last {
+            text-align:right;
+        }
+    }
+    
+    .xs {
+        display:inline-block;
+        width:6%;
+        text-align:center;
+        vertical-align:middle;
+    }
+    
+    label.help,
+    label.error {
+        width:100%;
+    }
+    
+    @media screen and (max-width:$breakingPointS) {
+        .topLabel {
+            display:inline-block;
+        }
+    
+        .inline {
+            width:10%;
+            
+            span {
+                display:none;
+            }
+        }
+        
+        .xs {
+            width:16%;
+        }
+    }
+}
+
+.passwordStrength,
+label.help,
+label.error {
+    margin:0.3em 0 0; 
+}
+
+input[type="text"],
+input[type="password"],
+select,
+.passwordStrength {
+    width:100%;
+    max-width:18em;
+    font-size:1em;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    height:1.9em;
+    padding:0 0.4em; 
+    box-sizing: border-box;
+}
+
+.passwordStrength { 
+    @extend .clearfix;
+    
+    > div {
+        display:block;
+        float:left;
+    }
+    
+    .label {
+        width:50%;
+    }
+    .bar {
+        width:47%;
+        height:1em;
+        margin-left:3%;
+        
+        > div {
+            height:100%;
+        }
+    }
+    
+    .comment {
+        width:100%;
+        margin:0.3em 0 0; 
+    }
+}
+
+input[type="text"] + input[type="text"],
+.colorGroup + .colorGroup {
+    margin:0.3em 0 0;
+}
+
+textarea {
+    overflow:auto;
+    width:100%;
+    max-width:$formWidth;
+    min-height:28px;
+    max-height:360px;
+    line-height:1.3em;
+    font-size:1em;
+    padding:0.2em 0.4em
+}
+
+.datepicker,
+.clockpicker {
+    display:inline-block;
+
+    input,
+    .icon {
+        vertical-align:middle;
+    }
+
+    .icon {
+        padding:0 0.4em; 
+    }
+}
+
+.datepicker {
+    input[type="text"] {
+        // Name required to overwrite followed margin
+        &.day,
+        &.month,
+        &.year {
+            width:4em;
+            margin:0;
+            text-align:center;
+        }
+    }
+}
+.clockpicker input {
+    width:4em;
+}
+
+.range {
+    select {
+        width:5em;
+    }
+}
+
+&.help,
+&.error {
+    margin-top:0.3em; 
+    text-align:left;
+}
+
+.searching {
+    display:table;
+
+    li {
+        display:table-row;
+
+        > label,
+        > .group {
+            display:table-cell;
+            padding-right:0.5em;
+        }
+
+        .group {
+            padding-top:0.3em;
+
+            label {
+                display:block; 
+            }
+        }
+    }
+
+    input {
+        display:none;
+    }
+}
+
+.rows {
+    text-align:center;
+    
+    ol {
+        > li {
+            padding:0.3em 
+        }
+    }
+    
+    ul {
+        @extend .clearfix;
+        li {
+            display:inline-block; 
+        }
+    }
+    
+    li {
+        margin:0 0 2px; 
+    }
+    
+    &.floating {
+        ul {
+            max-width:26em;
+            margin:0 auto;
+
+            li:first-child,
+            li.image {
+                float:left;
+            }
+                
+            li {
+                text-align:left;
+                display:block;
+            }
+        }
+    }
+    
+    .deleteRow {
+        display:block;
+    }
+    
+    .ajaxUploadPreview {
+        position:relative;
+        width:5em;
+        height:5em; 
+        margin-right:0.5em;
+        
+        &:empty {
+            display:inline-block; 
+        }
+        
+        .jLoading {
+            position:absolute;
+            right:0.2em;
+            bottom:0;
+            font-size:2em;
+            z-index:$contentElementZ + 2;
+        }
+        
+        img {
+            position:absolute;
+            top:0px;
+            left:0px;
+            border:none;
+            height:100%;
+            width:100%;
+            padding:0; 
+            z-index:$contentElementZ;
+        }
+    }
+}
+
+.ajaxUploadSelect {
+    display:none;
+}
+.ajaxUploadPreview {
+    display:inline-block;
+    padding-right:0.3em;
+    margin-right:auto;
+    
+    img {
+        height:1.8em;
+        vertical-align:middle;
+    }
+    
+    .filename {
+        max-width:calc(100% - 3.5em);
+        vertical-align:middle;
+        display:inline-block;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+    }
+    
+    .delete {
+        display:inline-block;
+        width:1em;
+    }
+    
+    &:empty {
+        display:none;
+    }
+}
+
+select option,
+select optgroup option {
+    padding-left:0.3em;
+}
+
+.scroll {
+    max-height:16em;
+    line-height:1.5em;
+    overflow-y:auto;
+    margin:0 0 0.3em;
+}
+
+.mchoice ul li {
+    margin:0 0 0.3em !important;
+}
+
+button,
+a.button {
+    font-size:1em;
+    padding:0.3em 0.7em;
+    line-height:1.4em;
+    text-align:center;
+}
+
+li.location {
+    position:relative;
+    
+    .addresspopup {
+        display:none;
+        position:absolute;
+        top:3.2em;
+        left:0;
+        width: 100%;
+        max-width: 18em;
+        padding:0.4em;
+        z-index:$popupZ;
+        
+        background-color:$itemBackgroundColor;
+        border:solid 1px $primaryColor;
+        border-radius:$smallBorderRadius;
+    }
+}
+
+::-webkit-file-upload-button,
+::-ms-browse{
+    font-size:1em;
+    padding:0.3em 0.5em;
+}
+
+form.horizontal {
+    @extend .clearfix;
+    
+    ul {
+        width:100%;
+        text-align:center;
+    
+        li {
+            display:inline-block;
+            width:auto;
+            margin:0.2em 0;
+            
+            label {
+                display:inline-block;
+            }
+        }
+    }
+    
+    button {
+        padding:0.2em 0.6em;
+    }
+}

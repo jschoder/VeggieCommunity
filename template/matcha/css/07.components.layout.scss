@@ -1,0 +1,71 @@
+h3 {
+    img {
+        vertical-align:middle;
+        height:1.5em;
+        margin-right:0.5em;
+    }
+}
+
+h1, h2, h3 {
+    sup {
+        vertical-align:top;
+        display:inline-block;
+        margin-left:0.8em;
+        font-size:0.6em;
+        font-weight:normal;
+        
+        &:before {
+            @extend .awesome; 
+        }
+        
+        &.member:before {
+            content:"\f023";
+        }
+        &.registered:before {
+            content:"\f0c0";
+        }
+        &.public:before {
+            content:"\f06e";
+        }
+        
+        span {
+            padding-left:0.3em;
+        
+            @media screen and (max-width:$breakingPointS) {
+                display:none;
+            }
+        }
+    }
+}
+
+div.textblock,
+section.textblock {
+    display:block;
+    width:100%;
+    max-width:$itemMaxWidth;
+    margin:0 auto;
+}
+
+.hidden {
+    display:none;
+}
+
+ul.h {
+    li { 
+        display:inline-block;
+        
+        + li {
+            margin-left:0.3em;
+            padding-left:0.3em;
+        }
+    }
+} 
+    
+.followed {
+    margin-bottom:0.1em !important;
+}
+
+footer.actions {
+    text-align:right;
+    font-size:0.9em; 
+}

@@ -1,0 +1,55 @@
+/* Default Elements */
+body {
+    color:$defaultFontColor; 
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:bold; 
+    margin:0 0 0.2em;
+}
+h1 {
+    font-size:1.6em; 
+}
+h2 {
+    font-size:1.4em; 
+}
+h3 {
+    font-size:1.2em; 
+}
+h4 {
+    // Same font size. Just adding other attributes
+}
+p, div.p {
+    line-height:1.3em; 
+    margin:0 0 0.5em; 
+}
+strong {
+    font-weight:bold;
+}
+a {
+    font-weight:bold;
+    color:$primaryColor;
+    text-decoration:none; 
+
+    &:active,
+    &:visited {
+        color:$primaryDarkColor; 
+    }
+    &:hover,
+    &:focus {
+        color:$primaryHighlightColor; 
+    }
+}
+
+label img,
+    a img {
+    padding:2px; 
+    border-radius:$smallBorderRadius;
+    border:1px solid $itemBorderColor; 
+
+    &:hover {
+        border-color:$primaryColor 
+    }
+}

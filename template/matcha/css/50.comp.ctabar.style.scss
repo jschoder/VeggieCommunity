@@ -1,0 +1,22 @@
+.ctabar {
+    border:1px solid $itemBorderColor;
+    border-radius:$smallBorderRadius;
+    
+    
+    a,
+    button {
+        background-color:$complementaryColor;
+        border:1px solid $complementaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%); 
+        color:$primaryContrastFontColor;
+        border-radius:$smallBorderRadius;
+        
+        &:before {
+            @extend .awesome; 
+        }
+        
+        &:hover {
+            background-color:$complementaryColor - hsl(0deg, 0%, 15%);
+            border:1px solid $complementaryColor - hsl(0deg, 0%, 15%);  
+        }
+    }
+}

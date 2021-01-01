@@ -1,0 +1,2 @@
+<p>your real check has been removed. This is probably due to you removing any recognizable pictures.</p>
+<p>This removal doesn't result in any punishment and you can rerequest the real status after you uploaded new profile pictures.</p>

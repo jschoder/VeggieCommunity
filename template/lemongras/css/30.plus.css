@@ -1,0 +1,17 @@
+.plus:after {
+    font:normal normal normal 14px/1 FontAwesome;
+    display:inline;
+    color:#E78E25;
+    vertical-align:super;
+    content:"\f06c"; 
+    margin-left:0.2em; }
+
+.real.plus:after {
+    content:"\f058\f06c"; 
+}
+
+#notify .plus:after {
+   display:none; }
+
+.plus:hover:after {
+    color:#E7B880; }

@@ -1,0 +1,12 @@
+table.wide {
+    display:block;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    border-collapse: separate;
+    border-spacing: 0.4em;
+    
+    th, td {
+        padding:0.6em; 
+        vertical-align:middle;
+    }
+}

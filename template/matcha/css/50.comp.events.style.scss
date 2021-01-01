@@ -1,0 +1,158 @@
+ul.events {
+    > li {
+        border-left:transparent 6px solid;
+        padding-left:0.4em;
+    }
+    
+    li  {
+        &.private {
+            border-color:#a10078;
+        }
+        &.privateParty {
+            border-color:#9768d1;
+        }
+        &.privateGoingout {
+            border-color:#7b52ab;
+        }
+        &.privateMusic {
+            border-color:#553285;
+        }
+        &.privateBirthday {
+            border-color:#de264c;
+        }
+        &.privateSport {
+            border-color:#f0788c;
+        }
+        &.activism {
+            border-color:#42a627;
+        }
+        &.activismDemonstration {
+            border-color:#7cb042;
+        }
+        &.activismVigil {
+            border-color:#81c14f;
+        }
+        &.activismInfostall {
+            border-color:#96be5d;
+        }
+        &.activismLecture {
+            border-color:#3f912f;
+        }
+        &.activismConference {
+            border-color:#1b7223;
+        }
+        &.activismBenefit {
+            border-color:#126537;
+        }
+        &.activismOnline {
+            border-color:#bad83c;
+        }
+        &.categoryMeeting {
+            border-color:#2c1dff;
+        }
+        &.meetingGamingEvening {
+            border-color:#1c3ffd;
+        }
+        &.meetingRoundtable {
+            border-color:#1b76ff;
+        }
+        &.meetingNetworking {
+            border-color:#15a9ff;
+        }
+        &.meetingActivistMeetup {
+            border-color:#0eeaff;
+        }
+        &.commercial {
+            border-color:#f58803;
+        }
+        &.commercialOpening {
+            border-color:#da5103;
+        }
+        &.tradefair {
+            border-color:#be350f;
+        }
+        &.other {
+            border-color:#aea79f;
+        }
+        &.festival {
+            border-color:#caa170;
+        }
+        &.summerfete {
+            border-color:#80a1bc;
+        }
+    }
+}
+
+.calendar {
+    .event {
+        &.private {
+            background-color:#a10078;
+        }
+        &.privateParty {
+            background-color:#9768d1;
+        }
+        &.privateGoingout {
+            background-color:#7b52ab;
+        }
+        &.privateMusic {
+            background-color:#553285;
+        }
+        &.privateBirthday {
+            background-color:#de264c;
+        }
+        &.privateSport {
+            background-color:#f0788c;
+        }
+        &.activism {
+            background-color:#42a627;
+        }
+        &.activismDemonstration {
+            background-color:#7cb042;
+        }
+        &.activismVigil {
+            background-color:#81c14f;
+        }
+        &.activismInfostall {
+            background-color:#96be5d;
+        }
+        &.activismLecture {
+            background-color:#3f912f;
+        }
+        &.activismConference {
+            background-color:#1b7223;
+        }
+        &.activismBenefit {
+            background-color:#126537;
+        }
+        &.activismOnline {
+            background-color:#bad83c;
+        }
+        &.categoryMeeting {
+            background-color:#2c1dff;
+        }
+        &.meetingGamingEvening {
+            background-color:#1c3ffd;
+        }
+        &.meetingRoundtable {
+            background-color:#1b76ff;
+        }
+        &.meetingNetworking {
+            background-color:#15a9ff;
+        }
+        &.meetingActivistMeetup {
+            background-color:#0eeaff;
+        }
+        &.commercial {
+            background-color:#f58803;
+        }
+        &.commercialOpening {
+            background-color:#da5103;
+        }
+        &.tradefair {
+            background-color:#be350f;
+        }
+        &.other {
+            background-color:#aea79f;
+        }
+    }
+}

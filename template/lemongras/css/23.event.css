@@ -1,0 +1,121 @@
+.eventCategory {
+    box-sizing: border-box;
+    padding-left:3px;
+    border-left:5px solid #FFF; }
+
+/* Temporary fix for tab width */
+#subnav a[href="/de/events/"],
+#subnav a[href="/de/events/add/"]{
+    width:150px; }
+
+/* -------------------------------------------------------
+  My Events
+------------------------------------------------------- */
+
+#myevents .mycalendar,
+#myevents .secondary {
+    float:left;
+    width:49%; }
+#myevents h2 {
+    font-size:18px;
+    line-height:18px; }
+#myevents .secondary h2 {
+    margin-bottom:8px; }
+
+#myevents li {
+    box-sizing: border-box;
+    border-left:5px solid #FFF; 
+    padding-left:3px;
+    margin:0 0 0.8em 0.2em;}
+
+#myevents li .img,
+#myevents li div {
+    float:left;
+    padding: 0.2em 0 0 0.5em; }
+
+/* -------------------------------------------------------
+  My Calendar
+------------------------------------------------------- */
+
+.fc-calendar {
+    border-bottom:1em; }
+
+.fc-head div,
+.fc-row div {
+    box-sizing: border-box;
+    border:solid 2px #c9d5db; 
+    margin:0 -1px -1px 0; }
+
+.fc-head div {
+    background-color:#c9d5db;
+    padding:0.5em 0;
+    text-align:center;
+    font-weight:bold; }
+
+.fc-four-rows .fc-row  {
+    height: 25%; }
+
+.fc-five-rows .fc-row  {
+    height: 20%; }
+
+.fc-six-rows .fc-row {
+    height: 16.66%;
+    height: -moz-calc(100%/6);
+    height: -webkit-calc(100%/6);
+    height: calc(100%/6); }
+
+.fc-calendar .fc-row > div,
+.fc-calendar .fc-head > div {
+    float: left;
+    height: 100%;
+    width:  14.28%; /* 100% / 7 */
+    width: -moz-calc(100%/7);
+    width: -webkit-calc(100%/7);
+    width: calc(100%/7);
+    position: relative; }
+
+.fc-calendar .fc-row > div {
+    min-height:7em; }
+
+.fc-calendar .fc-row div span {
+    display:block;
+    margin:0.2em 0.4em;
+    font-weight:bold; }
+
+.fc-calendar .fc-row div.prevM,
+.fc-calendar .fc-row div.nextM {
+    color:#c9d5db; }
+
+.fc-calendar .fc-row div a {
+    display:block;
+    margin:0 0.3em 0.3em 0.3em;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-left:3px;
+    border-left:5px solid #FFF; }
+
+/* -------------------------------------------------------
+  Event View
+------------------------------------------------------- */
+
+ .eventActions a {
+    padding:3px 8px 3px 3px;
+    color: #999999; }
+ .eventActions .context .context-menu ul li a.marked,
+ .eventActions a.marked {
+    color: #a0b42f; 
+    font-weight:bold; }
+ .eventActions .context {
+    position:relative;
+    display:inline-block; }
+ .eventActions .context .show-participate {
+    display:inline-block;
+    padding:0; }
+ .eventActions .context .context-menu {
+     width:200px; }
+ .eventActions .context .context-menu ul li a {
+    padding:0; 
+    margin-bottom:0.2em; }
+ .eventActions .context .context-menu {
+      left:0px; }

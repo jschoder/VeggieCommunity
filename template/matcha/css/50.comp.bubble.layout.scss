@@ -1,0 +1,115 @@
+.bubbleW {
+    @extend .clearfix;
+    display:block;
+    max-width:$itemMaxWidth;
+    margin:0 auto 0.5em;
+  
+    .label {
+        white-space:no-wrap;
+        float:left; 
+    }
+    .label img {
+        white-space:no-wrap;
+        width:50px;
+        height:50px; 
+    }
+}
+.bubble {
+    position: relative;
+    float:left; 
+    width: $supportedMinWidth - 65px;
+    width: calc(100% - 66px);
+    min-height:53px;
+    margin-left:15px;
+    padding:0.5em;
+    margin-bottom:0.5em; 
+    
+    header {
+        margin-bottom:0.3em; 
+    }
+    
+    p {
+        word-wrap:break-word;
+    }
+    
+    img {
+        max-width:100%;
+    }
+    
+    &.form {
+        text-align:center;
+        
+        ul {
+            vertical-align:top;
+            display:inline-block;
+            width:75%;
+            width:calc(100% - 3em);
+            max-width:20em;
+        }
+        .actions {
+            vertical-align:top;
+            display:inline-block;
+            width:2.2em;
+            
+            button {
+                padding:0.3em;
+                margin:0 0 0.3em;
+                
+                &:before {
+                    margin:0;
+                }
+            }
+        }
+        
+        li {
+            margin:0 0 0.2em;
+        }
+        input {
+            max-width:30em;
+        }
+    }
+    
+    .notifyInfo,
+    .notifyWarn,
+    .notfiyError {
+        margin:0.7em 0 0;
+    }
+}
+
+section.comments {
+    clear:both;
+    margin: 0 0 1em 65px;
+    
+    &.empty {
+        margin-bottom:0;
+    }
+        
+    .bubbleW {
+        margin-bottom:0.5em; 
+
+        // Smaller Icon
+        .label img {
+            width:40px;
+            height:40px; 
+        }
+    }
+        
+    // Moving the speech arrow a little to the top (to fit the smaller icon))
+    .bubble:after,
+    .bubble:before {
+        top: 9px; 
+    }
+
+    .bubble {
+        width: $supportedMinWidth - 65px - 65px;
+        width: calc(100% - 66px);  
+    }
+    
+    > aside > nav {
+        padding:0 0 0 55px;
+    }
+}
+
+
+    
+    

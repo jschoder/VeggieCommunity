@@ -1,0 +1,18 @@
+.receivedSent {
+    &:before {
+        @extend .awesome;
+        color:$primaryColor;
+    }
+    
+    &.bidirectional:before {
+        content:"\f0ec";
+    }
+    
+    &.received:before {
+        content:"\f177";
+    }
+    
+    &.sent:before {
+        content:"\f178";
+    }
+}

@@ -1,0 +1,28 @@
+table.mod {
+    th {
+        font-weight:bold;
+    }
+    
+    td {
+        vertical-align:top;
+        padding:3px;
+    }
+    
+    .deleted {
+        text-decoration: line-through;
+    }
+    
+    a.deleted {
+        color:$navFontColor;
+    }
+    
+    tr.highlight {
+        td {
+            background-color: $primaryColor;
+            
+            &, & a {
+                color:$primaryContrastFontColor;
+            }
+        }
+    }
+}

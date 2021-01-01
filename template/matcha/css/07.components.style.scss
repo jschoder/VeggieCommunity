@@ -1,0 +1,41 @@
+h1, h2, h3 {
+    sup {
+        color:$secondaryFontColor;
+    }
+}
+        
+ul.h {
+    li + li {
+        border-left:1px solid $itemBorderColor;
+    }
+}
+
+footer.actions {
+    a:before {
+        @extend .awesome;
+        margin-right:0.3em;
+    }
+}
+
+.zoomIcon {   
+    display:inline-block;
+    position:relative;
+    
+    img {
+        max-width:100%;
+    }
+    &:before {
+        @extend .awesome; 
+        position:absolute;
+        top:3%;
+        right:4%;
+        font-size:32px;
+        color:$secondaryColor;
+        content:"\f00e";
+    }
+    
+    &:hover:before,
+    &:focus:before {
+        color:$primaryHighlightColor; 
+    }
+}

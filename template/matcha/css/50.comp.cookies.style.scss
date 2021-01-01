@@ -1,0 +1,16 @@
+.cookies {
+    background-color:$secondaryColor;
+    box-shadow: 
+        0 -1px 0 0 $secondaryColor + hsl(3deg, 13%, 0%) - hsl(0deg, 0%, 15%),
+	0 -2px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 27%),
+	0 -3px 0 0 grayscale($primaryColor) + hsl(0deg, 0%, 47%);
+    
+    font-size:0.8em;
+    line-height:1.5em;
+    
+    .close:before {
+        @extend .awesome;
+        content:"\f00d";
+        font-size:1.5em;
+    }
+}

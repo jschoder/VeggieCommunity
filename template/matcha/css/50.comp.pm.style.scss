@@ -1,0 +1,70 @@
+#pmThreads {
+    border-right:1px solid $itemBorderColor; 
+    
+    .jPmThreads li {
+        border-bottom:1px solid $itemBorderColor;
+        
+        &.new {
+            background-color:$secondaryColor;
+            border-left:4px solid $primaryHighlightColor; 
+        }
+        
+        &.active {
+            background:$primaryColor;            a,
+            div,
+            .jAgo {
+                color:$primaryContrastFontColor !important;
+            }
+        }
+        
+        a {
+            color:$secondaryFontColor;
+        }
+
+        .nickname {
+            color:$primaryColor;
+        }
+    }
+    
+    .details {
+        .icon {
+            &:before {
+                @extend .awesome;
+            }
+            
+            &.new:before {
+                content:"\f0f3";
+            }
+            &.replied:before {
+                content:"\f112";
+            }
+        }
+    }
+}
+
+#inboxControl {
+    border-bottom:1px solid $itemBorderColor;
+}
+
+@media screen and (min-width:$breakingPointXL) {
+    #inboxControl {
+        border-bottom:none;
+    }
+}
+
+#inboxList {
+    nav a:before {
+        @extend .awesome;
+    }
+    
+    .jReplyForm {
+        border-top:1px solid $itemBorderColor;
+    }
+}
+
+#pmThreads,
+#inboxList {
+    .jLoading:before {
+        margin-right:0.3em;
+    }
+}

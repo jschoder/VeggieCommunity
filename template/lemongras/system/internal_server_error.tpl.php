@@ -1,0 +1,1 @@
+<div class="notifyError"><?php echo gettext('500.message'); ?></div>

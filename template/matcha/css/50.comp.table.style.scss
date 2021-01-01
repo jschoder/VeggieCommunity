@@ -1,0 +1,34 @@
+table.wide {
+    
+    th {
+        font-weight:bold; 
+    }
+        
+    th, td {
+        background-color:$itemBackgroundColor; 
+    }
+    
+    td.feature {
+        text-align:center;
+        
+        span {
+            @extend .awesome; 
+            
+            &:before {
+                font-size:1.5em;
+                width:1em;
+                display:inline-block;
+            }
+        }
+        
+        &.present span:before {
+            color:$primaryColor;
+            content:"\f058";
+        }
+        
+        &.missing span:before {
+            color:$secondaryFontColor;
+            content:"\f056";
+        }
+    }
+}

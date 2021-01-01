@@ -1,0 +1,11 @@
+@media screen and (max-width:$breakingPointS) {
+    /* Presuming a screen size of at LEAST 320px */
+    .jMenu span {
+        display:none; 
+    }
+    
+    #sidebars {
+        left:0em;
+        width:100%; 
+    }
+}

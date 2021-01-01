@@ -1,0 +1,3 @@
+<p>tut mir echt leid das fragen zu müssen: Hast du die Bilder in deinem Profil selbst erstellt? Hast du das Einverständnis der Nutzung des Originalfotografen? Oder hast du von einer anderen Webseite?</p>
+<p>Es gibt Firmen, die ihr ganzes Geld damit machen das Netz nach Urheberrechtsverletzungen zu durchsuchen und die Firmen abzumahnen. Allein die erste Mahnung kann sich schnell auf ein paar tausend Euro belaufen. Daher können wir leider keine solchen Bilder tolerieren.</p>
+<p>Bitte sag kurz Bescheid wenn die Bilder dir gehören oder du die Rechte hast und entferne die Bilder, die du kopiert hast.</p>

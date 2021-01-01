@@ -1,0 +1,29 @@
+.ctabar {
+    margin:0 0 0.5em;
+    text-align:center;
+    padding:0.5em 0.5em 0 0.5em;
+    
+    a {
+        display:inline-block;
+        padding:0.4em 0.8em;
+        font-size:1.2em;
+        font-weight:normal;
+        
+        &:before {
+            vertical-align:middle;
+            margin-right:0.3em; 
+            font-size:1.6em;
+        }
+    }
+    
+    select {
+        width:auto;
+        height:3em;
+    }
+    
+    select,
+    button,
+    a {
+        margin-bottom:0.5em;
+    }
+}

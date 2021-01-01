@@ -1,0 +1,25 @@
+.xzy {
+    .de,
+    .en {
+        position:relative;
+    
+        &:before {
+            color:$secondaryFontColor;
+            position:absolute;
+            font-size:9px;
+            transform: rotate(270deg);
+        }
+    }
+    
+    .de:before {
+        content:"Anzeige";
+        top:16px;
+        left:-26px;
+    }
+    
+    .en:before {
+        content:"Advert";
+        top:12px;
+        left:-21px;
+    }
+}
